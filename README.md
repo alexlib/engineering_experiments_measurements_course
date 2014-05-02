@@ -1,6 +1,8 @@
-##  engineering experiments measurements course
+##  School of Mechanical Engineering, Tel Aviv University
+### Engineering Testing and Measurements (Labs)
+### Copyright (c) 2014, Alex Liberzon
 
-Python snippets for the Engineering Experiments and Measurements course, Mech. Eng., Tel Aviv University
+Python snippets used in Lectures and laboratory experiments
 
 
 The snippets are mostly IPython notebooks. To visualize the code:
