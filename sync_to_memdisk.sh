@@ -1,0 +1,1 @@
+rsync -rtvuc ~/Box\ Sync/Courses/MDD/2015/Python/ /Users/alex/Documents/Teaching/engineering_experiments_measurements_course/
