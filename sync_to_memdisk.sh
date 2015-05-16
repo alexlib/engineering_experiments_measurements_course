@@ -1,1 +1,1 @@
-rsync -rtvuc ~/Box\ Sync/Courses/MDD/2015/Python/ /Users/alex/Documents/Teaching/engineering_experiments_measurements_course/
+rsync -rtvuc --exclude='.git/' /Users/alex/Documents/Teaching/engineering_experiments_measurements_course/ ~/Box\ Sync/Courses/MDD/2015/Python/
