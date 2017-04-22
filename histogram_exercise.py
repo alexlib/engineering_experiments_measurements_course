@@ -1,72 +1,97 @@
-# -*- coding: utf-8 -*-
-# <nbformat>2</nbformat>
 
-# <codecell>
-from pylab import *
+# coding: utf-8
+
+# In[29]:
+
 data = loadtxt('thermocouples.dat',skiprows=1)
 t = data[:,0]
 T = data[:,1]
 plot(t,T)
-show()
+xlabel('$t$ [sec]')
+ylabel(r'$T^\circ$C') 
+display()
 
-# <codecell>
+
+# In[30]:
 
 print 1 + 3.3*log10(len(t))
 print 2*len(t)**(0.33)
 
-# <codecell>
+
+# In[31]:
 
 J = 11
 n,bins,patches = hist(T,J)
 x = bins[:-1]+0.5*diff(bins)[0]
 plot(x,n,'r')
-show()
+xlabel(r'$T^\circ$C')
+ylabel('Counts')
+title('11 bins')
 
-# <codecell>
+
+# In[32]:
 
 J = 19
 n,bins,patches = hist(T,J)
 x = bins[:-1]+0.5*diff(bins)[0]
 plot(x,n,'r')
-show()
+xlabel(r'$T^\circ$C')
+ylabel('Counts')
+title('19 bins')
 
-# <codecell>
+
+# In[33]:
 
 J = 15
 n,bins,patches = hist(T,J)
 x = bins[:-1]+0.5*diff(bins)[0]
 plot(x,n,'r')
-show()
+xlabel(r'$T^\circ$C')
+ylabel('Counts')
+title('15 bins')
 
-# <codecell>
+
+# In[34]:
 
 # vertical normalization
 p = n/1000.
 plot(x,p)
+xlabel(r'$T^\circ$C')
+ylabel('Relative counts')
+title('Vertically normalized')
 
-# <codecell>
+
+# In[35]:
 
 # area normalization
 f = p/diff(x)[0]
 plot(x,f)
-show()
+xlabel(r'$T^\circ$C')
+ylabel('Probability Density')
 
-# <codecell>
+
+# In[36]:
 
 # horizontal normalization
 z = (x - T.mean())/T.std()
 plot(z,f)
-show()
+xlabel(r'$x$ ')
+ylabel(r'$P(x)$')
+title('Final result')
 
-# <codecell>
+
+# In[37]:
 
 def gaussian(x,mu,sig):
     return 1/(sig*sqrt(2*pi))*exp(-((x-mu)**2)/(2*sig**2))
 
 plot(z,f,z,gaussian(z,0,1),'r')
-show()
+xlabel(r'$x$')
+ylabel(r'$P(x)$')
+title('Blue - original, red - Gaussian')
 
-# <codecell>
+
+# In[38]:
 
 import scipy.stats as st
 
@@ -74,11 +99,14 @@ print "T skewness = %f, kurtosis = %f" % (st.skew(T), st.kurtosis(T))
 tmp = randn(1000,1)
 print "Normal distribution skewness = %f, kurtosis = %f" % (st.skew(tmp), st.kurtosis(tmp))
 
-# <codecell>
+
+# In[39]:
 
 # area under the curve
 print "Area under the curve = %f " % trapz(f,x)
 
-# <codecell>
+
+# In[39]:
+
 
 
