@@ -202,26 +202,127 @@ print(("Normal distribution skewness = %.3f, kurtosis = %.3f" % (st.skew(tmp), s
 # area under the curve
 print(("Area under the curve = %f " % trapz(f,x)))
 ```
+<!-- #region cell_id="383466ac-d9c4-4c47-b2de-b8a45ac9b84b" -->
+# Chi-square test
+
+
+How well does a set of measurements follow an assumed distribution function? 
+<!-- #endregion -->
+
+```python cell_id="2dddde5a-3c5d-4482-9c25-c0ccb7952afd" jupyter={"outputs_hidden": false}
+data = np.array([0.98, 1.07, 0.86, 1.16, 0.96, 0.68, 1.34, 1.04, 1.21, 0.86, 1.02, 1.26, \
+1.08, 1.02, 0.94, 1.11, 0.99, 0.78, 1.06, 0.96])
+```
+
+```python tags=[] cell_id="c2fb726e-3112-4c80-ae3e-6bb3523c21bc"
+# import matplotlib.pyplot as plt
+plt.plot(data,'o')
+plt.xlabel('$i$')
+plt.ylabel('$x_i$');
+```
+
+```python tags=[] cell_id="64211aaa-50ca-455f-9604-98d8651ad445"
+np.mean(data), np.std(data), data.shape[0], np.min(data), np.max(data)
+```
+
+```python tags=[] cell_id="a191ed17-1c89-415b-a4b2-5dc6cd6dce7c"
+n = data.shape[0]
+K = np.int(1.87 * (n - 1)**0.4 + 1) 
+print(f"best number of bins is {K}")
+
+bins = np.arange(0.65, 1.45, 0.1)
+print(bins)
+```
+
+```python tags=[] cell_id="8a668114-6ebe-4d7b-ae5f-46c9fbe1a4da"
+# let's see the histogram
+plt.hist(data,bins=bins,width=0.07)
+```
+
+<!-- #region tags=[] cell_id="4f245083-2856-4464-bafc-ff29f28209b4" -->
+$\chi^2 = \sum_{j} (n_j - n'_j)^2 / n'_j \quad j = 1,2, ..., k$  bins
+
+
+$n'_j = N (p(x_u) - p(x_l))$
+
+$p(x_u) = \int\limits_{0}^{x_u} G(x) $  
+<!-- #endregion -->
+
+<!-- #region tags=[] cell_id="616185a8-dc6f-4aa6-b2c6-08def54cd4e2" -->
+the goodness of fit test evaluates the null hypothesis $H_0$ that the data are described by the assumed distribution
+<!-- #endregion -->
+
+```python tags=[] cell_id="cec0eb07-aabf-41dd-82aa-518ceefcfc6a"
+# calculate probability
+from math import erf, sqrt
+x1 = 0.75
+x2 = 0.85
+
+mu = data.mean()
+sigma = data.std()
+
+# probability from Z=0 to lower bound
+def probability(x, mu, sigma):
+    ''' Probability is the area under the Gaussian curve which is identical to the 
+    cumulative density function value '''
+    return 0.5 * erf( (x-mu) / (sigma*sqrt(2.)) )
+
+def expected(lower,upper,mu,sigma,n):
+    ''' Expected number of samples in some bin is the number of samples times the 
+    probability of a variable to be between the lower and upper edge of the bin  '''
+    # return np.abs(n * (probability(lower,mu,sigma) - probability(upper,mu,sigma)))
+    return np.abs(n*(stats.norm(mu, sigma).cdf(lower) - stats.norm(mu, sigma).cdf(upper)))
+
+
+print(expected(0.75,0.85,mu,sigma,20))
+```
+
+```python tags=[] cell_id="6b522382-1b08-40e4-9b59-a48ea378805e"
+oh = np.histogram(data,bins=bins)
+
+x = []
+y = []
+
+for i in range(len(bins)-1):
+    x.append((oh[1][i]+oh[1][i+1])/2) # middle of the bin
+    y.append(expected(bins[i],bins[i+1],mu,sigma,n))
+
+chisq = []
+for a,b in zip(oh[0],y):
+    chisq.append( (a-b)**2/b )
+
+plt.bar(x,y,width=0.02,color='r',alpha=.8)
+plt.bar(x,oh[0],width=.05,alpha=.5)
+plt.legend(('$E_i$','$O_i$'))
+
+print(f"chi square = {np.sum(chisq)}")
+```
+
+```python tags=[] cell_id="5fcac380-8698-46f8-b999-c6f6bc01158a"
+# degrees of freedom = K.- 2 because we used mean and std:
+df = K - 2
+```
+
+```python tags=[] cell_id="7f4402e1-5fe1-4d46-8f34-10b9619d67db"
+pval = 1 - stats.chi2.cdf(np.sum(chisq), K-2);
+print(f'Confidence level is {(pval*100)} percent') 
+```
+
+```python tags=[] cell_id="8586fa2e-974d-4d89-b83d-313c0ba38e41"
+
+```
+
 <!-- #region cell_id="1cc37d28-bc22-4483-a97e-10848cbcdd0e" tags=[] -->
 ##### From sample to population statistics 
 or from a histogram to the probability density function
 
 1. [Histogram to distribution](histogram_to_distribution.ipynb)
-
-
-1. [Histograms, chi^2 test](histogram_example.ipynb)
 1. [chi^2 test of normal distribution using SciPy stats](chi_square_test_example.ipynb)
 1. [Central limit theorem illustration](Central_limit_theorem_illustration.ipynb)
-1. [Probability Distributions and the Central Limit Theorem](distributions.ipynb)
-
+1. [Various probability Distributions and the Central Limit Theorem](distributions.ipynb)
 1. [Student t-distribution](t-distribution.ipynb)
-
-#### Next lecture 
-1. [Outliers analysis](outliers_example.ipynb)
-1. [Outliers of pairs (x,y) analyis](outliers_example_pairs.ipynb)
-1. [Various random variables, log-normal, log-log-normal](various_random_variables.ipynb)
 <!-- #endregion -->
 
-```python cell_id="71df2001-06c6-485b-bfa2-5e5effbb5de0" tags=[]
-#
+```python
+
 ```
