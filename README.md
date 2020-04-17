@@ -29,7 +29,6 @@ Most of them build upon knowledge from previous units, so you should do them in 
 
 
 ### Statistics (histograms, statistical tests, outliers)
-
 1. [Statistics](notebooks/statistics/Lecture_5.ipynb)
 
 1. [Outliers analysis](outliers_example.ipynb)
