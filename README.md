@@ -3,7 +3,7 @@ Python snippets used in Lectures and laboratory experiments
 
 Click the [index.ipynb](https://github.com/alexlib/engineering_experiments_measurements_course/blob/master/index.ipynb) file to see its rendered by Github and IPython notebook viewer or if you want to **play** with the interactive notebooks, use Binder applicaiton:
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/alexlib/engineering_experiments_measurements_course/master?filepath=index.ipynb)
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/alexlib/engineering_experiments_measurements_course/master)
 
 
 
@@ -59,3 +59,19 @@ Most of them build upon knowledge from previous units, so you should do them in 
 ### Various measurement concepts
 1. [Doppler effect demonstration](doppler.ipynb)
 1. [Particle Image Velocimetry](piv.ipynb)
+
+
+
+## Copyright Information
+
+<p xmlns:dct="http://purl.org/dc/terms/">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law,
+  <span rel="dct:publisher" resource="[_:publisher]">the person who associated CC0</span>
+  with this work has waived all copyright and related or neighboring
+  rights to this work.
+</p>
