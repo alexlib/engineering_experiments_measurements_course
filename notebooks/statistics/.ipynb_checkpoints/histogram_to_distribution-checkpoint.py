@@ -51,20 +51,26 @@ density = probability/dx
 bar(pos,density,width=1.4)
 xlabel('bins of x')
 ylabel('probability density')
-# -
 
+# + jupyter={"outputs_hidden": true}
 z = (pos - x.mean())/x.std()
 
+# + jupyter={"outputs_hidden": true}
 # probability density function 
 pdf = x.std() * density
 
 # + jupyter={"outputs_hidden": false}
 from scipy.stats import norm
-
-y = norm.pdf( z, 0, 1)
+y = mlab.normpdf( z, 0, 1)
 bar(z,pdf,alpha=.3,width=.4),
 zi = arange(-3,3,.1)
-yi = norm.pdf( zi, 0, 1)
+yi = mlab.normpdf( zi, 0, 1)
 plot(zi, yi, 'k--', linewidth=2)
 xlabel(r'$z$',fontsize=16)
-ylabel(r'pdf', fontsize=16);
+ylabel(r'pdf', fontsize=16)
+
+# + jupyter={"outputs_hidden": false}
+
+
+# + jupyter={"outputs_hidden": true}
+
