@@ -321,6 +321,7 @@ or from a histogram to the probability density function
 1. [Central limit theorem illustration](Central_limit_theorem_illustration.ipynb)
 1. [Various probability Distributions and the Central Limit Theorem](distributions.ipynb)
 1. [Student t-distribution](t-distribution.ipynb)
+1. [t-test comparing two samples](t-test.ipynb)
 <!-- #endregion -->
 
 ```python
