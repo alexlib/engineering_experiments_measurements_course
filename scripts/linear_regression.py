@@ -1,4 +1,6 @@
-from numpy import sqrt
+import numpy as np
+from scipy.stats import t
+
 
 def linreg(X, Y):
     """
@@ -36,23 +38,24 @@ def linreg(X, Y):
     m = 1
     nu = N - (m+1)
 
-    sxy = sqrt(residual / nu)
+    sxy = np.sqrt(residual / nu)
 
     # Var_a, Var_b = ss * N / det, ss * Sxx / det
 
-    Sa = sxy * sqrt(1/residualx)
-    Sb = sxy * sqrt(Sxx/(N*residualx))
+    Sa = sxy * np.sqrt(1/residualx)
+    Sb = sxy * np.sqrt(Sxx/(N*residualx))
 
 
     # We work with t-distribution, ()
     # t_{nu;\alpha/2} = t_{3,95} = 3.18
+    tvalue = t.ppf(1-(1-0.95)/2, nu)
 
     print("Estimate: y = ax + b")
     print("N = %d" % N)
     print("Degrees of freedom $\\nu$ = %d " % nu)
-    print("a = %.2f $\\pm$ %.3f" % (a, 3.18*Sa/sqrt(N)))
-    print("b = %.2f $\\pm$ %.3f" % (b, 3.18*Sb/sqrt(N)))
+    print("a = %.2f $\\pm$ %.3f" % (a, tvalue*Sa/np.sqrt(N)))
+    print("b = %.2f $\\pm$ %.3f" % (b, tvalue*Sb/np.sqrt(N)))
     print("R^2 = %.3f" % RR)
-    print("Sxy = %.3f" % sxy)
-    print("y = %.2f x + %.2f $\\pm$ %.2fV" % (a, b, 3.18*sxy/sqrt(N)))
+    print("Syx = %.3f" % sxy)
+    print("y = %.2f x + %.2f $\\pm$ %.3f V" % (a, b, tvalue*sxy/np.sqrt(N)))
     return a, b, RR, sxy
