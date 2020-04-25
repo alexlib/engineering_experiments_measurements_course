@@ -7,3 +7,4 @@ notebooks/statistics/.ipynb_checkpoints/*
 notebooks/calibration/.ipynb_checkpoints/*
 notebooks/unsorted/.ipynb_checkpoints/*
 scripts/.ipynb_checkpoints/*
+*.pyc
