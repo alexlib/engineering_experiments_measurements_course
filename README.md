@@ -17,23 +17,23 @@ Most of them build upon knowledge from previous units, so you should do them in 
 1. [Basic error analysis](basic_error_analysis.ipynb)
 
 ### Calibration (typical errors, regression)
-1. [Regression analysis - explanation](introduction_linear_regression.ipynb)
-1. [Calibration of non-linear relations](calibration_non_linear_relations.ipynb)
-1. [Hysteresis error analysis](hysteresis_error_analysis.ipynb)
-1. [Sensitivity coefficient](sensitivity_analysis.ipynb)
-1. [Hysteresis and regression for calibration](calibration_error_analysis_pressure.ipynb)
-1. [Linearity error analysis - calibration](Lineariy_error_example.ipynb)
+1. [Regression analysis](notebooks/calibration/regression_analysis.ipynb)
+1. [Regression analysis - detailed explanation](notebooks/calibration/introduction_linear_regression.ipynb)
+1. [Calibration of non-linear relations](notebooks/calibration/calibration_non_linear_relations.ipynb)
+1. [Hysteresis error analysis](notebooks/calibration/hysteresis_error_analysis.ipynb)
+1. [Sensitivity coefficient](notebooks/calibration/sensitivity_analysis.ipynb)
+1. [Hysteresis and regression for calibration](notebooks/calibration/calibration_error_analysis_pressure.ipynb)
+1. [Linearity error analysis - calibration](notebooks/calibration/Lineariy_error_example.ipynb)
 <!--- 1. [LVDT calibration](lvdt_calibration.ipynb) --->
-1. [Calibration and uncertainty analysis - virtual experiment](full_calibration_analysis_example_2.ipynb)
-1. [Pressure transducer calibration example](pressure_calibration_example.ipynb)
+1. [Calibration and uncertainty analysis - virtual experiment](notebooks/calibration/full_calibration_analysis_example_2.ipynb)
+1. [Pressure transducer calibration example](notebooks/calibration/pressure_calibration_example.ipynb)
 
 
 ### Statistics (histograms, statistical tests, outliers)
 1. [Statistics](notebooks/statistics/Lecture_5.ipynb)
-
-1. [Outliers analysis](outliers_example.ipynb)
-1. [Outliers of pairs (x,y) analyis](outliers_example_pairs.ipynb)
-1. [Various random variables, log-normal, log-log-normal](various_random_variables.ipynb)
+1. [Outliers analysis](notebooks/statistics/outliers_example.ipynb)
+1. [Outliers of pairs (x,y) analyis](notebooks/statistics/outliers_example_pairs.ipynb)
+1. [Various random variables, log-normal, log-log-normal](notebooks/statistics/various_random_variables.ipynb)
 
 ### Dynamical systems (1st order, 2nd order)
 1. [First order dynamical system responses](first_order_time_response.ipynb)
