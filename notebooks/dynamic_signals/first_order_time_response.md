@@ -18,10 +18,12 @@ css_file = 'https://raw.githubusercontent.com/ngcm/training-public/master/ipytho
 HTML(url=css_file)
 <!-- #endraw -->
 
+<!-- #region slideshow={"slide_type": "slide"} -->
 # 1st order dynamic system
 Following the example of Prof. Cimbala ME 345 course
+<!-- #endregion -->
 
-```python jupyter={"outputs_hidden": false}
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
@@ -32,7 +34,7 @@ mpl.rcParams['font.size']=14
 mpl.rcParams['axes.labelsize']=16
 ```
 
-```python jupyter={"outputs_hidden": false}
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
 T = 1.
 t = np.arange(0,10*T,.0001)
 t_T = t/T
@@ -45,7 +47,9 @@ y_f = 3.0
 
 y_step_norm =  (1 - np.exp(-t_T))
 y_step = (y_f-y_i)*y_step_norm + y_i
+```
 
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
 fig,ax = plt.subplots(nrows=2,sharex=True)
 ax[0].plot(t, y_step)
 ax[0].set_xlabel('$t$ (sec)')
@@ -57,7 +61,7 @@ ax[1].set_xlabel('$t/\tau$ ');
 ax[1].set_ylabel('$y_f/Ky_i$');
 ```
 
-<!-- #raw -->
+<!-- #raw slideshow={"slide_type": "subslide"} -->
 plt.figure(figsize=(6,5))
 plt.plot(t_T,y_step_norm,lw=2)
 plt.xlim(0,10)
@@ -68,7 +72,7 @@ plt.xlabel(r'$t/\tau$',fontsize=26);
 # plt.savefig('1st_order_step_response.png',dpi=200)
 <!-- #endraw -->
 
-```python jupyter={"outputs_hidden": false}
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
 
 y_i_ramp = 1.
 A = 2.
@@ -91,13 +95,15 @@ ax[1].set_ylabel('$\hat{y}$')
 
 ```
 
-```python jupyter={"outputs_hidden": false}
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
 y_i_impulse = 0.;
 y_f_impulse = 5.;
 
 y_impulse_norm = (1./T)*np.exp(-t_T);
 y_impulse = y_impulse_norm * (y_f_impulse-y_i_impulse) + y_i_impulse;
+```
 
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
 fig,ax = plt.subplots(nrows=2,sharex=True)
 # figure(figsize=(10,8))
 ax[0].plot(t_T, y_impulse_norm)
