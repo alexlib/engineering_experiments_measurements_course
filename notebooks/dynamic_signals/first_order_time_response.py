@@ -12,7 +12,7 @@
 #     name: conda-env-mdd-py
 # ---
 
-# %% [raw]
+# %% [raw] slideshow={"slide_type": "skip"}
 # from IPython.core.display import HTML
 # css_file = 'https://raw.githubusercontent.com/ngcm/training-public/master/ipython_notebook_styles/ngcmstyle.css'
 # HTML(url=css_file)
@@ -21,7 +21,7 @@
 # # 1st order dynamic system
 # Following the example of Prof. Cimbala ME 345 course
 
-# %% jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
+# %% jupyter={"outputs_hidden": false} slideshow={"slide_type": "skip"}
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl

@@ -12,7 +12,7 @@ jupyter:
     name: conda-env-mdd-py
 ---
 
-<!-- #raw -->
+<!-- #raw slideshow={"slide_type": "skip"} -->
 from IPython.core.display import HTML
 css_file = 'https://raw.githubusercontent.com/ngcm/training-public/master/ipython_notebook_styles/ngcmstyle.css'
 HTML(url=css_file)
@@ -23,7 +23,7 @@ HTML(url=css_file)
 Following the example of Prof. Cimbala ME 345 course
 <!-- #endregion -->
 
-```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "slide"}
+```python jupyter={"outputs_hidden": false} slideshow={"slide_type": "skip"}
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
