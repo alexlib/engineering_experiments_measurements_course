@@ -45,8 +45,8 @@ Therefore we plot the normalized step founction output minus 1, obtain a functio
 ```python slideshow={"slide_type": "slide"} jupyter={"outputs_hidden": false}
 from IPython.core.display import Image 
 Image(filename='../../img/log-decrement.png',width=600)
-
 ```
+
 
 ```python slideshow={"slide_type": "skip"} jupyter={"outputs_hidden": false}
 %pylab inline
@@ -69,8 +69,8 @@ plot(t,y)
 title('Step response')
 xlabel('$t$ [sec]')
 ylabel('E [V]')
-
 ```
+
 
 ```python slideshow={"slide_type": "skip"} jupyter={"outputs_hidden": false}
 # note that sampling is sufficient, if not we need to apply the D/A reconstruction

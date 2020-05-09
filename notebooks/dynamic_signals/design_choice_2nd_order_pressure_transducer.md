@@ -29,7 +29,8 @@ import numpy as np
 
 ```python slideshow={"slide_type": "slide"} jupyter={"outputs_hidden": false}
 # Define transfer function
-fn = 1200 # Hz
+fd = 1200 # Hz
+fn = fd/(np.sqrt(1-0.5**2))
 wn = fn/(2*np.pi) # rad/s
 z=0.5     # damping
 k = 1 		# sensitivity
@@ -45,8 +46,8 @@ plot(t,y)
 title('Step response of a pressure transducer')
 xlabel('$t$ [sec]')
 ylabel('E [V]')
-
 ```
+
 
 ```python slideshow={"slide_type": "skip"} jupyter={"outputs_hidden": false}
 # note that sampling is sufficient, if not we need to apply the D/A reconstruction
@@ -57,8 +58,16 @@ ylabel('E [V]')
 w, mag, phase = signal.bode(sys)
 
 fig,ax = subplots(2,1,figsize=(8,10))
-ax[0].semilogx(w, mag)    # Bode magnitude plot
-ax[0].set_ylabel('Magnitude, dB')
-ax[1].semilogx(w, phase)  # Bode phase plot
-ax[1].set_ylabel('Phase, deg.')
+ax[0].semilogx(w/wn, mag)    # Bode magnitude plot
+# ax[0].plot(w/wn,mag)
+ax[0].set_ylabel('Magnitude (dB)',fontsize=16)
+ax[1].semilogx(w/wn, phase)  # Bode phase plot
+# ax[1].plot(w/wn, phase)  # Bode phase plot
+ax[1].set_ylabel('Phase (deg)',fontsize=16)
+ax[1].set_xlabel('$\omega/\omega_n$',fontsize=16)
+fig.savefig('bode_pressure_transducer.png',dpi=200)
+```
+
+```python
+
 ```
