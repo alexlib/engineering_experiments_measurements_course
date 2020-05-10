@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     formats: py:percent,ipynb
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -53,6 +54,7 @@ ylabel('E [V]')
 # or interpolations, which will add more noise and uncertainty to the system identification
 
 # %% slideshow={"slide_type": "slide"} jupyter={"outputs_hidden": false}
+# Create Bode plot
 w, mag, phase = signal.bode(sys)
 
 fig,ax = subplots(2,1,figsize=(8,10))
@@ -63,6 +65,6 @@ ax[1].semilogx(w/wn, phase)  # Bode phase plot
 # ax[1].plot(w/wn, phase)  # Bode phase plot
 ax[1].set_ylabel('Phase (deg)',fontsize=16)
 ax[1].set_xlabel('$\omega/\omega_n$',fontsize=16)
-fig.savefig('bode_pressure_transducer.png',dpi=200)
+# fig.savefig('bode_pressure_transducer.png',dpi=200)
 
 # %%
