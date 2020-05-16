@@ -1,12 +1,5 @@
 
-notebooks/statistics/.ipynb_checkpoints/*
 .ipynb_checkpoints/*
-
 index.py
-notebooks/statistics/.ipynb_checkpoints/*
-notebooks/calibration/.ipynb_checkpoints/*
-notebooks/unsorted/.ipynb_checkpoints/*
-scripts/.ipynb_checkpoints/*
 *.pyc
-notebooks/dynamic_signals/.ipynb_checkpoints/*
-notebooks/a2d/.ipynb_checkpoints/*
+notebooks/**/.ipynb_checkpoints/*
