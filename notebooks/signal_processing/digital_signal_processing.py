@@ -19,5 +19,7 @@
 # 1. [Fourier series](Fourier_coefficients_analytical_evaluation_periodic_ramp_function.ipynb)
 # 2. [Fourier transform of a sine](Fourier_transforms_pure_sine.ipynb)
 # 3. [Fourier analysis with windowing](Fourier_transform_with_windowing.ipynb)
+# 4. [Frequency content or spectrum analysis](Frequency_content_of_a_periodic_signal.ipynb)
+# 5. [More complex example with zero padding](fft_of_multi_frequency_signal_window.ipynb)
 
 # %%

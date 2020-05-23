@@ -18,25 +18,6 @@ b) windowing with DC treatment
 
 
 ```python jupyter={"outputs_hidden": false}
-import io
-from nbformat import read
-
-def execute_notebook(nbfile):
-    
-    with io.open(nbfile) as f:
-        nb = read(f,3)
-    
-    ip = get_ipython()
-    
-    for cell in nb.worksheets[0].cells:
-        if cell.cell_type != 'code':
-            continue
-        ip.run_cell(cell.input)
-        
-        
-    
-execute_notebook("../a2d/create_plot_signal.ipynb")
-
 from numpy import *
 from numpy.fft import fft
 from matplotlib.pyplot import *
@@ -185,6 +166,10 @@ len2, = t_2.shape
 g_uncoupled_2 = g - DC
 ```
 
+```python
+N_2
+```
+
 ```python jupyter={"outputs_hidden": false}
 # create the low pass filter, called Hanning
 u_Hann_2 = 0.5*(1-cos(2*pi*t_2[:-1]/T_2))  #u_Hanning(t)
@@ -266,6 +251,10 @@ A_3 = Magnitude_Hann_3[0:int(len_loc/2)]
 Freq_3 = frequency_3[0:int(len_loc/2)]
 ```
 
+```python
+N_3
+```
+
 ```python jupyter={"outputs_hidden": false}
 figure()
 plot(frequency,Magnitude[:frequency.shape[0]],'b:x')
@@ -303,6 +292,6 @@ g1 = DC + a1*sin(2*pi*f1*t) + a2*sin(2*pi*f2*t)
 plot(t,g,'b--',t,g1,'r-')
 ```
 
-```python jupyter={"outputs_hidden": true}
+```python
 
 ```
