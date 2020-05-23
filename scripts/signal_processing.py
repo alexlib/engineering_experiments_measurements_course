@@ -8,11 +8,14 @@ mpl.rc('figure', figsize=(12, 10))
 
 
 # create signal
-def create_signal(fs, N):
+def create_signal(fs, N, a=[1., 1.5], f=[10.0, 35.7], DC=0):
     """ create a periodic signal with a DC and a Gaussian noise"""
     dt = 1./fs
     t = np.linspace(0, N*dt, N)
-    y = 2.3 + 1.0*np.sin(2*np.pi*10*t) + 1.5*np.sin(2*np.pi*35.7*t)
+    y = np.random.normal(0, 1, N) + DC
+    for aa, ff in zip(a, f):
+        y += aa*np.sin(2*np.pi*ff*t)
+
     noise = np.random.normal(0, 1, N)
     y += noise
     return t, y
