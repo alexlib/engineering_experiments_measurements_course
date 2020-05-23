@@ -15,7 +15,9 @@ jupyter:
 # Digital signal processing
 
 
-1. [Fourier series](notebooks/signal_processing/Fourier_coefficients_analytical_evaluation_periodic_ramp_function.ipynb)
+1. [Fourier series](Fourier_coefficients_analytical_evaluation_periodic_ramp_function.ipynb)
+2. [Fourier transform of a sine](Fourier_transforms_pure_sine.ipynb)
+3. [Fourier analysis with windowing](Fourier_transform_with_windowing.ipynb)
 
 ```python
 

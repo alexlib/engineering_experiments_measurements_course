@@ -19,16 +19,8 @@
 #
 
 # %% jupyter={"outputs_hidden": false}
-from __future__ import division
-
 from scipy import fft
 import numpy as np
-
-# redefine default figure size and fonts
-import matplotlib as mpl
-mpl.rc('font', size=14)
-mpl.rc('figure',figsize=(12,10))
-
 import matplotlib.pyplot as plt
 
 # %matplotlib inline
@@ -37,48 +29,9 @@ import matplotlib.pyplot as plt
 # ## Two basic ploting functions that repeat the actuall spectral analysis:
 
 # %% jupyter={"outputs_hidden": false}
-from scipy import fft
-
-def spectrum(y,Fs):
-    """
-    Plots a Single-Sided Amplitude Spectrum of a sampled
-    signal y(t), sampling frequency Fs (lenght of a signal 
-    provides the number of samples recorded)
-    
-    Following: http://goo.gl/wRoUn
-    """
-    n = len(y) # length of the signal
-    k = np.arange(n)
-    T = n/Fs
-    frq = k/T # two sides frequency range
-    frq = frq[range(np.int(n/2))] # one side frequency range
-    Y = 2*fft.fft(y)/n # fft computing and normalization
-    Y = Y[range(np.int(n/2))]
-    return (frq, Y)
-
-
-def plotSignal(A,ff,fs,N):
-
-    T = N/fs # sampling period
-    t = np.arange(0.0,T,T/N) # sampling time steps
-    y = A*np.sin(2*np.pi*ff*t) # sampled signal
-    frq,Y = spectrum(y,fs) # FFT(sampled signal)
-    
-    # Plot
-    plt.figure(figsize=(8,6))
-    plt.subplot(2,1,1)
-    plt.plot(t,y,'b:.')
-    plt.xlabel('$t$ [s]')
-    plt.ylabel('Y [V]')
-    # axes().set_aspect(0.2)
-    # title('sampled signal')
-    plt.subplot(2,1,2)
-    plt.plot(frq,abs(Y),'r') # plotting the spectrum
-    plt.xlabel('$f$ (Hz)')
-    plt.ylabel('$|Y(f)|$')
-    lgnd = str(r'N = %d, f = %d' % (N,fs))
-    plt.legend([lgnd],loc='best')
-
+import sys
+sys.path.append('../../scripts')
+from signal_processing import *
 
 # %% [markdown]
 # ## More elaborate example, demonstration of a leakage effect:
@@ -86,6 +39,7 @@ def plotSignal(A,ff,fs,N):
 # %% jupyter={"outputs_hidden": false}
 # We sample a signal at fs = 200 Hz and record 256 points"
 
+# true values
 A = 1.0 # Volt, amplitude
 ff = 10.0 # Hz, signal frequency, zero harmonics
 
