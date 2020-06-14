@@ -1,4 +1,4 @@
-# %%
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 def reconstruct_with_sinc(ts,fd,t):
@@ -16,8 +16,9 @@ def reconstruct_with_sinc(ts,fd,t):
         fr.append((1./np.pi)*sumf)
         
     return np.asarray(fr,dtype='f')
+```
 
-# %%
+```python
 if __name__ == '__main__':
     t = np.arange(0.0,0.6,0.001)
     fa = 1.0*np.sin(2*np.pi*10*t)+0.2*np.sin(2*np.pi*6*t)
@@ -33,6 +34,8 @@ if __name__ == '__main__':
     plt.ylabel('y [V]')
     plt.legend(('Original','Sampled','Reconstructed'))
     plt.show()
+```
 
-# %%
+```python
     
+```

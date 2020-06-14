@@ -38,7 +38,7 @@ execute_notebook("create_plot_signal.ipynb") # also imports numpy as np and matp
 t = np.linspace(0,10,10000) # almost continuous
 y = 9+np.sin(2*np.pi*0.1*t)
 
-ts,yq,tr,yr = adc(t,y,fs=10,N=4,miny=0,maxy=10,method='soh') # monopolar
+ts,yq,tr,yr = adc(t,y,fs=1,N=4,miny=0,maxy=10,method='soh') # monopolar
 plt.figure()
 plt.plot(t,y,'k--',lw=0.1)
 plt.plot(ts,yq,'ro')
@@ -48,7 +48,7 @@ plt.plot(tr, yr,'b-')
 ```python
 # an example from the A/D lecture
 t = np.linspace(0,1,1000) # almost continuous
-y = 3 + 3*np.sin(2*np.pi*10*t - np.pi/2.)
+y = 3 + 3*np.sin(2*np.pi*10*t)# - np.pi/2.)
 ```
 
 ### sample at 15 Hz

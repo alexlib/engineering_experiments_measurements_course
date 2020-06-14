@@ -21,14 +21,14 @@ import matplotlib.pyplot as plt
 time_of_view        = 1.; # s.
 analog_time         = np.linspace (0, time_of_view, num=100); # s.
 
-sampling_rate       = 20.; # Hz
+sampling_rate       = 21.; # Hz
 sampling_period     = 1. / sampling_rate; # s
 sample_number       = time_of_view / sampling_period;
 sampling_time       = np.linspace (0, time_of_view, int(sample_number));
 
-carrier_frequency   = 9.;
-amplitude           = 1;
-phase               = 0;
+carrier_frequency   = 9.; # Hz
+amplitude           = 1;  # V
+phase               = 0;  # deg
 
 quantizing_bits     = 4;
 quantizing_levels   = 2 ** quantizing_bits / 2;
