@@ -38,9 +38,9 @@ Most of them build upon knowledge from previous units, so you should do them in 
 1. [Various random variables, log-normal, log-log-normal](notebooks/statistics/various_random_variables.ipynb)
 
 ### Dynamical systems (1st order, 2nd order)
-1. [First order dynamical system responses](first_order_time_response.ipynb)
-1. [Step response](step_response.ipynb)
-1. [Estimate parameters 2nd order system](2nd_order_system_step_function_log_decrement.ipynb)
+1. [First order dynamical system responses](notebooks/dynamic_signals/first_order_time_response.ipynb)
+1. [Step response](notebooks/dynamic_signals/step_response.ipynb)
+1. [Estimate parameters 2nd order system](notebooks/dynamic_signals/2nd_order_system_step_function_log_decrement.ipynb)
 
 
 ### Fourier analysis, frequency content, spectrum
