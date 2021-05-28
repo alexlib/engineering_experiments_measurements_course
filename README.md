@@ -54,8 +54,9 @@ Most of them build upon knowledge from previous units, so you should do them in 
 
 
 ### Sampling, aliasing, A/D, D/A conversion
-1. [Digital to Analog D/A reconstruction](Reconstruction_periodic_signal_Cardinal_series.ipynb)
-1. [Sampling, aliasing, clipping](sampling_aliasing_examples.ipynb)
+1. [Digital to Analog D/A reconstruction](notebooks/a2d/Reconstruction_periodic_signal_Cardinal_series.ipynb)
+1. [Sampling, aliasing, clipping](notebooks/a2d/sampling_aliasing_examples.ipynb)
+2. [Mimic A/D](notebooks/a2d/mimic_analog_to_digital_conversion.ipynb)
 
 
 ### Various measurement concepts
