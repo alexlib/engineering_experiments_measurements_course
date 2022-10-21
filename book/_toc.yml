@@ -3,7 +3,18 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: Introduction
+    chapters:
+    - file: markdown
+    - file: notebook
+    - file: statistics/basic_statistics
+    - file: general_measurement_system_analysis
+    sections:
+        - file: markdown-notebooks
+  # - caption: Name of Part 2
+    # chapters:
+    # - file: Readme
+    # - file: notebook
+    # - file: basic_statistics
+    # - file: markdown-notebooks
