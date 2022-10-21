@@ -15,8 +15,8 @@ The exercises are split into the following units.
 Most of them build upon knowledge from previous units, so you should do them in order:
 
 ### Introduction and theory
-1. [Generalized measurement system](https://github.com/alexlib/engineering_experiments_measurements_course/blob/master/notebooks/unsorted/general_measurement_system_analysis.ipynb)
-1. [Basic error analysis](https://github.com/alexlib/engineering_experiments_measurements_course/blob/master/notebooks/unsorted/basic_error_analysis.ipynb)
+1. [Generalized measurement system](notebooks/unsorted/general_measurement_system_analysis.ipynb)
+1. [Basic error analysis](notebooks/unsorted/basic_error_analysis.ipynb)
 
 ### Calibration (typical errors, regression)
 1. [Regression analysis](notebooks/calibration/regression_analysis.ipynb)
