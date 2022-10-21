@@ -15,7 +15,7 @@ The exercises are split into the following units.
 Most of them build upon knowledge from previous units, so you should do them in order:
 
 ### Introduction and theory
-1. [Generalized measurement system](general_measurement_system_analysis.ipynb)
+1. [Generalized measurement system](../unsorted/general_measurement_system_analysis.ipynb)
 1. [Basic error analysis](basic_error_analysis.ipynb)
 
 ### Calibration (typical errors, regression)
