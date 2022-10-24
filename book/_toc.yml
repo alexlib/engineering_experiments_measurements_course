@@ -9,7 +9,8 @@ parts:
     - file: markdown
     - file: notebook
     - file: statistics/basic_statistics
-    - file: general_measurement_system_analysis
+    - file: theory/general_measurement_system_analysis
+    - file: theory/uncertainty101
     sections:
         - file: markdown-notebooks
   # - caption: Name of Part 2
