@@ -1,16 +1,12 @@
----
-title: |
-    Uncertainty 101\
-    Engineering Testing and Measurements
----
+# Uncertainty 101
 
-Our main goal
+### Our main goal
 
 [The science of good measurement]{.smallcaps}
 
 **Good == accurate, low uncertainty**
 
-Uncertainty
+### Uncertainty
 
 ![image](uncertainty-ahead.jpg){width=".9\textwidth"}
 
