@@ -3,4 +3,4 @@
 # or 
 # conda activate mdd
 jupyter-book build book
-ghp-import -n -p -f book
+ghp-import -n -p -f book/_build/html
