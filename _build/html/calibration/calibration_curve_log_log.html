@@ -52,6 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hysteresis and regression analysis example" href="calibration_error_analysis_pressure.html" />
+    <link rel="prev" title="Calibration and uncertainty analysis - virtual experiment" href="full_calibration_analysis_example.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,29 +109,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to “Engineering Measurements and Instrumentation” course
+                    Engineering Measurements and Instrumentation course
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Theory of measurements
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../markdown.html">
-   Markdown Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../notebook.html">
-   Content with notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../statistics/basic_statistics.html">
-   Very basic review of some statistics terms
+  <a class="reference internal" href="../theory/uncertainty101.html">
+   Uncertainty 101
   </a>
  </li>
  <li class="toctree-l1">
@@ -137,9 +129,68 @@ const thebe_selector_output = ".output, .cell_output"
    General measurement system diagram
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Statistics for measurements
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../theory/uncertainty101.html">
-   Definitions
+  <a class="reference internal" href="../statistics/basic_statistics.html">
+   Very basic review of some statistics terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/distributions.html">
+   Probability Distributions and the Central Limit Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/Lecture_5.html">
+   Lecture 5 - probability and statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regression_analysis.html">
+   Lecture 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/outliers_example.html">
+   Outliers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Calibration
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="sensitivity_analysis.html">
+   Sensitivity estimate example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="micrometer_calibration.html">
+   Micrometer calibration using gage block
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="full_calibration_analysis_example.html">
+   Calibration and uncertainty analysis - virtual experiment
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   see the linear part and the “saturated part”, use only the linear one
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration_error_analysis_pressure.html">
+   Hysteresis and regression analysis example
   </a>
  </li>
 </ul>
@@ -396,7 +447,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0e0085460&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b6694550&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_2_1.png" src="../_images/calibration_curve_log_log_2_1.png" />
@@ -410,7 +461,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0ddf7fee0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b459b040&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_3_1.png" src="../_images/calibration_curve_log_log_3_1.png" />
@@ -426,7 +477,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0ddef6ee0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b45101f0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_5_1.png" src="../_images/calibration_curve_log_log_5_1.png" />
@@ -454,7 +505,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0dde73700&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b447f850&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_7_1.png" src="../_images/calibration_curve_log_log_7_1.png" />
@@ -469,7 +520,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0dde63f70&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b4471e80&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_8_1.png" src="../_images/calibration_curve_log_log_8_1.png" />
@@ -498,8 +549,8 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0ddde7550&gt;,
- &lt;matplotlib.lines.Line2D at 0x7fe0ddde75e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b43f45e0&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7fe7b43f4580&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_10_1.png" src="../_images/calibration_curve_log_log_10_1.png" />
@@ -516,7 +567,7 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0ddd60040&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b436b0d0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_11_1.png" src="../_images/calibration_curve_log_log_11_1.png" />
@@ -529,7 +580,7 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0ddcbf670&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b42d17c0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_12_1.png" src="../_images/calibration_curve_log_log_12_1.png" />
@@ -563,7 +614,7 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe0ddc33f40&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b424f0d0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_15_1.png" src="../_images/calibration_curve_log_log_15_1.png" />
@@ -598,6 +649,20 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="full_calibration_analysis_example.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Calibration and uncertainty analysis - virtual experiment</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="calibration_error_analysis_pressure.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hysteresis and regression analysis example</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>

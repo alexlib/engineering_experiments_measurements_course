@@ -6,7 +6,7 @@ root: intro
 parts:
   - caption: Introduction
     chapters:
-    # - file: markdown
+    - file: markdown
     # - file: notebook
   - caption: Theory of measurements
     chapters:
