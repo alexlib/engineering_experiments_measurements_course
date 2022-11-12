@@ -9,7 +9,7 @@ __Good means low uncertainty__
 
 ## Uncertainty
 
-<img src="fig/uncertainty-ahead.jpg" alt="image" />
+![uncertainty](fig/uncertainty-ahead.jpg)
 
 ## Not this kind of “uncertainty”
 
