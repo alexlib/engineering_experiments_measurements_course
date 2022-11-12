@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Engineering Measurements and Instrumentation course
+                    Introduction to measurements for mechanical engineers
                 </a>
             </li>
         </ul>
@@ -272,6 +272,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
    Example of pre-measurement design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/step_response.html">
+   Step responses of dynamical systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">
+   Plot power spectrum of experimental data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/spectrum_example.html">
+   Spectrum example
   </a>
  </li>
  <li class="toctree-l1">
@@ -640,7 +655,7 @@ Populating the interactive namespace from numpy and matplotlib
 
 <span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">P</span><span class="p">)),</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">text</span><span class="p">(</span><span class="mf">6.</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">+</span><span class="mf">.05</span><span class="p">,</span><span class="s1">&#39;Average&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">text</span><span class="p">(</span><span class="mf">5.</span><span class="p">,</span><span class="mf">10.01</span><span class="p">,</span><span class="s1">&#39;True&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -650,16 +665,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">P</span><span class="p">)),</span><span class="s1">&#39;r--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">plot</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">text</span><span class="p">(</span><span class="mf">6.</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">+</span><span class="mf">.05</span><span class="p">,</span><span class="s1">&#39;Average&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;P&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$P$ [kPa]&#39;)
 </pre></div>
 </div>
 <img alt="../_images/chi_square_test_example_2_1.png" src="../_images/chi_square_test_example_2_1.png" />
@@ -694,6 +700,13 @@ Populating the interactive namespace from numpy and matplotlib
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>average = 10.111 (kPa)
+standard deviation =  0.138 (kPa)
+r.m.s.=  0.135 (kPa)
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="prepare-the-histogram">
@@ -717,7 +730,7 @@ Populating the interactive namespace from numpy and matplotlib
 <span class="c1"># Let&#39;s see if it fits normal distribution</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
 <span class="c1"># if you didn&#39;t estimate the mu, sigma above</span>
-<span class="n">param</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">P</span><span class="p">)</span> <span class="c1"># param[0] = sample mean, param[1] = sample std.</span>
+<span class="n">param</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># param[0] = sample mean, param[1] = sample std.</span>
 <span class="c1"># pdf_fitted = norm.pdf(x,loc=param[0],scale=param[1])</span>
 
 <span class="n">pdf_fitted</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">)</span>
@@ -729,6 +742,12 @@ Populating the interactive namespace from numpy and matplotlib
 <span class="n">legend</span><span class="p">((</span><span class="s1">&#39;expected&#39;</span><span class="p">,</span><span class="s1">&#39;observed&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5f09203fa0&gt;
+</pre></div>
+</div>
+<img alt="../_images/chi_square_test_example_6_1.png" src="../_images/chi_square_test_example_6_1.png" />
 </div>
 </div>
 </section>
@@ -745,6 +764,12 @@ or can be quickly estimated taken some really random distribution.</p>
 <span class="c1"># let&#39;s compare it to the values of larger random values sample:</span>
 <span class="n">tmp</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">scale</span><span class="o">=</span><span class="n">param</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">size</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normal distribution skewness -&gt; </span><span class="si">%f</span><span class="s2">, kurtosis -&gt; </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">skew</span><span class="p">(</span><span class="n">tmp</span><span class="p">),</span> <span class="n">st</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">(</span><span class="n">tmp</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>skewness = -0.106814, kurtosis = 0.214252
+Normal distribution skewness -&gt; -0.007018, kurtosis -&gt; -0.000211
 </pre></div>
 </div>
 </div>
@@ -768,6 +793,13 @@ or can be quickly estimated taken some really random distribution.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chi_square = 8.1282
+n = [0 0 0 1 1 0 2 3 2 3 3 3 1 0 0 1 0 0]
+ dof = 10
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -776,6 +808,11 @@ or can be quickly estimated taken some really random distribution.</p>
 <span class="c1"># one-sided Chi^2 test</span>
 <span class="n">pval</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">chi2</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">chi_sq</span><span class="p">,</span> <span class="n">dof</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confidence level is: </span><span class="si">%3.1f</span><span class="s2"> percent&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pval</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confidence level is: 61.6 percent
 </pre></div>
 </div>
 </div>
@@ -788,6 +825,9 @@ or can be quickly estimated taken some really random distribution.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;../img/xsquare.png&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/chi_square_test_example_13_0.png" src="../_images/chi_square_test_example_13_0.png" />
 </div>
 </div>
 </section>

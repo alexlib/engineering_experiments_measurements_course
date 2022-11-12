@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Engineering Measurements and Instrumentation course &#8212; Introduction to Measurements for Mechanical Engineers</title>
+    <title>Introduction to measurements for mechanical engineers &#8212; Introduction to Measurements for Mechanical Engineers</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -108,7 +108,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Engineering Measurements and Instrumentation course
+                    Introduction to measurements for mechanical engineers
                 </a>
             </li>
         </ul>
@@ -271,6 +271,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
    Example of pre-measurement design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamic_signals/step_response.html">
+   Step responses of dynamical systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">
+   Plot power spectrum of experimental data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dynamic_signals/spectrum_example.html">
+   Spectrum example
   </a>
  </li>
  <li class="toctree-l1">
@@ -459,8 +474,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#textbook">
    Textbook
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of contents
+  </a>
   <ul class="nav section-nav flex-column">
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
  </li>
 </ul>
 
@@ -471,7 +496,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Engineering Measurements and Instrumentation course</h1>
+                <h1>Introduction to measurements for mechanical engineers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -485,8 +510,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#textbook">
    Textbook
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of contents
+  </a>
   <ul class="nav section-nav flex-column">
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
  </li>
 </ul>
 
@@ -498,9 +533,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="engineering-measurements-and-instrumentation-course">
-<h1>Engineering Measurements and Instrumentation course<a class="headerlink" href="#engineering-measurements-and-instrumentation-course" title="Permalink to this headline">#</a></h1>
-<p>Set of Jupyter notebooks, prepared by <a class="reference external" href="https://turbulencelab.sites.tau.ac.il">Prof. Alex Liberzon</a>, School of Mechanical Engineering, Faculty of Engineering, Tel Aviv University for the course that is called in many places as “Mechanical Measurements Lab 1” or “Theory and Design of Mechanical Measurements”, “Introduction to Mechanical Measurements for Engineers”, etc.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-measurements-for-mechanical-engineers">
+<h1>Introduction to measurements for mechanical engineers<a class="headerlink" href="#introduction-to-measurements-for-mechanical-engineers" title="Permalink to this headline">#</a></h1>
+<p>Set of Jupyter notebooks, prepared by <a class="reference external" href="https://turbulencelab.sites.tau.ac.il">Prof. Alex Liberzon</a>, School of Mechanical Engineering, Faculty of Engineering, Tel Aviv University for the course that is called in many places as “Mechanical Measurements Lab 1” or “Theory and Design of Mechanical Measurements”, “Introduction to Measurements for Mechanical Engineers”, etc.</p>
 <!-- This is a small sample book to give you a feel for how book content is
 structured.
 It shows off a few of the major file types, as well as some sample content.
@@ -510,6 +545,9 @@ It does not go in-depth into any particular topic - check out [the Jupyter Book 
 <section id="textbook">
 <h2>Textbook<a class="headerlink" href="#textbook" title="Permalink to this headline">#</a></h2>
 <p>This course follows the <span id="id1">[<a class="reference internal" href="#id4" title="R.S. Figliola and D.E. Beasley. Theory and Design for Mechanical Measurements. Wiley, 2020.">Figliola and Beasley, 2020</a>]</span> and <span id="id2">[<a class="reference internal" href="#id5" title="P.F. Dunn and M.P. Davis. Measurement and Data Analysis for Engineering and Science. CRC Press, 4 edition, 2017.">Dunn and Davis, 2017</a>]</span></p>
+</section>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory of measurements</span></p>
 <ul>
@@ -568,9 +606,15 @@ It does not go in-depth into any particular topic - check out [the Jupyter Book 
 <li class="toctree-l1"><a class="reference internal" href="dynamic_signals/2nd_order_system_step_function_log_decrement.html">Log decrement method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dynamic_signals/first_order_time_response.html">1st order dynamic system</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dynamic_signals/design_choice_2nd_order_pressure_transducer.html">Example of pre-measurement design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamic_signals/step_response.html">Step responses of dynamical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">Plot power spectrum of experimental data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamic_signals/spectrum_example.html">Spectrum example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dynamic_signals/simple_fft_two_sine.html">Fast Fourier Transform (FFT) of a sum of two sine signals</a></li>
 </ul>
 </div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
 <div class="docutils container" id="id3">
 <dl class="citation">
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">DD17</a></span></dt>
