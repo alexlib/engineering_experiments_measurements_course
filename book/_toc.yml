@@ -14,6 +14,7 @@ parts:
       - file: theory/laboratory_notebook
       - file: theory/uncertainty101
       - file: theory/general_measurement_system_analysis
+      - file: theory/significant_digits 
     # sections:
       - file: markdown-notebooks
   - caption: Statistics for measurements
