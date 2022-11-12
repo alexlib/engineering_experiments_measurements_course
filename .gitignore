@@ -3,4 +3,6 @@
 index.py
 *.pyc
 notebooks/**/.ipynb_checkpoints/*
+book/**/.ipynb_checkpoints/*
 .vscode/settings.json
+book/_build/*
