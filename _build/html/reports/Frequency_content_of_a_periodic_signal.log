@@ -17,24 +17,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# we made a mistake with the DC
-
-DC = y.mean()
-y -= DC
-
-yh = y*h
-
-plt.plot(t,y,'b-',t,yh,'r') 
+import sys
+sys.path.append('../../scripts')
+from signal_processing import create_signal, spectrum
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn [15], line 6[0m
-[1;32m      3[0m DC [38;5;241m=[39m y[38;5;241m.[39mmean()
-[1;32m      4[0m y [38;5;241m-[39m[38;5;241m=[39m DC
-[0;32m----> 6[0m yh [38;5;241m=[39m y[38;5;241m*[39m[43mh[49m
-[1;32m      8[0m plt[38;5;241m.[39mplot(t,y,[38;5;124m'[39m[38;5;124mb-[39m[38;5;124m'[39m,t,yh,[38;5;124m'[39m[38;5;124mr[39m[38;5;124m'[39m)
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn [2], line 3[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      2[0m sys[38;5;241m.[39mpath[38;5;241m.[39mappend([38;5;124m'[39m[38;5;124m../../scripts[39m[38;5;124m'[39m)
+[0;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01msignal_processing[39;00m [38;5;28;01mimport[39;00m create_signal, spectrum
 
-[0;31mNameError[0m: name 'h' is not defined
-NameError: name 'h' is not defined
+[0;31mModuleNotFoundError[0m: No module named 'signal_processing'
+ModuleNotFoundError: No module named 'signal_processing'
 

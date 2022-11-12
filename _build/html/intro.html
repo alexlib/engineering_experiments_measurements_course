@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to “Engineering Measurements and Instrumentation” course &#8212; My sample book</title>
+    <title>Notes of the “Engineering Measurements and Instrumentation” course &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -108,7 +108,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to “Engineering Measurements and Instrumentation” course
+                    Notes of the “Engineering Measurements and Instrumentation” course
                 </a>
             </li>
         </ul>
@@ -128,14 +128,70 @@ const thebe_selector_output = ".output, .cell_output"
    Content with notebooks
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Theory of measurements
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="theory/uncertainty101.html">
+   Uncertainty 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="theory/general_measurement_system_analysis.html">
+   General measurement system diagram
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Statistics for measurements
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="statistics/basic_statistics.html">
    Very basic review of some statistics terms
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="general_measurement_system_analysis.html">
-   General measurement system
+  <a class="reference internal" href="statistics/distributions.html">
+   Probability Distributions and the Central Limit Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="statistics/Lecture_5.html">
+   Lecture 5 - probability and statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration/regression_analysis.html">
+   Lecture 6
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Calibration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration/sensitivity_analysis.html">
+   Sensitivity estimate example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration/micrometer_calibration.html">
+   Micrometer calibration using gage block
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration/full_calibration_analysis_example.html">
+   Calibration and uncertainty analysis - virtual experiment
   </a>
  </li>
 </ul>
@@ -305,7 +361,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to “Engineering Measurements and Instrumentation” course</h1>
+                <h1>Notes of the “Engineering Measurements and Instrumentation” course</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -317,32 +373,56 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-engineering-measurements-and-instrumentation-course">
-<h1>Welcome to “Engineering Measurements and Instrumentation” course<a class="headerlink" href="#welcome-to-engineering-measurements-and-instrumentation-course" title="Permalink to this headline">#</a></h1>
-<p>by Prof. Alex Liberzon, School of Mechanical Engineering, Faculty of Engineering, Tel Aviv University</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="notes-of-the-engineering-measurements-and-instrumentation-course">
+<h1>Notes of the “Engineering Measurements and Instrumentation” course<a class="headerlink" href="#notes-of-the-engineering-measurements-and-instrumentation-course" title="Permalink to this headline">#</a></h1>
+<p>by <a class="reference external" href="https://turbulencelab.sites.tau.ac.il">Prof. Alex Liberzon</a>, School of Mechanical Engineering, Faculty of Engineering, Tel Aviv University</p>
 <!-- This is a small sample book to give you a feel for how book content is
 structured.
 It shows off a few of the major file types, as well as some sample content.
 It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
  -->
-<p>This book does not replace the course materials, but rather organizes them in Jupyter notebooks, hopefully useful for your learning period and your other laboratory courses</p>
-<p>This course follows the book <span id="id1">[<a class="reference internal" href="markdown.html#id7" title="David Flanagan and Yukihiro Matsumoto. The Ruby Programming Language. O'Reilly Media, 2008.">Flanagan and Matsumoto, 2008</a>]</span></p>
+<p>This book does not replace the course materials, but rather organizes it in Jupyter and Markdown notebooks. We hope is useful as an assistance learning material for undergraduate engineering laboratory courses. It is an open source project and any contribution is welcome ( contact us on <a class="reference external" href="https://github.com/alexlib">Github</a> ).</p>
+<p>This course follows the <span id="id1">[<a class="reference internal" href="#id3" title="R.S. Figliola and D.E. Beasley. Theory and Design for Mechanical Measurements. Wiley, 2020.">Figliola and Beasley, 2020</a>]</span></p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebook.html">Content with notebooks</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory of measurements</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="theory/uncertainty101.html">Uncertainty 101</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/general_measurement_system_analysis.html">General measurement system diagram</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistics for measurements</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="statistics/basic_statistics.html">Very basic review of some statistics terms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="general_measurement_system_analysis.html">General measurement system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/distributions.html">Probability Distributions and the Central Limit Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/Lecture_5.html">Lecture 5 - probability and statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/Lecture_5.html#histogram">Histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/Lecture_5.html#let-s-create-our-own-histogram">Let’s create our own histogram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/Lecture_5.html#now-we-can-load-some-real-long-sample-of-turbulent-temperature-fluctuations">Now we can load some real long sample of turbulent temperature fluctuations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="statistics/Lecture_5.html#chi-square-test">Chi-square test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration/regression_analysis.html">Lecture 6</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Calibration</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="calibration/sensitivity_analysis.html">Sensitivity estimate example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration/micrometer_calibration.html">Micrometer calibration using gage block</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration/micrometer_calibration.html#second-half-use-the-calibrated-micrometer-to-measure-the-diameter-of-a-cylinder">Second half: use the calibrated micrometer to measure the diameter of a cylinder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calibration/full_calibration_analysis_example.html">Calibration and uncertainty analysis - virtual experiment</a></li>
 </ul>
 </div>
 <div class="docutils container" id="id2">
 <dl class="citation">
-<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">FM08</a></span></dt>
-<dd><p>David Flanagan and Yukihiro Matsumoto. <em>The Ruby Programming Language</em>. O'Reilly Media, 2008.</p>
-</dd>
-<dt class="label" id="id3"><span class="brackets">HdHPK14</span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">FB20</a></span></dt>
+<dd><p>R.S. Figliola and D.E. Beasley. <em>Theory and Design for Mechanical Measurements</em>. Wiley, 2020.</p>
 </dd>
 </dl>
 </div>
