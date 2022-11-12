@@ -12,7 +12,7 @@ This book does not replace the course materials, but rather organizes it in Jupy
 
 
 ## Textbook 
-This course follows the {cite}`textbook`
+This course follows the {cite}`textbook` and {cite}`dunn_davis`
 
 
 ```{tableofcontents}
