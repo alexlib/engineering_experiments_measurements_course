@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Mimic A/D conversion
+
 # In[1]:
 
 
@@ -36,32 +38,30 @@ quantizing_signal   = np.round (sampling_signal / quantizing_step) * quantizing_
 fig = plt.figure ()
 # plt.plot (analog_time,   analog_signal (analog_time) );
 #plt.stem (sampling_time, sampling_signal);
-plt.stem (sampling_time, quantizing_signal, linefmt='r-', markerfmt='rs', basefmt='r-',use_line_collection=True);
+plt.stem (sampling_time, quantizing_signal, linefmt='r-', markerfmt='rs', basefmt='r-');
 plt.title("Analog to digital signal conversion")
 plt.xlabel("Time")
 plt.ylabel("Amplitude")
 
 plt.show()
+
+
+# In[ ]:
+
+
+
 
 
 # In[2]:
 
 
-fig = plt.figure ()
-plt.plot (analog_time,   analog_signal (analog_time) );
+fig = plt.figure()
+plt.plot (analog_time, analog_signal (analog_time) );
 #plt.stem (sampling_time, sampling_signal);
-plt.stem (sampling_time, quantizing_signal, linefmt='r-', markerfmt='rs', basefmt='r-',use_line_collection=True);
+plt.stem(sampling_time, quantizing_signal, linefmt='r-', markerfmt='rs', basefmt='r-');
 plt.title("Analog to digital signal conversion")
 plt.xlabel("Time")
-plt.ylabel("Amplitude")
-
-plt.show()
-
-
-# In[3]:
-
-
-quantizing_signal
+plt.ylabel("Amplitude");
 
 
 # In[ ]:

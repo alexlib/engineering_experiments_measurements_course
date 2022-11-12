@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Basic error analysis
+# 
+# This part is the simplified error analysis that we will extend through the course with the more precise definitions
+# and analysis using regressions, calibration, statistics, dynamics, etc.
+
 # In[1]:
 
 
 get_ipython().run_line_magic('pylab', 'inline')
 
-
-# ## Basic error analysis
-# 
-# This part is the simplified error analysis that we will extend through the course with the more precise definitions
-# and analysis using regressions, calibration, statistics, dynamics, etc.
 
 # ### Errors
 # 1. Systematic errors

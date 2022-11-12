@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Using FFT the right way to find the correct spectrum" href="Frequency_content_of_a_periodic_signal.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="../a2d/reconstruct_with_sinc.html" />
+    <link rel="prev" title="Digital to Analog conversion using sinc" href="../a2d/reconstruct_with_sinc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -201,8 +201,23 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/mimic_analog_to_digital_conversion.html">
+   Mimic A/D conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/Reconstruction_periodic_signal_Cardinal_series.html">
+   Digital to analog conversion or reconstruction with sinc
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../a2d/sampling_aliasing_examples.html">
-   Understand sampling, clipping and aliasing problems
+   Sampling, clipping and aliasing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/reconstruct_with_sinc.html">
+   Digital to Analog conversion using sinc
   </a>
  </li>
 </ul>
@@ -252,6 +267,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
    1st order dynamic system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
+   Example of pre-measurement design
   </a>
  </li>
 </ul>
@@ -576,11 +596,11 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Measured periods at threshold 0.5:
-[6.27391288 6.3121521  6.27455987 6.27762771 6.27613917 6.26939075]
-Min:  6.2694
-Max:  6.3122
-Mean: 6.2806
-Std dev: 0.014324
+[6.31334853 6.26506545 6.29531743 6.29047889 6.26783868 6.30087164]
+Min:  6.2651
+Max:  6.3133
+Mean: 6.2888
+Std dev: 0.017303
 </pre></div>
 </div>
 <img alt="../_images/proving_periods_0_1.png" src="../_images/proving_periods_0_1.png" />
@@ -618,7 +638,7 @@ Std dev: 0.014324
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Digital to Analog conversion using sinc</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Frequency_content_of_a_periodic_signal.html" title="next page">

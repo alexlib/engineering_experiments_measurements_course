@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Compare normal and log-normal random variables
+
 # In[1]:
 
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# # Digital to analog conversion or reconstruction with sinc
+
 # In[1]:
 
 

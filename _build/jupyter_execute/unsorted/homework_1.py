@@ -14,7 +14,7 @@
 
 
 from IPython.display import Image
-Image('../../img/lvdt.png',width=600)
+Image('../img/lvdt.png',width=600)
 
 
 # Please, describe the system according to the general system scheme: 
@@ -29,7 +29,7 @@ Image('../../img/lvdt.png',width=600)
 # In[2]:
 
 
-Image('../../img/generalized_measurement_system.png',width=600)
+Image('../img/generalized_measurement_system.png',width=600)
 
 
 # ## Question 2

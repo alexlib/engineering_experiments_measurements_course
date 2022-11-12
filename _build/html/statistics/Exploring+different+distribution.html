@@ -201,8 +201,23 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/mimic_analog_to_digital_conversion.html">
+   Mimic A/D conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/Reconstruction_periodic_signal_Cardinal_series.html">
+   Digital to analog conversion or reconstruction with sinc
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../a2d/sampling_aliasing_examples.html">
-   Understand sampling, clipping and aliasing problems
+   Sampling, clipping and aliasing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/reconstruct_with_sinc.html">
+   Digital to Analog conversion using sinc
   </a>
  </li>
 </ul>
@@ -252,6 +267,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
    1st order dynamic system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
+   Example of pre-measurement design
   </a>
  </li>
 </ul>
@@ -643,11 +663,11 @@ f(k;p) = \begin{cases}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0,
-       0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0,
-       0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1,
-       0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1,
-       1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0,
+       1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0,
+       0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1,
+       1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0,
+       1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0])
 </pre></div>
 </div>
 </div>

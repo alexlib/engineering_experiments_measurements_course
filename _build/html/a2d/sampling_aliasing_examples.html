@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Understand sampling, clipping and aliasing problems &#8212; My sample book</title>
+    <title>Sampling, clipping and aliasing &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="reconstruct_with_sinc.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="Reconstruction_periodic_signal_Cardinal_series.html" />
+    <link rel="next" title="Digital to Analog conversion using sinc" href="reconstruct_with_sinc.html" />
+    <link rel="prev" title="Digital to analog conversion or reconstruction with sinc" href="Reconstruction_periodic_signal_Cardinal_series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -202,9 +202,24 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mimic_analog_to_digital_conversion.html">
+   Mimic A/D conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reconstruction_periodic_signal_Cardinal_series.html">
+   Digital to analog conversion or reconstruction with sinc
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Understand sampling, clipping and aliasing problems
+   Sampling, clipping and aliasing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reconstruct_with_sinc.html">
+   Digital to Analog conversion using sinc
   </a>
  </li>
 </ul>
@@ -254,6 +269,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
    1st order dynamic system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
+   Example of pre-measurement design
   </a>
  </li>
 </ul>
@@ -462,27 +482,22 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Understand sampling, clipping and aliasing problems
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sample-at-15-hz">
    sample at 15 Hz
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sample-at-11-hz">
    sample at 11 Hz
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#estimate-the-aliasing-using-the-folding-diagram-or-the-formula">
    Estimate the aliasing using the folding diagram or the formula:
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-do-we-use-it-we-use-trial-error-and-smart-guesses">
    How do we use it? we use trial/error and smart guesses:
   </a>
@@ -496,7 +511,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Understand sampling, clipping and aliasing problems</h1>
+                <h1>Sampling, clipping and aliasing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -506,27 +521,22 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Understand sampling, clipping and aliasing problems
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sample-at-15-hz">
    sample at 15 Hz
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sample-at-11-hz">
    sample at 11 Hz
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#estimate-the-aliasing-using-the-folding-diagram-or-the-formula">
    Estimate the aliasing using the folding diagram or the formula:
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-do-we-use-it-we-use-trial-error-and-smart-guesses">
    How do we use it? we use trial/error and smart guesses:
   </a>
@@ -541,8 +551,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="understand-sampling-clipping-and-aliasing-problems">
-<h1>Understand sampling, clipping and aliasing problems<a class="headerlink" href="#understand-sampling-clipping-and-aliasing-problems" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="sampling-clipping-and-aliasing">
+<h1>Sampling, clipping and aliasing<a class="headerlink" href="#sampling-clipping-and-aliasing" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">io</span>
@@ -565,7 +575,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fcea1737d60&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1c8ba48e20&gt;]
 </pre></div>
 </div>
 <img alt="../_images/sampling_aliasing_examples_1_1.png" src="../_images/sampling_aliasing_examples_1_1.png" />
@@ -586,7 +596,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fce9f644b20&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f1c89954ac0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/sampling_aliasing_examples_2_1.png" src="../_images/sampling_aliasing_examples_2_1.png" />
@@ -601,9 +611,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
 <section id="sample-at-15-hz">
-<h1>sample at 15 Hz<a class="headerlink" href="#sample-at-15-hz" title="Permalink to this headline">#</a></h1>
+<h2>sample at 15 Hz<a class="headerlink" href="#sample-at-15-hz" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ts</span><span class="p">,</span><span class="n">yq</span><span class="p">,</span><span class="n">tr</span><span class="p">,</span><span class="n">yr</span> <span class="o">=</span> <span class="n">adc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="mf">15.</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span><span class="n">miny</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">maxy</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="c1"># monopolar</span>
@@ -627,7 +636,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="sample-at-11-hz">
-<h1>sample at 11 Hz<a class="headerlink" href="#sample-at-11-hz" title="Permalink to this headline">#</a></h1>
+<h2>sample at 11 Hz<a class="headerlink" href="#sample-at-11-hz" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ts</span><span class="p">,</span><span class="n">yq</span><span class="p">,</span><span class="n">tr</span><span class="p">,</span><span class="n">yr</span> <span class="o">=</span> <span class="n">adc</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">fs</span><span class="o">=</span><span class="mf">11.</span><span class="p">,</span><span class="n">N</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span><span class="n">miny</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">maxy</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># monopolar</span>
@@ -693,7 +702,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="estimate-the-aliasing-using-the-folding-diagram-or-the-formula">
-<h1>Estimate the aliasing using the folding diagram or the formula:<a class="headerlink" href="#estimate-the-aliasing-using-the-folding-diagram-or-the-formula" title="Permalink to this headline">#</a></h1>
+<h2>Estimate the aliasing using the folding diagram or the formula:<a class="headerlink" href="#estimate-the-aliasing-using-the-folding-diagram-or-the-formula" title="Permalink to this headline">#</a></h2>
 <p>if <span class="math notranslate nohighlight">\(f_s &gt; 2 f\)</span> , no aliasing</p>
 <p>if <span class="math notranslate nohighlight">\(2/3 f &lt; f_s &lt; 2 f\)</span>, <span class="math notranslate nohighlight">\(f_a = |f_s - f|\)</span></p>
 <p>if <span class="math notranslate nohighlight">\(f_s &lt; 2/3 f\)</span>, <span class="math notranslate nohighlight">\(f_a = (f/f_f)f_f\)</span>, where <span class="math notranslate nohighlight">\(f_f = f_s/2\)</span></p>
@@ -701,7 +710,7 @@ title="Print to PDF"
 $<span class="math notranslate nohighlight">\(f_a = \left|f- f_s \cdot NINT (f/f_s) \right|\)</span>$</p>
 </section>
 <section id="how-do-we-use-it-we-use-trial-error-and-smart-guesses">
-<h1>How do we use it? we use trial/error and smart guesses:<a class="headerlink" href="#how-do-we-use-it-we-use-trial-error-and-smart-guesses" title="Permalink to this headline">#</a></h1>
+<h2>How do we use it? we use trial/error and smart guesses:<a class="headerlink" href="#how-do-we-use-it-we-use-trial-error-and-smart-guesses" title="Permalink to this headline">#</a></h2>
 <p>let’s check different options:</p>
 <p>if it’s aliasing we could be in one of the two regions, either 6 Hz &lt; 2/3 f, i.e. f &gt; 1.5*6, f &gt; 9 or</p>
 <p>it can be that 6Hz is above 2/3f and below 2f, i.e. f is between 3 and 9 Hz</p>
@@ -747,6 +756,7 @@ $<span class="math notranslate nohighlight">\(f_a = \left|f- f_s \cdot NINT (f/f
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -779,13 +789,13 @@ $<span class="math notranslate nohighlight">\(f_a = \left|f- f_s \cdot NINT (f/f
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Digital to analog conversion or reconstruction with sinc</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="reconstruct_with_sinc.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Digital to Analog conversion using sinc</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -12,7 +12,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # In[2]:
 
 
-data = np.loadtxt('../../data/sizedistribution.dat');
+data = np.loadtxt('../data/sizedistribution.dat');
 vals = data[:,1]
 num = data[:,0]
 

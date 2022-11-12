@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### Understand sampling, clipping and aliasing problems
+# # Sampling, clipping and aliasing
 
 # In[1]:
 

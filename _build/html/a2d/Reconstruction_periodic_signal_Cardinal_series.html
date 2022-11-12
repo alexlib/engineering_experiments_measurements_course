@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>Digital to analog conversion or reconstruction with sinc &#8212; My sample book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Understand sampling, clipping and aliasing problems" href="sampling_aliasing_examples.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="mimic_analog_to_digital_conversion.html" />
+    <link rel="next" title="Sampling, clipping and aliasing" href="sampling_aliasing_examples.html" />
+    <link rel="prev" title="Mimic A/D conversion" href="mimic_analog_to_digital_conversion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -199,10 +199,25 @@ const thebe_selector_output = ".output, .cell_output"
   Analog to digital (A/D) and D/A
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mimic_analog_to_digital_conversion.html">
+   Mimic A/D conversion
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Digital to analog conversion or reconstruction with sinc
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="sampling_aliasing_examples.html">
-   Understand sampling, clipping and aliasing problems
+   Sampling, clipping and aliasing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reconstruct_with_sinc.html">
+   Digital to Analog conversion using sinc
   </a>
  </li>
 </ul>
@@ -252,6 +267,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
    1st order dynamic system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
+   Example of pre-measurement design
   </a>
  </li>
 </ul>
@@ -438,50 +458,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Digital to analog conversion or reconstruction with sinc</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -489,7 +482,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="digital-to-analog-conversion-or-reconstruction-with-sinc">
+<h1>Digital to analog conversion or reconstruction with sinc<a class="headerlink" href="#digital-to-analog-conversion-or-reconstruction-with-sinc" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -537,10 +532,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f619c9ddd90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe2ce9cdd60&gt;
 </pre></div>
 </div>
-<img alt="../_images/Reconstruction_periodic_signal_Cardinal_series_2_1.png" src="../_images/Reconstruction_periodic_signal_Cardinal_series_2_1.png" />
+<img alt="../_images/Reconstruction_periodic_signal_Cardinal_series_3_1.png" src="../_images/Reconstruction_periodic_signal_Cardinal_series_3_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -550,7 +545,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_178928/1079865406.py:14: RuntimeWarning: invalid value encountered in double_scalars
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_187823/1079865406.py:14: RuntimeWarning: invalid value encountered in double_scalars
   sumf += fd[i]*np.sin(np.pi*(ti/dt-i))/(ti/dt-i)
 </pre></div>
 </div>
@@ -567,12 +562,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f619a63e4f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe2cc5d0e20&gt;
 </pre></div>
 </div>
-<img alt="../_images/Reconstruction_periodic_signal_Cardinal_series_4_1.png" src="../_images/Reconstruction_periodic_signal_Cardinal_series_4_1.png" />
+<img alt="../_images/Reconstruction_periodic_signal_Cardinal_series_5_1.png" src="../_images/Reconstruction_periodic_signal_Cardinal_series_5_1.png" />
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -605,13 +601,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Mimic A/D conversion</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="sampling_aliasing_examples.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Understand sampling, clipping and aliasing problems</p>
+        <p class="prev-next-title">Sampling, clipping and aliasing</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
