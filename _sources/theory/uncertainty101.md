@@ -1,4 +1,6 @@
-# This course is about:
+# Uncertainty 101
+
+## This course is about:
 
 ***The science of good measurement***
 
