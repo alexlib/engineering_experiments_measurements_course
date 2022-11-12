@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Significant digits &#8212; Introduction to Measurements for Mechanical Engineers</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Very basic review of some statistics terms" href="../statistics/basic_statistics.html" />
+    <link rel="prev" title="General measurement system diagram" href="general_measurement_system_analysis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Measurements for Mechanical Engineers</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to measurements for mechanical engineers
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Theory of experiments and measurements
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="standartization.html">
+   Standardization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laboratory_notebook.html">
+   Laboratory Notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="uncertainty101.html">
+   Uncertainty 101
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="general_measurement_system_analysis.html">
+   General measurement system diagram
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Significant digits
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Statistics for measurements
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/basic_statistics.html">
+   Very basic review of some statistics terms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/distributions.html">
+   Probability Distributions and the Central Limit Theorem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/Lecture_5.html">
+   Lecture 5 - probability and statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../calibration/regression_analysis.html">
+   Lecture 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../statistics/outliers_example.html">
+   Outliers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Calibration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../calibration/sensitivity_analysis.html">
+   Sensitivity estimate example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../calibration/micrometer_calibration.html">
+   Micrometer calibration using gage block
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../calibration/full_calibration_analysis_example.html">
+   Calibration and uncertainty analysis - virtual experiment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../calibration/calibration_curve_log_log.html">
+   Calibration of non-linear (logarithmic) function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../calibration/calibration_error_analysis_pressure.html">
+   Hysteresis and regression analysis example
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analog to digital (A/D) and D/A
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/mimic_analog_to_digital_conversion.html">
+   Mimic A/D conversion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/Reconstruction_periodic_signal_Cardinal_series.html">
+   Analog to digital (A/D) and Digital to Analog (d/A) conversion example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/sampling_aliasing_examples.html">
+   Sampling, clipping and aliasing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/reconstruct_with_sinc.html">
+   Digital to Analog conversion using sinc
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Signal processing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/proving_periods.html">
+   Digitizing the signal using pure Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/Frequency_content_of_a_periodic_signal.html">
+   Using FFT the right way to find the correct spectrum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/Fourier_transforms_pure_sine.html">
+   Fourier transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/Fourier_coefficients_analytical_evaluation_periodic_ramp_function.html">
+   Symbolic evaluation of Fourier coefficients
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/FFT_based_filtering.html">
+   Using FFT-based filter to reduce noise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/fft_of_multi_frequency_signal_window.html">
+   FFT demo of a real, periodic signal
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Dynamic signals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/2nd_order_system_step_function_log_decrement.html">
+   Log decrement method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
+   1st order dynamic system
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
+   Example of pre-measurement design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/step_response.html">
+   Step responses of dynamical systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">
+   Plot power spectrum of experimental data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/spectrum_example.html">
+   Spectrum example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/simple_fft_two_sine.html">
+   Fast Fourier Transform (FFT) of a sum of two sine signals
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/alexlib/engineering_experiments_measurements_course/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/alexlib/engineering_experiments_measurements_course//issues/new?title=Issue%20on%20page%20%2Ftheory/significant_digits.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/theory/significant_digits.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rules">
+   Rules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keep-one-extra-digit-in-intermediate-answers">
+   Keep One Extra Digit in Intermediate Answers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example">
+   An example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-table">
+   Summary table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Significant digits</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rules">
+   Rules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keep-one-extra-digit-in-intermediate-answers">
+   Keep One Extra Digit in Intermediate Answers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example">
+   An example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-table">
+   Summary table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="significant-digits">
+<h1>Significant digits<a class="headerlink" href="#significant-digits" title="Permalink to this headline">#</a></h1>
+<ul class="simple">
+<li><p>Engineering measurements are generally accurate to at most only a
+few digits – three digits of accuracy is considered ‘’standard’’
+for engineering analysis</p></li>
+<li><p>The number of significant digits is defined as the number of
+<strong>relevant or useful digits</strong> in a measurement.</p></li>
+<li><p>The number of significant digits is meaningful: 0.9, 0.90, 0.900 are
+all different</p></li>
+<li><p>The <strong>best way</strong> is the standard exponential (scientific) notation
+(count the number of digits), <span class="math notranslate nohighlight">\(1.23\times 10^{4}\)</span></p></li>
+</ul>
+<p>Why it is important for measurements</p>
+<p><img alt="image" src="../_images/scale_at_53.png" /></p>
+<p>The rightmost zero after the decimal point counts, 53.0 means we know more than just 53, we could also find 53.1 or 52.9.</p>
+<p>if the rightmost zero is before the decimal point, e.g. in integeres 53200, we have difficulty to distinguish what is meaningfull so we better use scientific notation <span class="math notranslate nohighlight">\(5.32 \times 10^4\)</span></p>
+<p>The value is about 53, we can say even it’s 53.2 - by adding .2 we mean
+it’s a meaningful digit, i.e. we can measure things using this tool to
+the level of one digit after a decimal point, i.e.
+<span class="math notranslate nohighlight">\(5.32 \times 10^{1}=0.532 \times 10^{2}\)</span></p>
+<p>– So if the measure will be precisely on 53, we’ll still write 53.0
+– that’s the important difference, it’s not an integer value 53 and not
+<span class="math notranslate nohighlight">\(0.53 \times 10^{2}\)</span> , but <span class="math notranslate nohighlight">\(0.530 \times 10^{2}\)</span> - three significant digits</p>
+<section id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Non-zero digits are always significant. Thus, 2.2 has two significant digits, and 22.3 has three significant digits.</p></li>
+<li><p>Zeroes:</p>
+<ol class="simple">
+<li><p>Zeroes placed <strong>before</strong> other digits are <strong>not</strong> significant;
+0.046 has <strong>two</strong> significant digits.</p></li>
+<li><p>Zeroes placed <strong>between</strong> <strong>other digits</strong> are always
+significant; 4009 kg has <strong>four</strong> significant digits.</p></li>
+<li><p>Zeroes placed after other digits but <strong>behind a decimal point</strong>
+are significant; 7.90 has <strong>three</strong> significant digits.</p></li>
+<li><p>Zeroes <strong>at the end of a number</strong>: USE scientific notation to be
+clear:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(8.200\times10^{3}\)</span> has four significant digits</p></li>
+<li><p><span class="math notranslate nohighlight">\(8.20\times10^{3}\)</span> has three significant digits</p></li>
+<li><p><span class="math notranslate nohighlight">\(8.2\times10^{3}\)</span> has two significant digits</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>Calculations</p>
+<p>In a calculation involving <strong>multiplication</strong>, <strong>division</strong>,
+<strong>trigonometric</strong> functions, etc., the number of significant digits in
+an answer should equal <strong>the least number of significant digits</strong> in any
+<strong>one of the numbers</strong> being multiplied, divided etc.</p>
+<ul class="simple">
+<li><p>Thus in evaluating <span class="math notranslate nohighlight">\(\sin(kx)\)</span> where k = 0.097 m<span class="math notranslate nohighlight">\(^{-1}\)</span> (two
+significant digits) and x = 4.73 m (three significant digits), the
+answer should have <strong>two</strong> significant digits.</p></li>
+<li><p><strong>integers</strong> have <span class="math notranslate nohighlight">\(\infty\)</span> significant digits, e.g. a devices uses
+1.2 kW, 2 devices use 2.4 kW.</p></li>
+<li><p>When quantities are being <em>added or subtracted</em>,<strong>[ the number of
+decimal places]{style=”color: blue”}</strong> (not significant digits) in
+the answer should be the same as <strong>the least number of decimal
+places in any of the numbers</strong> being added or subtracted.</p></li>
+</ul>
+</section>
+<section id="keep-one-extra-digit-in-intermediate-answers">
+<h2>Keep One Extra Digit in Intermediate Answers<a class="headerlink" href="#keep-one-extra-digit-in-intermediate-answers" title="Permalink to this headline">#</a></h2>
+<p>When doing multi-step calculations, [keep at least one more significant
+digit in intermediate results than needed in your final answer]{.alert}.</p>
+<ul class="simple">
+<li><p>For instance, if a final answer requires 2 s.d., then carry at least
+3 s.d. in calculations.</p></li>
+<li><p>If you round-off intermediate answers to only two digits, a result
+the second digit in your final answer might be incorrect. (This
+phenomenon is known as round-off error.)</p></li>
+</ul>
+<p><strong>The Two Greatest Mistakes Regarding Significant
+Digits:</strong></p>
+<ol class="simple">
+<li><p>Writing more digits in an answer (intermediate or final) than justified by the number of digits in the data.</p></li>
+<li><p>Rounding-off, say, to two digits in an intermediate answer, and then writing three digits in the final answer.</p></li>
+</ol>
+</section>
+<section id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">#</a></h2>
+<p>Atmospheric pressure <span class="math notranslate nohighlight">\(P_{atm}=101.3\)</span> kPa</p>
+<p>Gage pressure measured at point 1 is 1,3[5]{.underline}0 Pa</p>
+<p>Gage pressure is defined as <span class="math notranslate nohighlight">\(P_{gage}=P-P_{atm}\)</span></p>
+<p>Calculate and report the absolute pressure at position 1:</p>
+<p><span class="math notranslate nohighlight">\(P_{1}=101.\underline{3}+1.3\underline{5}0=\)</span> (aligned at decimal point)
+= <span class="math notranslate nohighlight">\(102.\underline{6}50\)</span> kPa, i.e. the answer is:</p>
+<p><span class="math notranslate nohighlight">\(P_{1}=102.6\)</span> kPa</p>
+<p>if you use the value for other estimates, e.g. density or temperature,
+use 102.65 kPa</p>
+<p>Operations with signficant digits</p>
+<ul class="simple">
+<li><p>Multiplication, division = first calculate, keep more significant
+digits, then round to the least number of significant digits (there
+is impossible to get “new” information beyond the known):</p></li>
+<li><p>Division example:<br />
+<span class="math notranslate nohighlight">\(\underline{3.0}\times10^{4}/1.15\times10^{4}=2.608695...=\underline{2.6}\)</span></p></li>
+<li><p>Multiplication example:<br />
+<span class="math notranslate nohighlight">\(2.8723\times\underline{1.6}=4.59568=\underline{4.6}\)</span></p></li>
+<li><p>Integers do not matter:<br />
+<span class="math notranslate nohighlight">\(3\times0.5=1.5\)</span><br />
+<span class="math notranslate nohighlight">\(222\times22=4884\)</span></p></li>
+</ul>
+<p>Summation/subtraction</p>
+<p>Summation, subtraction - keep similar order of magnitude (all big ones
+separately from the small ones)</p>
+<p>Work with the decimal point - shift first, then after the operation,
+round:</p>
+<p><span class="math notranslate nohighlight">\(3.76+14.83+2.\underline{1}=20.69 \Rightarrow 20.\underline{7}\)</span></p>
+<p><span class="math notranslate nohighlight">\(4.7832+1.234+2.\underline{02}=8.0372 \Rightarrow 8.\underline{04}\)</span></p>
+<p>Problems are unavoidable when sum very different orders of magnitude:</p>
+<p><span class="math notranslate nohighlight">\(1.2\underline{3}\times 10^{5}+0.5=12\underline{3}000.0+0.5=12\underline{3}000.5 \Rightarrow 12 \underline{3}000=1.23 \times 10^{5}\)</span></p>
+</section>
+<section id="summary-table">
+<h2>Summary table<a class="headerlink" href="#summary-table" title="Permalink to this headline">#</a></h2>
+<p><img alt="image" src="../_images/significant_digits_table.png" /></p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h2>
+<p>603 vs 603. vs 6<u>0</u>3 <span class="math notranslate nohighlight">\((\infty,3,2)\)</span></p>
+<p>0.007 =<span class="math notranslate nohighlight">\(7.\times10^{-3}\)</span> (1), 1.005 (4)</p>
+<p>0.01070 = <span class="math notranslate nohighlight">\(1.070\times10^{-2}\)</span> (4)</p>
+<p>2.00/3.0=0.666666<span class="math notranslate nohighlight">\(\ldots\)</span>=0.67 = 6.7 <span class="math notranslate nohighlight">\(\times10^{-1}\)</span> but if you use it
+for other estimates, do not round now (!), 0.66667</p>
+<p>134,2<u>9</u>0, 0.287<u>5</u>, 29.47<u>3</u> -
+round to 3 digits: 134,000 = 1.34 <span class="math notranslate nohighlight">\(\times 10^{5}\)</span>, 0.288 =
+2.88 <span class="math notranslate nohighlight">\(\times10^{-3}\)</span>, 29.5</p>
+<p>sum and answer to the proper number of significant digits:</p>
+<p>134,290 + 0.2875 + 29.473 = ?</p>
+<p>Solution, align decimal places: get 134319.7605 and round to the left-most least significant digits () = 134,320 = 1.3432 <span class="math notranslate nohighlight">\(\times 10^{5}\)</span></p>
+<p>multiply the first two and report: 134,290
+<span class="math notranslate nohighlight">\( \times\)</span> 0.2875 = 38608.375 (if its
+intermediate, otherwise 5 digits <span class="math notranslate nohighlight">\( \times \)</span> 4 digits = 4 digits) =
+38610</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./theory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="general_measurement_system_analysis.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">General measurement system diagram</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../statistics/basic_statistics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Very basic review of some statistics terms</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Alex Liberzon<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
