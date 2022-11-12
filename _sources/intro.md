@@ -12,7 +12,7 @@ This book does not replace the course materials, but rather organizes it in Jupy
 
 
 ## Textbook and relevant books: 
-This course follows the {cite}`textbook`. It is also recommended to consult with {cite}`dunn_davis` and {cite}`wheller`
+This course follows the {cite}`textbook`. It is also recommended to consult with {cite}`dunn_davis` and {cite}`wheeler`
 
 
 ## Table of contents
