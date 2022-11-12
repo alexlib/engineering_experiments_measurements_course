@@ -349,12 +349,38 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#textbook">
+   Textbook
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -366,6 +392,21 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#textbook">
+   Textbook
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -382,6 +423,8 @@ It shows off a few of the major file types, as well as some sample content.
 It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
  -->
 <p>This book does not replace the course materials, but rather organizes it in Jupyter and Markdown notebooks. We hope is useful as an assistance learning material for undergraduate engineering laboratory courses. It is an open source project and any contribution is welcome ( contact us on <a class="reference external" href="https://github.com/alexlib">Github</a> ).</p>
+<section id="textbook">
+<h2>Textbook<a class="headerlink" href="#textbook" title="Permalink to this headline">#</a></h2>
 <p>This course follows the <span id="id1">[<a class="reference internal" href="#id3" title="R.S. Figliola and D.E. Beasley. Theory and Design for Mechanical Measurements. Wiley, 2020.">Figliola and Beasley, 2020</a>]</span></p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
@@ -426,6 +469,7 @@ It does not go in-depth into any particular topic - check out [the Jupyter Book 
 </dd>
 </dl>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
