@@ -8,13 +8,34 @@ parts:
     chapters:
     - file: markdown
     - file: notebook
-  - caption: Theory
+  - caption: Theory of measurements
     chapters:
-      - file: statistics/basic_statistics
       - file: theory/uncertainty101
       - file: theory/general_measurement_system_analysis
     sections:
         - file: markdown-notebooks
+  - caption: Statistics for measurements
+    chapters: 
+    - file: statistics/basic_statistics
+    - file: statistics/distributions
+    - file: statistics/Exploring+different+distributions
+    - file: statistics/Lecture_5
+    - file: calibration/regression_analysis
+    sections:
+      - file: statistics/outliers_example
+      - file: statistics/outlers_example-2
+  - caption: Calibration
+    chapters: 
+    - file: calibration/sensitivity_analysis
+    - file: calibration/micrometer_calibration
+    - file: calibration/full_calibration_analysis_example
+    - file: calibration/ldvt_calibration_2
+    - file: calibration/Linearity_error_example
+    sections:
+      - file: calibration/calibration_curve_log_log
+      - file: calibration/error_analysis_pressure
+      - file: calibration/calibration_error_analysis_pressure
+
 
 # ### Introduction and theory
 # 1. [Basic error analysis](notebooks/unsorted/basic_error_analysis.ipynb)
