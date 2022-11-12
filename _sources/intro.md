@@ -11,8 +11,8 @@ It does not go in-depth into any particular topic - check out [the Jupyter Book 
 This book does not replace the course materials, but rather organizes it in Jupyter and Markdown notebooks. We hope is useful as an assistance learning material for undergraduate engineering laboratory courses. It is an open source project and any contribution is welcome ( contact us on [Github](https://github.com/alexlib) ).
 
 
-## Textbook 
-This course follows the {cite}`textbook` and {cite}`dunn_davis`
+## Textbook and relevant books: 
+This course follows the {cite}`textbook`. It is also recommended to consult with {cite}`dunn_davis` and {cite}`wheller`
 
 
 ## Table of contents
