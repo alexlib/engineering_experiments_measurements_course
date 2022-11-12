@@ -116,35 +116,29 @@ Different categories require different uncertainty approach:
 In all cases, a measurement is **only** useful if: a) has high quality,
 b) if suitable for the **intended purpose**.
 
-Lord Kelvin said once: ![image](kelvin_quote.jpeg)
+Lord Kelvin said once: 
 
-Measurement is as good as its uncertainty
+![image](fig/kelvin_quote.jpeg)
+
+## Measurement is as good as its uncertainty
 
 <span style="color:red">measurement = best estimate ± uncertainty</span>
 
-*L* = (2.35 ± 0.03) *m**m*  (95%)
+$L = 2.35 \pm 0.03$  mm  (95% confidence)
 
-**We report:** what is measured *L*, its most probable value (2.35), its
-uncertainty range (0.03) and the best known probability that this true
-(95%)
+**We report:** what is measured $L$, its most probable value (2.35), its uncertainty range (0.03) and the best known confidence range (95%)
 
-If you cannot quantify the measurement uncertainty, <span
-class="alert">don’t</span> start make the measurement - it is useless
-
-<https://blog.beamex.com/calibration-uncertainty-for-dummies-part-1>
+"If you cannot quantify the measurement uncertainty, **don’t** start make the measurement - it is useless", source: https://blog.beamex.com/calibration-uncertainty-for-dummies-part-1>
 
 ## Uncertainty analysis
 
-1.  identify all the possible <span style="color:red">sources</span> of
-    uncertainty,
+1.  identify all the possible <span style="color:red">sources</span> of uncertainty,
 
-2.  evaluate the <span style="color:red">standard uncertainty</span> from
-    each source,
+2.  evaluate the <span style="color:red">standard uncertainty</span> from each source,
 
-3.  <span style="color:red">combine</span> the individual standard
-    uncertainties
+3.  <span style="color:red">combine</span> the individual standard uncertainties
 
-Some sources of uncertainty
+## Some known sources of uncertainty
 
 -   Measuring instrument: they suffer from errors.
 
@@ -162,7 +156,7 @@ Some sources of uncertainty
 You should not make any measurements unless you are aware of the related
 uncertainty.
 
-How to reduce uncertainty?
+## How to reduce uncertainty?
 
 **It is important to reduce uncertainty for an accurate measurement.**
 <span style="color:red">Remember:</span> you cannot eliminate uncertainty
