@@ -55,7 +55,6 @@ parts:
     - file: dynamic_signals/2nd_order_system_step_function_log_decrement.ipynb
     - file: dynamic_signals/first_order_time_response.ipynb
     - file: dynamic_signals/2nd_order_system_step_function_log_decrement.ipynb
-    - file: dynamic_signals/2nd_order_system_step_function_log_decrement.ipynb)
     - file: dynamic_signals/first_order_time_response.ipynb
     - file: dynamic_signals/step_response.ipynb
     - file: dynamic_signals/load_plot_spectrum_turbulent_data_jet
