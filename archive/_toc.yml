@@ -6,14 +6,14 @@ root: intro
 parts:
   - caption: Introduction
     chapters:
-    - file: markdown
-    - file: notebook
+    # - file: markdown
+    # - file: notebook
   - caption: Theory of measurements
     chapters:
       - file: theory/uncertainty101
       - file: theory/general_measurement_system_analysis
-    sections:
-        - file: markdown-notebooks
+    # sections:
+    #     - file: markdown-notebooks
   - caption: Statistics for measurements
     chapters: 
     - file: statistics/basic_statistics
@@ -21,9 +21,9 @@ parts:
     - file: statistics/Exploring+different+distributions
     - file: statistics/Lecture_5
     - file: calibration/regression_analysis
-    sections:
-      - file: statistics/outliers_example
-      - file: statistics/outlers_example-2
+#     sections:
+    - file: statistics/outliers_example
+    - file: statistics/outlers_example-2
   - caption: Calibration
     chapters: 
     - file: calibration/sensitivity_analysis
@@ -31,10 +31,10 @@ parts:
     - file: calibration/full_calibration_analysis_example
     - file: calibration/ldvt_calibration_2
     - file: calibration/Linearity_error_example
-    sections:
-      - file: calibration/calibration_curve_log_log
-      - file: calibration/error_analysis_pressure
-      - file: calibration/calibration_error_analysis_pressure
+#     sections:
+    - file: calibration/calibration_curve_log_log
+    - file: calibration/error_analysis_pressure
+    - file: calibration/calibration_error_analysis_pressure
 
 
 # ### Introduction and theory
