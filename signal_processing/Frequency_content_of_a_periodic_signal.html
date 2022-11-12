@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Fourier transforms" href="Fourier_transforms_pure_sine.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="proving_periods.html" />
+    <link rel="prev" title="Digitizing the signal using pure Python" href="proving_periods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Engineering Measurements and Instrumentation course
+                    Introduction to measurements for mechanical engineers
                 </a>
             </li>
         </ul>
@@ -229,6 +229,11 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="proving_periods.html">
+   Digitizing the signal using pure Python
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Using FFT the right way to find the correct spectrum
@@ -240,8 +245,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="digital_signal_processing.html">
-   Digital signal processing
+  <a class="reference internal" href="Fourier_coefficients_analytical_evaluation_periodic_ramp_function.html">
+   Symbolic evaluation of Fourier coefficients
   </a>
  </li>
  <li class="toctree-l1">
@@ -274,6 +279,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
    Example of pre-measurement design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/step_response.html">
+   Step responses of dynamical systems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">
+   Plot power spectrum of experimental data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/spectrum_example.html">
+   Spectrum example
   </a>
  </li>
  <li class="toctree-l1">
@@ -758,8 +778,8 @@ let’s try:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fae53b4d640&gt;,
- &lt;matplotlib.lines.Line2D at 0x7fae53b4d940&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f31b213e370&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7f31b213e220&gt;]
 </pre></div>
 </div>
 <img alt="../_images/Frequency_content_of_a_periodic_signal_18_1.png" src="../_images/Frequency_content_of_a_periodic_signal_18_1.png" />
@@ -776,7 +796,7 @@ let’s try:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fae53c54f40&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f31b2224400&gt;]
 </pre></div>
 </div>
 <img alt="../_images/Frequency_content_of_a_periodic_signal_19_1.png" src="../_images/Frequency_content_of_a_periodic_signal_19_1.png" />
@@ -796,8 +816,8 @@ let’s try:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.292650153591767 35.7733203125
-0.2903740880924372 64.786328125
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2083205412501847 35.7733203125
+0.3028931535686591 42.251953125
 </pre></div>
 </div>
 </div>
@@ -849,7 +869,7 @@ let’s try:</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Digitizing the signal using pure Python</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Fourier_transforms_pure_sine.html" title="next page">

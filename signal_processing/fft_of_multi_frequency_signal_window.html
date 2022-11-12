@@ -230,6 +230,11 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="proving_periods.html">
+   Digitizing the signal using pure Python
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Frequency_content_of_a_periodic_signal.html">
    Using FFT the right way to find the correct spectrum
   </a>
@@ -240,8 +245,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="digital_signal_processing.html">
-   Digital signal processing
+  <a class="reference internal" href="Fourier_coefficients_analytical_evaluation_periodic_ramp_function.html">
+   Symbolic evaluation of Fourier coefficients
   </a>
  </li>
  <li class="toctree-l1">
@@ -754,7 +759,7 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8049a04520&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd319ab54f0&gt;
 </pre></div>
 </div>
 <img alt="../_images/fft_of_multi_frequency_signal_window_12_1.png" src="../_images/fft_of_multi_frequency_signal_window_12_1.png" />
@@ -815,13 +820,13 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.17 µs ± 61.3 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.52 µs ± 172 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.85 µs ± 14.9 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.98 µs ± 90.5 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.66 µs ± 4.15 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.02 µs ± 170 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -872,7 +877,7 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8049b24a60&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd319be5310&gt;]
 </pre></div>
 </div>
 <img alt="../_images/fft_of_multi_frequency_signal_window_18_1.png" src="../_images/fft_of_multi_frequency_signal_window_18_1.png" />
@@ -906,7 +911,7 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8049bf02e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd319c02a00&gt;
 </pre></div>
 </div>
 <img alt="../_images/fft_of_multi_frequency_signal_window_20_1.png" src="../_images/fft_of_multi_frequency_signal_window_20_1.png" />
@@ -997,7 +1002,7 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8049b396d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd319bfed00&gt;
 </pre></div>
 </div>
 <img alt="../_images/fft_of_multi_frequency_signal_window_24_1.png" src="../_images/fft_of_multi_frequency_signal_window_24_1.png" />
@@ -1012,7 +1017,7 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f80481bcca0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd319cadf70&gt;]
 </pre></div>
 </div>
 <img alt="../_images/fft_of_multi_frequency_signal_window_25_1.png" src="../_images/fft_of_multi_frequency_signal_window_25_1.png" />
@@ -1056,8 +1061,8 @@ b) windowing with DC treatment</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8049ffba90&gt;,
- &lt;matplotlib.lines.Line2D at 0x7f8049ffbeb0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fd31a09eca0&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7fd31a09e220&gt;]
 </pre></div>
 </div>
 <img alt="../_images/fft_of_multi_frequency_signal_window_28_1.png" src="../_images/fft_of_multi_frequency_signal_window_28_1.png" />
