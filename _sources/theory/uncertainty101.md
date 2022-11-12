@@ -13,7 +13,7 @@ __Good means low uncertainty__
 
 ## Not this kind of “uncertainty”
 
-<img src="fig/uncertainty_arrows.jpg" alt="image" />
+![](fig/uncertainty_arrows.jpg)
 
 ## Measurement uncertainty
 
@@ -33,7 +33,7 @@ __Good means low uncertainty__
 
 -   Error is a property of this particular measurement and value.
 
-<img src="fig/rod_length.png" alt="image" height=300px/>
+![](fig/rod_length.png" alt="image" height=300px/>
 
 
 
@@ -46,12 +46,12 @@ __Good means low uncertainty__
 
 -   Our goal is to *quantify* and then to *reduce* this uncertainty
 
-<img src="fig/inner_diameter_2.jpg" alt="image" />
+![](fig/inner_diameter_2.jpg)
 
 
 ## Let’s repeat: error is not uncertainty
 
-<img src="fig/error_vs_uncertainty.png" alt="image" />
+![](fig/error_vs_uncertainty.png)
 
 Source: https://www.engineering.com/story/an-introduction-to-metrology-and-quality-in-manufacturing
 
@@ -63,7 +63,7 @@ Source: https://www.engineering.com/story/an-introduction-to-metrology-and-quali
 2.  The result is **the best estimate with uncertainty, expressed in
     standard units**.
 
-<img src="fig/words.png" alt="image" />
+![](fig/words.png)
 
 based on “Good practice guide no. 131” of **The Institute of Mechanical
 Engineers** <https://www.npl.co.uk/resources/gpgs>
@@ -86,18 +86,18 @@ Engineers** <https://www.npl.co.uk/resources/gpgs>
 
 ## Basic units
 
-<img src="fig/units1.png" alt="image" />
+![](fig/units1.png)
 
 ## Derived units
 
-<img src="fig/units2.png" alt="image" />
+![](fig/units2.png)
 
 ## Measurement science is important 
 
 Aero-engines are built to a very high accuracy and require about
 **200,000** separate measurements during production and maintenance
 
-<img src="fig/engine.jpeg" alt="image" />  
+![](fig/engine.jpeg)  
 <https://www.af.mil/News/Photos/igphoto/2000589434/>
 
 ## Categories of experiments
@@ -179,7 +179,7 @@ uncertainty.
 
 ## 8 points plan to quantify uncertainty
 
-<img src="fig/8steps.png" alt="image" />
+![](fig/8steps.png)
 
 ## 1. Decide what you need to find out from your measurement
 
@@ -189,7 +189,7 @@ that require a correction.
 
 For this example, suppose you decide to use a set of electronic calipers
 to measure the length of an object.
-<img src="fig/caliper.png" alt="image" />
+![](fig/caliper.png)
 
 \* **direct** and **indirect** measurements in the Lab
 
@@ -201,7 +201,7 @@ reading** on your electronic calipers, you know they are **well
 maintained** and **calibrated**, and then you took **repeated
 readings**.
 
-<img src="fig/notebook1.png" alt="image" />
+![](fig/notebook1.png)
 
 ## Notebook should be clear
 
@@ -210,7 +210,7 @@ sticker on the calipers**, and **a record of the temperature**. <span
 class="alert">This is good practice and pays off by 5% bonus for lab
 notebooks</span>
 
-<img src="fig/notebook1.png" alt="image" />
+![](fig/notebook1.png)
 
 ## Outliers and averaging
 
@@ -229,7 +229,7 @@ notebooks</span>
 
 ## 3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)
 
-<img src="fig/summaryuncertainty.png" alt="image" />
+![](fig/summaryuncertainty.png)
 
 ## Type A uncertainty
 
@@ -268,7 +268,7 @@ This is <span style="color:red">standard deviation of a single measurement
 Of course one could glue (white glue, no marking) a print from a Python
 notebook
 
-<img src="fig/notebook2.png" alt="image" />
+![](fig/notebook2.png)
 
 ## Type A standard uncertainty of average
 
@@ -291,7 +291,7 @@ estimate **the characteristics of this distribution** – and then worked
 out the standard uncertainty – <span style="color:red">how well one can
 estimate the position of the centre of the distribution</span>.
 
-<img src="fig/standarduncertainty.png" alt="image" />
+![](fig/standarduncertainty.png)
 
 ## Type B uncertainty evaluation
 
@@ -307,7 +307,7 @@ estimate the position of the centre of the distribution</span>.
 
 Typical sources of Type B
 
-<img src="fig/Vernier-Caliper-6.jpg" alt="image" />
+![](fig/Vernier-Caliper-6.jpg)
 
 -   Calibration - we do not know what how the calibration was performed
 
@@ -334,7 +334,7 @@ Then we use the standard deviation from that assumed distribution. Our basic opt
 4.  **Gaussian or normal**, random, all probable, $n \gt 20$
 
 Probability and distributions
-<img src="fig/central-limit-theorem.png" alt="image" />
+![](fig/central-limit-theorem.png)
 <https://www.muelaner.com/uncertainty-of-measurement/>
 
 ## Uniform distribution
@@ -381,7 +381,7 @@ standard uncertainty = half range/$\sqrt{3}$
 
 ### Summary of uncertainty types
 
-<img src="fig/summaryuncertainty.png" alt="image" />
+![](fig/summaryuncertainty.png)
 
 ### 4. Decide whether the errors of the input quantities are independent of each other 
 
@@ -445,7 +445,7 @@ could cause the calipers to read incorrectly.
     99% by combining with the appropriate coverage factor (assuming a
     normal distribution).
 
-<img src="fig/extendeduncertainty.png" alt="image" />
+![](fig/extendeduncertainty.png)
 
 ### 8. Write down the measurement result and the uncertainty, and state how you got both of these
 
@@ -465,20 +465,20 @@ The main things to mention are:
 
 ## An example 1/2
 
-<img src="fig/uncertainty_budget.png" alt="image" />
+![](fig/uncertainty_budget.png)
 
 Source: https://www.muelaner.com/uncertainty-budget
 
 ## An example, 2/2
 
-<img src="fig/combined_uncertainty.png" alt="image" />
+![](fig/combined_uncertainty.png)
 
 Source: https://www.muelaner.com/uncertainty-budget/
 
 
 ## Eight steps to get the correct measurement
 
-<img src="fig/8steps.png" alt="image" />
+![](fig/8steps.png)
 
 ##  This is just the simplest case 
 
