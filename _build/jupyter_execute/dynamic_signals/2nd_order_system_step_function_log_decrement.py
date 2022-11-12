@@ -34,13 +34,13 @@ from IPython.core.display import Image
 Image(filename='../../img/log-decrement.png',width=600)
 
 
-# In[2]:
+# In[ ]:
 
 
 get_ipython().run_line_magic('pylab', 'inline')
 
 
-# In[3]:
+# In[ ]:
 
 
 from scipy import signal
@@ -61,14 +61,14 @@ xlabel('$t$ [sec]')
 ylabel('E [V]')
 
 
-# In[4]:
+# In[ ]:
 
 
 # note that sampling is sufficient, if not we need to apply the D/A reconstruction
 # or interpolations, which will add more noise and uncertainty to the system identification
 
 
-# In[5]:
+# In[ ]:
 
 
 # plot the data as a decrement
@@ -82,7 +82,7 @@ xlabel('$t$ [sec]')
 ylabel('E [V]')
 
 
-# In[6]:
+# In[ ]:
 
 
 # we will use the open source peakdetect function from 
@@ -168,20 +168,20 @@ def peakdet(v, delta, x = None):
 #     show()
 
 
-# In[7]:
+# In[ ]:
 
 
 maxtab, mintab = peakdet(ys-1,.01,ts)
 
 
-# In[8]:
+# In[ ]:
 
 
 # we need only positive peaks, maxima:
 maxtab
 
 
-# In[9]:
+# In[ ]:
 
 
 # We see 4 peaks and therefore n = 4
@@ -196,21 +196,21 @@ xlabel('$t$ [sec]')
 ylabel('E [V]')
 
 
-# In[10]:
+# In[ ]:
 
 
 n = len(tstar)-1
 print("cycles = %d" % n)
 
 
-# In[11]:
+# In[ ]:
 
 
 T = (tstar[-1] - tstar[0])/(n)
 print ("period T= %4.3f sec" % T)
 
 
-# In[12]:
+# In[ ]:
 
 
 # delta 
@@ -218,7 +218,7 @@ d = log(ystar[0]/ystar[-1])/(n)
 print ("delta = %4.3f " % d)
 
 
-# In[13]:
+# In[ ]:
 
 
 # recover the damping and the frequency:

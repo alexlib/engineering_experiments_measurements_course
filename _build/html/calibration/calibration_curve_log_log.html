@@ -194,6 +194,67 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Analog to digital (A/D) and D/A
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../a2d/sampling_aliasing_examples.html">
+   Understand sampling, clipping and aliasing problems
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Signal processing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/Frequency_content_of_a_periodic_signal.html">
+   Using FFT the right way to find the correct spectrum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/Fourier_transforms_pure_sine.html">
+   Fourier transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/digital_signal_processing.html">
+   Digital signal processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/FFT_based_filtering.html">
+   Using FFT-based filter to reduce noise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signal_processing/fft_of_multi_frequency_signal_window.html">
+   FFT demo of a real, periodic signal
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Dynamic signals
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/2nd_order_system_step_function_log_decrement.html">
+   Log decrement method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
+   1st order dynamic system
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav></div>
@@ -447,7 +508,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b6694550&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f59821af520&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_2_1.png" src="../_images/calibration_curve_log_log_2_1.png" />
@@ -461,7 +522,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b459b040&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f59800a8c10&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_3_1.png" src="../_images/calibration_curve_log_log_3_1.png" />
@@ -477,7 +538,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b45101f0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f598002d130&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_5_1.png" src="../_images/calibration_curve_log_log_5_1.png" />
@@ -505,7 +566,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b447f850&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f597ff9f5b0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_7_1.png" src="../_images/calibration_curve_log_log_7_1.png" />
@@ -520,7 +581,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b4471e80&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f597ff8cd30&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_8_1.png" src="../_images/calibration_curve_log_log_8_1.png" />
@@ -549,8 +610,8 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b43f45e0&gt;,
- &lt;matplotlib.lines.Line2D at 0x7fe7b43f4580&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f597ff0f550&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7f597ff0f5e0&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_10_1.png" src="../_images/calibration_curve_log_log_10_1.png" />
@@ -567,7 +628,7 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b436b0d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f597fe88310&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_11_1.png" src="../_images/calibration_curve_log_log_11_1.png" />
@@ -580,7 +641,7 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b42d17c0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f597fde5a30&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_12_1.png" src="../_images/calibration_curve_log_log_12_1.png" />
@@ -614,7 +675,7 @@ T = [91.72763561 70.60278306 53.0039356  45.03419592 32.45847839 29.03763728
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe7b424f0d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f597fd58e50&gt;]
 </pre></div>
 </div>
 <img alt="../_images/calibration_curve_log_log_15_1.png" src="../_images/calibration_curve_log_log_15_1.png" />
