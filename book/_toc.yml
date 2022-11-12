@@ -8,8 +8,10 @@ parts:
     # chapters:
     # - file: markdown
     # - file: notebook
-  - caption: Theory of measurements
+  - caption: Theory of experiments and measurements
     chapters:
+      - file: theory/standartization
+      - file: theory/laboratory_notebook
       - file: theory/uncertainty101
       - file: theory/general_measurement_system_analysis
     # sections:
