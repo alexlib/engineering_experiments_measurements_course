@@ -328,6 +328,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/alexlib/engineering_experiments_measurements_course/master?urlpath=tree/book/unsorted/doppler.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -350,7 +379,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://alexlib.github.io/engineering_experiments_measurements_course/_build/html/"
+        <a href="https://github.com/alexlib/engineering_experiments_measurements_course/"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -367,7 +396,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://alexlib.github.io/engineering_experiments_measurements_course/_build/html//issues/new?title=Issue%20on%20page%20%2Funsorted/doppler.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/alexlib/engineering_experiments_measurements_course//issues/new?title=Issue%20on%20page%20%2Funsorted/doppler.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -654,61 +683,6 @@ title="Print to PDF"
 30 10.0 0.0 10.0
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">doppler</span><span class="p">()</span>
-
-<span class="nn">Cell In [2], line 105,</span> in <span class="ni">doppler</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="n">pylab</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">bottom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">top</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">105</span> <span class="n">pylab</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="o">-</span><span class="mf">1.2</span><span class="o">*</span><span class="n">xmax</span><span class="p">,</span><span class="mf">1.2</span><span class="o">*</span><span class="n">xmax</span><span class="p">,</span><span class="o">-</span><span class="mf">1.2</span><span class="o">*</span><span class="n">xmax</span><span class="p">,</span><span class="mf">1.2</span><span class="o">*</span><span class="n">xmax</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span> <span class="n">pylab</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="n">f</span> <span class="o">=</span> <span class="n">pylab</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
-
-<span class="nn">File ~/.edm/envs/mdd/lib/python3.8/site-packages/matplotlib/pyplot.py:2331,</span> in <span class="ni">axis</span><span class="nt">(emit, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2329</span> <span class="nd">@_copy_docstring_and_deprecators</span><span class="p">(</span><span class="n">Axes</span><span class="o">.</span><span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2330</span> <span class="k">def</span> <span class="nf">axis</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">emit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">2331</span>     <span class="k">return</span> <span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">emit</span><span class="o">=</span><span class="n">emit</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/.edm/envs/mdd/lib/python3.8/site-packages/matplotlib/axes/_base.py:2145,</span> in <span class="ni">_AxesBase.axis</span><span class="nt">(self, emit, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2141</span>     <span class="n">yauto</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">2142</span>              <span class="k">if</span> <span class="n">ymin</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ymax</span> <span class="ow">is</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">2143</span>              <span class="k">else</span> <span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2144</span>     <span class="bp">self</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">,</span> <span class="n">emit</span><span class="o">=</span><span class="n">emit</span><span class="p">,</span> <span class="n">auto</span><span class="o">=</span><span class="n">xauto</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2145</span>     <span class="bp">self</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">,</span> <span class="n">emit</span><span class="o">=</span><span class="n">emit</span><span class="p">,</span> <span class="n">auto</span><span class="o">=</span><span class="n">yauto</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2146</span> <span class="k">if</span> <span class="n">kwargs</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2147</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;axis() got an unexpected keyword argument &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2148</span>                     <span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">kwargs</span><span class="p">))</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/.edm/envs/mdd/lib/python3.8/site-packages/matplotlib/_api/deprecation.py:454,</span> in <span class="ni">make_keyword_only.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">name_idx</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">449</span>     <span class="n">warn_deprecated</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="n">since</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Passing the </span><span class="si">%(name)s</span><span class="s2"> </span><span class="si">%(obj_type)s</span><span class="s2"> &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span>         <span class="s2">&quot;positionally is deprecated since Matplotlib </span><span class="si">%(since)s</span><span class="s2">; the &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">452</span>         <span class="s2">&quot;parameter will become keyword-only </span><span class="si">%(removal)s</span><span class="s2">.&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">453</span>         <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">obj_type</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;parameter of </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">()&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">454</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/.edm/envs/mdd/lib/python3.8/site-packages/matplotlib/axes/_base.py:3925,</span> in <span class="ni">_AxesBase.set_ylim</span><span class="nt">(self, bottom, top, emit, auto, ymin, ymax)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3923</span>         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Cannot pass both &#39;top&#39; and &#39;ymax&#39;&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3924</span>     <span class="n">top</span> <span class="o">=</span> <span class="n">ymax</span>
-<span class="ne">-&gt; </span><span class="mi">3925</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">_set_lim</span><span class="p">(</span><span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">,</span> <span class="n">emit</span><span class="o">=</span><span class="n">emit</span><span class="p">,</span> <span class="n">auto</span><span class="o">=</span><span class="n">auto</span><span class="p">)</span>
-
-<span class="nn">File ~/.edm/envs/mdd/lib/python3.8/site-packages/matplotlib/axis.py:1136,</span> in <span class="ni">Axis._set_lim</span><span class="nt">(self, v0, v1, emit, auto)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1133</span>         <span class="n">_api</span><span class="o">.</span><span class="n">warn_external</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attempt to set non-positive </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">lim on &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1134</span>                            <span class="sa">f</span><span class="s2">&quot;a log-scaled axis will be ignored.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1135</span>         <span class="n">v1</span> <span class="o">=</span> <span class="n">old1</span>
-<span class="ne">-&gt; </span><span class="mi">1136</span> <span class="k">if</span> <span class="n">v0</span> <span class="o">==</span> <span class="n">v1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1137</span>     <span class="n">_api</span><span class="o">.</span><span class="n">warn_external</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1138</span>         <span class="sa">f</span><span class="s2">&quot;Attempting to set identical low and high </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">lims &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1139</span>         <span class="sa">f</span><span class="s2">&quot;makes transformation singular; automatically expanding.&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1140</span> <span class="n">reverse</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">v0</span> <span class="o">&gt;</span> <span class="n">v1</span><span class="p">)</span>  <span class="c1"># explicit cast needed for python3.8+np.bool_.</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-<img alt="../_images/doppler_2_2.png" src="../_images/doppler_2_2.png" />
 </div>
 </div>
 
