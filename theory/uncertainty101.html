@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Uncertainty 101 &#8212; Introduction to Measurements for Mechanical Engineers</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,61 +64,104 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'theory/uncertainty101';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="General measurement system diagram" href="general_measurement_system_analysis.html" />
     <link rel="prev" title="Laboratory Notebook" href="laboratory_notebook.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Introduction to Measurements for Mechanical Engineers</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Measurements for Mechanical Engineers - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Measurements for Mechanical Engineers - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -115,898 +170,334 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Theory of experiments and measurements
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory of experiments and measurements</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="standartization.html">
-   Standardization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="laboratory_notebook.html">
-   Laboratory Notebook
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Uncertainty 101
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="general_measurement_system_analysis.html">
-   General measurement system diagram
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="significant_digits.html">
-   Significant digits
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="standartization.html">Standardization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laboratory_notebook.html">Laboratory Notebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Uncertainty 101</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_measurement_system_analysis.html">General measurement system diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="significant_digits.html">Significant digits</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Statistics for measurements
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistics for measurements</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../statistics/basic_statistics.html">
-   Very basic review of some statistics terms
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../statistics/distributions.html">
-   Probability Distributions and the Central Limit Theorem
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../statistics/Lecture_5.html">
-   Lecture 5 - probability and statistics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../calibration/regression_analysis.html">
-   Lecture 6
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../statistics/outliers_example.html">
-   Outliers
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/basic_statistics.html">Very basic review of some statistics terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/distributions.html">Probability Distributions and the Central Limit Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/Lecture_5.html">Lecture 5 - probability and statistics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../calibration/regression_analysis.html">Lecture 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistics/outliers_example.html">Outliers</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Calibration
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Calibration</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../calibration/sensitivity_analysis.html">
-   Sensitivity estimate example
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../calibration/micrometer_calibration.html">
-   Micrometer calibration using gage block
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../calibration/full_calibration_analysis_example.html">
-   Calibration and uncertainty analysis - virtual experiment
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../calibration/calibration_curve_log_log.html">
-   Calibration of non-linear (logarithmic) function
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../calibration/calibration_error_analysis_pressure.html">
-   Hysteresis and regression analysis example
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../calibration/sensitivity_analysis.html">Sensitivity estimate example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calibration/micrometer_calibration.html">Micrometer calibration using gage block</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../calibration/full_calibration_analysis_example.html">Calibration and uncertainty analysis - virtual experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calibration/calibration_curve_log_log.html">Calibration of non-linear (logarithmic) function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calibration/calibration_error_analysis_pressure.html">Hysteresis and regression analysis example</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Analog to digital (A/D) and D/A
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analog to digital (A/D) and D/A</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../a2d/mimic_analog_to_digital_conversion.html">
-   Mimic A/D conversion
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../a2d/Reconstruction_periodic_signal_Cardinal_series.html">
-   Analog to digital (A/D) and Digital to Analog (d/A) conversion example
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../a2d/sampling_aliasing_examples.html">
-   Sampling, clipping and aliasing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../a2d/reconstruct_with_sinc.html">
-   Digital to Analog conversion using sinc
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../a2d/mimic_analog_to_digital_conversion.html">Mimic A/D conversion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../a2d/Reconstruction_periodic_signal_Cardinal_series.html">Analog to digital (A/D) and Digital to Analog (d/A) conversion example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../a2d/sampling_aliasing_examples.html">Sampling, clipping and aliasing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../a2d/reconstruct_with_sinc.html">Digital to Analog conversion using sinc</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Signal processing
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Signal processing</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../signal_processing/proving_periods.html">
-   Digitizing the signal using pure Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../signal_processing/Frequency_content_of_a_periodic_signal.html">
-   Using FFT the right way to find the correct spectrum
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../signal_processing/Fourier_transforms_pure_sine.html">
-   Fourier transforms
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../signal_processing/Fourier_coefficients_analytical_evaluation_periodic_ramp_function.html">
-   Symbolic evaluation of Fourier coefficients
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../signal_processing/FFT_based_filtering.html">
-   Using FFT-based filter to reduce noise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../signal_processing/fft_of_multi_frequency_signal_window.html">
-   FFT demo of a real, periodic signal
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../signal_processing/proving_periods.html">Digitizing the signal using pure Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal_processing/Frequency_content_of_a_periodic_signal.html">Using FFT the right way to find the correct spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal_processing/Fourier_transforms_pure_sine.html">Fourier transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal_processing/Fourier_coefficients_analytical_evaluation_periodic_ramp_function.html">Symbolic evaluation of Fourier coefficients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal_processing/FFT_based_filtering.html">Using FFT-based filter to reduce noise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signal_processing/fft_of_multi_frequency_signal_window.html">FFT demo of a real, periodic signal</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Dynamic signals
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dynamic signals</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/2nd_order_system_step_function_log_decrement.html">
-   Log decrement method
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/first_order_time_response.html">
-   1st order dynamic system
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">
-   Example of pre-measurement design
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/step_response.html">
-   Step responses of dynamical systems
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">
-   Plot power spectrum of experimental data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/spectrum_example.html">
-   Spectrum example
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../dynamic_signals/simple_fft_two_sine.html">
-   Fast Fourier Transform (FFT) of a sum of two sine signals
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/2nd_order_system_step_function_log_decrement.html">Log decrement method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/first_order_time_response.html">1st order dynamic system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/design_choice_2nd_order_pressure_transducer.html">Example of pre-measurement design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/step_response.html">Step responses of dynamical systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">Plot power spectrum of experimental data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/spectrum_example.html">Spectrum example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/simple_fft_two_sine.html">Fast Fourier Transform (FFT) of a sum of two sine signals</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alexlib/engineering_experiments_measurements_course" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alexlib/engineering_experiments_measurements_course/issues/new?title=Issue%20on%20page%20%2Ftheory/uncertainty101.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/theory/uncertainty101.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/alexlib/engineering_experiments_measurements_course/"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/alexlib/engineering_experiments_measurements_course//issues/new?title=Issue%20on%20page%20%2Ftheory/uncertainty101.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/theory/uncertainty101.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#this-course-is-about">
-   This course is about:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uncertainty">
-   Uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#not-this-kind-of-uncertainty">
-   Not this kind of “uncertainty”
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-uncertainty">
-   Measurement uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lets-repeat-error-is-not-uncertainty">
-   Let’s repeat: error is not uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definitions">
-   Definitions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#we-use-only-si">
-   We use only SI
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-units">
-   Basic units
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#derived-units">
-   Derived units
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-science-is-important">
-   Measurement science is important
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#categories-of-experiments">
-   Categories of experiments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-is-as-good-as-its-uncertainty">
-   Measurement is as good as its uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uncertainty-analysis">
-   Uncertainty analysis
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#some-known-sources-of-uncertainty">
-   Some known sources of uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-reduce-uncertainty">
-   How to reduce uncertainty?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-plan-to-quantify-uncertainty">
-   8 points plan to quantify uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decide-what-you-need-to-find-out-from-your-measurement">
-   1. Decide what you need to find out from your measurement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#carry-out-and-record-the-measurements-needed">
-   2. Carry out and record the measurements needed
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebook-should-be-clear">
-   Notebook should be clear
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outliers-and-averaging">
-   Outliers and averaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties">
-   3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-uncertainty">
-   Type A uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continued">
-   3. continued …
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-uncertainty-evaluation">
-   Type A uncertainty evaluation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#write-it-clear-in-your-notebook">
-   Write it clear in your notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-standard-uncertainty-of-average">
-   Type A standard uncertainty of average
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-standard-uncertainty">
-   Type A standard uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-b-uncertainty-evaluation">
-   Type B uncertainty evaluation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uniform-distribution">
-   Uniform distribution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#back-to-type-b-in-our-example">
-     Back to Type B in our example
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary-of-uncertainty-types">
-     Summary of uncertainty types
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other">
-     4. Decide whether the errors of the input quantities are independent of each other
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations">
-     5. Calculate the result of your measurement (including any known corrections, such as calibrations)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions">
-     6. Find the combined standard uncertainty from all the individual uncertainty contributions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#and-our-combined-uncertainty-is">
-     And our combined uncertainty is …
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculate-expanded-uncertainty-for-a-particular-level-of-confidence">
-     7. Calculate expanded uncertainty for a particular level of confidence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these">
-     8. Write down the measurement result and the uncertainty, and state how you got both of these
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-1-2">
-   An example 1/2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-2-2">
-   An example, 2/2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eight-steps-to-get-the-correct-measurement">
-   Eight steps to get the correct measurement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#this-is-just-the-simplest-case">
-   This is just the simplest case
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#combination-of-uncertainties">
-   Combination of uncertainties
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#theory-of-uncertainty-analysis-taylor-expansion">
-   Theory of uncertainty analysis Taylor expansion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maximum-uncertainty">
-   Maximum uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expected-uncertainty">
-   Expected uncertainty
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-expectation-method">
-     The expectation method
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Uncertainty 101</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#this-course-is-about">
-   This course is about:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uncertainty">
-   Uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#not-this-kind-of-uncertainty">
-   Not this kind of “uncertainty”
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-uncertainty">
-   Measurement uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lets-repeat-error-is-not-uncertainty">
-   Let’s repeat: error is not uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definitions">
-   Definitions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#we-use-only-si">
-   We use only SI
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-units">
-   Basic units
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#derived-units">
-   Derived units
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-science-is-important">
-   Measurement science is important
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#categories-of-experiments">
-   Categories of experiments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-is-as-good-as-its-uncertainty">
-   Measurement is as good as its uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uncertainty-analysis">
-   Uncertainty analysis
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#some-known-sources-of-uncertainty">
-   Some known sources of uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-reduce-uncertainty">
-   How to reduce uncertainty?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#points-plan-to-quantify-uncertainty">
-   8 points plan to quantify uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decide-what-you-need-to-find-out-from-your-measurement">
-   1. Decide what you need to find out from your measurement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#carry-out-and-record-the-measurements-needed">
-   2. Carry out and record the measurements needed
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebook-should-be-clear">
-   Notebook should be clear
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outliers-and-averaging">
-   Outliers and averaging
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties">
-   3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-uncertainty">
-   Type A uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#continued">
-   3. continued …
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-uncertainty-evaluation">
-   Type A uncertainty evaluation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#write-it-clear-in-your-notebook">
-   Write it clear in your notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-standard-uncertainty-of-average">
-   Type A standard uncertainty of average
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-a-standard-uncertainty">
-   Type A standard uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#type-b-uncertainty-evaluation">
-   Type B uncertainty evaluation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uniform-distribution">
-   Uniform distribution
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#back-to-type-b-in-our-example">
-     Back to Type B in our example
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary-of-uncertainty-types">
-     Summary of uncertainty types
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other">
-     4. Decide whether the errors of the input quantities are independent of each other
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations">
-     5. Calculate the result of your measurement (including any known corrections, such as calibrations)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions">
-     6. Find the combined standard uncertainty from all the individual uncertainty contributions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#and-our-combined-uncertainty-is">
-     And our combined uncertainty is …
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculate-expanded-uncertainty-for-a-particular-level-of-confidence">
-     7. Calculate expanded uncertainty for a particular level of confidence
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these">
-     8. Write down the measurement result and the uncertainty, and state how you got both of these
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-1-2">
-   An example 1/2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-2-2">
-   An example, 2/2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eight-steps-to-get-the-correct-measurement">
-   Eight steps to get the correct measurement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#this-is-just-the-simplest-case">
-   This is just the simplest case
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#combination-of-uncertainties">
-   Combination of uncertainties
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#theory-of-uncertainty-analysis-taylor-expansion">
-   Theory of uncertainty analysis Taylor expansion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maximum-uncertainty">
-   Maximum uncertainty
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expected-uncertainty">
-   Expected uncertainty
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-expectation-method">
-     The expectation method
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Uncertainty 101</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-course-is-about">This course is about:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty">Uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#not-this-kind-of-uncertainty">Not this kind of “uncertainty”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-uncertainty">Measurement uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-repeat-error-is-not-uncertainty">Let’s repeat: error is not uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-use-only-si">We use only SI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-units">Basic units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derived-units">Derived units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-science-is-important">Measurement science is important</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categories-of-experiments">Categories of experiments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-is-as-good-as-its-uncertainty">Measurement is as good as its uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-analysis">Uncertainty analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-known-sources-of-uncertainty">Some known sources of uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-reduce-uncertainty">How to reduce uncertainty?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-plan-to-quantify-uncertainty">8 points plan to quantify uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-what-you-need-to-find-out-from-your-measurement">1. Decide what you need to find out from your measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carry-out-and-record-the-measurements-needed">2. Carry out and record the measurements needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-should-be-clear">Notebook should be clear</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers-and-averaging">Outliers and averaging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties">3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-uncertainty">Type A uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continued">3. continued …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-uncertainty-evaluation">Type A uncertainty evaluation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-it-clear-in-your-notebook">Write it clear in your notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-standard-uncertainty-of-average">Type A standard uncertainty of average</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-standard-uncertainty">Type A standard uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-b-uncertainty-evaluation">Type B uncertainty evaluation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-distribution">Uniform distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-type-b-in-our-example">Back to Type B in our example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-uncertainty-types">Summary of uncertainty types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other">4. Decide whether the errors of the input quantities are independent of each other</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations">5. Calculate the result of your measurement (including any known corrections, such as calibrations)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions">6. Find the combined standard uncertainty from all the individual uncertainty contributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-our-combined-uncertainty-is">And our combined uncertainty is …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-expanded-uncertainty-for-a-particular-level-of-confidence">7. Calculate expanded uncertainty for a particular level of confidence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these">8. Write down the measurement result and the uncertainty, and state how you got both of these</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-1-2">An example 1/2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-2-2">An example, 2/2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eight-steps-to-get-the-correct-measurement">Eight steps to get the correct measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-just-the-simplest-case">This is just the simplest case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combination-of-uncertainties">Combination of uncertainties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theory-of-uncertainty-analysis-taylor-expansion">Theory of uncertainty analysis Taylor expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-uncertainty">Maximum uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-uncertainty">Expected uncertainty</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-expectation-method">The expectation method</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="uncertainty-101">
-<h1>Uncertainty 101<a class="headerlink" href="#uncertainty-101" title="Permalink to this headline">#</a></h1>
+<h1>Uncertainty 101<a class="headerlink" href="#uncertainty-101" title="Permalink to this heading">#</a></h1>
 <section id="this-course-is-about">
-<h2>This course is about:<a class="headerlink" href="#this-course-is-about" title="Permalink to this headline">#</a></h2>
+<h2>This course is about:<a class="headerlink" href="#this-course-is-about" title="Permalink to this heading">#</a></h2>
 <p><em><strong>The science of good measurement</strong></em></p>
 <p><strong>Good means low uncertainty</strong></p>
 </section>
 <section id="uncertainty">
-<h2>Uncertainty<a class="headerlink" href="#uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Uncertainty<a class="headerlink" href="#uncertainty" title="Permalink to this heading">#</a></h2>
 <p><img alt="uncertainty" src="../_images/uncertainty-ahead.jpg" /></p>
 </section>
 <section id="not-this-kind-of-uncertainty">
-<h2>Not this kind of “uncertainty”<a class="headerlink" href="#not-this-kind-of-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Not this kind of “uncertainty”<a class="headerlink" href="#not-this-kind-of-uncertainty" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/uncertainty_arrows.jpg" /></p>
 </section>
 <section id="measurement-uncertainty">
-<h2>Measurement uncertainty<a class="headerlink" href="#measurement-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Measurement uncertainty<a class="headerlink" href="#measurement-uncertainty" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Engineers are interested in the uncertainty of measurement simply
 because we wish to make good quality measurements and to
@@ -1032,13 +523,13 @@ uncertainty is 1 mm.</p></li>
 <p><img alt="" src="../_images/inner_diameter_2.jpg" /></p>
 </section>
 <section id="lets-repeat-error-is-not-uncertainty">
-<h2>Let’s repeat: error is not uncertainty<a class="headerlink" href="#lets-repeat-error-is-not-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Let’s repeat: error is not uncertainty<a class="headerlink" href="#lets-repeat-error-is-not-uncertainty" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/error_vs_uncertainty.png" /></p>
 <p>Source: <a class="reference external" href="https://www.engineering.com/story/an-introduction-to-metrology-and-quality-in-manufacturing">https://www.engineering.com/story/an-introduction-to-metrology-and-quality-in-manufacturing</a></p>
 </section>
 <section id="definitions">
-<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p><strong>Measurement is:</strong> estimate of the size, amount or degree of a
 desired quantity/parameter by using a set of instruments or devices.</p></li>
 <li><p>The result is <strong>the best estimate with uncertainty, expressed in
@@ -1049,7 +540,7 @@ standard units</strong>.</p></li>
 Engineers</strong> <a class="reference external" href="https://www.npl.co.uk/resources/gpgs">https://www.npl.co.uk/resources/gpgs</a></p>
 </section>
 <section id="we-use-only-si">
-<h2>We use only SI<a class="headerlink" href="#we-use-only-si" title="Permalink to this headline">#</a></h2>
+<h2>We use only SI<a class="headerlink" href="#we-use-only-si" title="Permalink to this heading">#</a></h2>
 <p><span style="color:red">International system of units (SI)</span></p>
 <ul class="simple">
 <li><p>The International System of Units has the abbreviation SI (French).</p></li>
@@ -1063,22 +554,22 @@ one another.</p></li>
 </ul>
 </section>
 <section id="basic-units">
-<h2>Basic units<a class="headerlink" href="#basic-units" title="Permalink to this headline">#</a></h2>
+<h2>Basic units<a class="headerlink" href="#basic-units" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/units1.png" /></p>
 </section>
 <section id="derived-units">
-<h2>Derived units<a class="headerlink" href="#derived-units" title="Permalink to this headline">#</a></h2>
+<h2>Derived units<a class="headerlink" href="#derived-units" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/units2.png" /></p>
 </section>
 <section id="measurement-science-is-important">
-<h2>Measurement science is important<a class="headerlink" href="#measurement-science-is-important" title="Permalink to this headline">#</a></h2>
+<h2>Measurement science is important<a class="headerlink" href="#measurement-science-is-important" title="Permalink to this heading">#</a></h2>
 <p>Aero-engines are built to a very high accuracy and require about
 <strong>200,000</strong> separate measurements during production and maintenance</p>
 <p><img alt="" src="../_images/engine.jpeg" /><br />
 <a class="reference external" href="https://www.af.mil/News/Photos/igphoto/2000589434/">https://www.af.mil/News/Photos/igphoto/2000589434/</a></p>
 </section>
 <section id="categories-of-experiments">
-<h2>Categories of experiments<a class="headerlink" href="#categories-of-experiments" title="Permalink to this headline">#</a></h2>
+<h2>Categories of experiments<a class="headerlink" href="#categories-of-experiments" title="Permalink to this heading">#</a></h2>
 <p>Different categories require different uncertainty approach:</p>
 <ul class="simple">
 <li><p>basic science - to learn something new about nature</p></li>
@@ -1094,22 +585,22 @@ b) if suitable for the <strong>intended purpose</strong>.</p>
 <p><img alt="image" src="../_images/kelvin_quote.jpeg" /></p>
 </section>
 <section id="measurement-is-as-good-as-its-uncertainty">
-<h2>Measurement is as good as its uncertainty<a class="headerlink" href="#measurement-is-as-good-as-its-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Measurement is as good as its uncertainty<a class="headerlink" href="#measurement-is-as-good-as-its-uncertainty" title="Permalink to this heading">#</a></h2>
 <p><span style="color:red">measurement = best estimate ± uncertainty</span></p>
 <p><span class="math notranslate nohighlight">\(L = 2.35 \pm 0.03\)</span>  mm  (95% confidence)</p>
 <p><strong>We report:</strong> what is measured <span class="math notranslate nohighlight">\(L\)</span>, its most probable value (2.35), its uncertainty range (0.03) and the best known confidence range (95%)</p>
 <p>“If you cannot quantify the measurement uncertainty, <strong>don’t</strong> start make the measurement - it is useless”, source: <a class="reference external" href="https://blog.beamex.com/calibration-uncertainty-for-dummies-part-1">https://blog.beamex.com/calibration-uncertainty-for-dummies-part-1</a>&gt;</p>
 </section>
 <section id="uncertainty-analysis">
-<h2>Uncertainty analysis<a class="headerlink" href="#uncertainty-analysis" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
+<h2>Uncertainty analysis<a class="headerlink" href="#uncertainty-analysis" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>identify all the possible <span style="color:red">sources</span> of uncertainty,</p></li>
 <li><p>evaluate the <span style="color:red">standard uncertainty</span> from each source,</p></li>
 <li><p><span style="color:red">combine</span> the individual standard uncertainties</p></li>
 </ol>
 </section>
 <section id="some-known-sources-of-uncertainty">
-<h2>Some known sources of uncertainty<a class="headerlink" href="#some-known-sources-of-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Some known sources of uncertainty<a class="headerlink" href="#some-known-sources-of-uncertainty" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Measuring instrument: they suffer from errors.</p></li>
 <li><p>Environmental conditions: some measurements are affected by varying
@@ -1124,7 +615,7 @@ and/or judgment skill.</p></li>
 uncertainty.</p>
 </section>
 <section id="how-to-reduce-uncertainty">
-<h2>How to reduce uncertainty?<a class="headerlink" href="#how-to-reduce-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>How to reduce uncertainty?<a class="headerlink" href="#how-to-reduce-uncertainty" title="Permalink to this heading">#</a></h2>
 <p><strong>It is important to reduce uncertainty for an accurate measurement.</strong>
 <span style="color:red">Remember:</span> you cannot eliminate uncertainty</p>
 <ul class="simple">
@@ -1138,11 +629,11 @@ uncertainty.</p>
 </ul>
 </section>
 <section id="points-plan-to-quantify-uncertainty">
-<h2>8 points plan to quantify uncertainty<a class="headerlink" href="#points-plan-to-quantify-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>8 points plan to quantify uncertainty<a class="headerlink" href="#points-plan-to-quantify-uncertainty" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/8steps.png" /></p>
 </section>
 <section id="decide-what-you-need-to-find-out-from-your-measurement">
-<h2>1. Decide what you need to find out from your measurement<a class="headerlink" href="#decide-what-you-need-to-find-out-from-your-measurement" title="Permalink to this headline">#</a></h2>
+<h2>1. Decide what you need to find out from your measurement<a class="headerlink" href="#decide-what-you-need-to-find-out-from-your-measurement" title="Permalink to this heading">#</a></h2>
 <p>Identify the <strong>type of measurement</strong> and how it is to be measured, as
 well as any <strong>calculations*</strong> required in the process such as effects
 that require a correction.</p>
@@ -1152,7 +643,7 @@ to measure the length of an object.
 <p>* <strong>direct</strong> and <strong>indirect</strong> measurements in the Lab</p>
 </section>
 <section id="carry-out-and-record-the-measurements-needed">
-<h2>2. Carry out and record the measurements needed<a class="headerlink" href="#carry-out-and-record-the-measurements-needed" title="Permalink to this headline">#</a></h2>
+<h2>2. Carry out and record the measurements needed<a class="headerlink" href="#carry-out-and-record-the-measurements-needed" title="Permalink to this heading">#</a></h2>
 <p>Follow a <strong>specified measurement procedure</strong> to ensure that your
 measurement is consistent with <strong>standards</strong>. Check: <strong>the zero
 reading</strong> on your electronic calipers, you know they are <strong>well
@@ -1161,7 +652,7 @@ readings</strong>.</p>
 <p><img alt="" src="../_images/notebook1.png" /></p>
 </section>
 <section id="notebook-should-be-clear">
-<h2>Notebook should be clear<a class="headerlink" href="#notebook-should-be-clear" title="Permalink to this headline">#</a></h2>
+<h2>Notebook should be clear<a class="headerlink" href="#notebook-should-be-clear" title="Permalink to this heading">#</a></h2>
 <p><strong>a date</strong>, <strong>name</strong>, <strong>the instruments</strong>, <strong>a note of the calibration
 sticker on the calipers</strong>, and <strong>a record of the temperature</strong>. <span
 class="alert">This is good practice and pays off by 5% bonus for lab
@@ -1169,7 +660,7 @@ notebooks</span></p>
 <p><img alt="" src="../_images/notebook1.png" /></p>
 </section>
 <section id="outliers-and-averaging">
-<h2>Outliers and averaging<a class="headerlink" href="#outliers-and-averaging" title="Permalink to this headline">#</a></h2>
+<h2>Outliers and averaging<a class="headerlink" href="#outliers-and-averaging" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Because the numbers are laid out neatly, it makes it easy to spot
 that Measurement 3 is out of line with the others. Having confirmed
@@ -1184,11 +675,11 @@ take the average of the other 24.</p></li>
 </ul>
 </section>
 <section id="evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties">
-<h2>3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)<a class="headerlink" href="#evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties" title="Permalink to this headline">#</a></h2>
+<h2>3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)<a class="headerlink" href="#evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/summaryuncertainty.png" /></p>
 </section>
 <section id="type-a-uncertainty">
-<h2>Type A uncertainty<a class="headerlink" href="#type-a-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Type A uncertainty<a class="headerlink" href="#type-a-uncertainty" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Type A</strong> uncertainty evaluations are carried out by <strong>statistical
 methods</strong>, usually from repeated measurement readings. In this case,
@@ -1197,7 +688,7 @@ you have 24 readings and have used these to gain an average of
 </ul>
 </section>
 <section id="continued">
-<h2>3. continued …<a class="headerlink" href="#continued" title="Permalink to this headline">#</a></h2>
+<h2>3. continued …<a class="headerlink" href="#continued" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Type B</strong> uncertainty evaluations are carried out using any other
 information such as past experiences, calibration certificates,
@@ -1211,7 +702,7 @@ uncertainty”</span> – with each term.</p></li>
 </ul>
 </section>
 <section id="type-a-uncertainty-evaluation">
-<h2>Type A uncertainty evaluation<a class="headerlink" href="#type-a-uncertainty-evaluation" title="Permalink to this headline">#</a></h2>
+<h2>Type A uncertainty evaluation<a class="headerlink" href="#type-a-uncertainty-evaluation" title="Permalink to this heading">#</a></h2>
 <p>For <span style="color:red">Type A</span>: characterize the variability of
 <em>n</em> readings by their <strong>standard deviation</strong>, given by the formula below</p>
 <div class="math notranslate nohighlight">
@@ -1222,13 +713,13 @@ uncertainty”</span> – with each term.</p></li>
 !</span></p>
 </section>
 <section id="write-it-clear-in-your-notebook">
-<h2>Write it clear in your notebook<a class="headerlink" href="#write-it-clear-in-your-notebook" title="Permalink to this headline">#</a></h2>
+<h2>Write it clear in your notebook<a class="headerlink" href="#write-it-clear-in-your-notebook" title="Permalink to this heading">#</a></h2>
 <p>Of course one could glue (white glue, no marking) a print from a Python
 notebook</p>
 <p><img alt="" src="../_images/notebook2.png" /></p>
 </section>
 <section id="type-a-standard-uncertainty-of-average">
-<h2>Type A standard uncertainty of average<a class="headerlink" href="#type-a-standard-uncertainty-of-average" title="Permalink to this headline">#</a></h2>
+<h2>Type A standard uncertainty of average<a class="headerlink" href="#type-a-standard-uncertainty-of-average" title="Permalink to this heading">#</a></h2>
 <p><strong>Average (mean) is the random variable by itself.</strong></p>
 <p>For <em>n</em> readings the <span style="color:red">standard uncertainty associated
 with the <strong>average</strong></span>:</p>
@@ -1238,7 +729,7 @@ with the <strong>average</strong></span>:</p>
 \[0.1044\, \mathrm{mm}/\sqrt{24} = 0.021 \mathrm{mm}\]</div>
 </section>
 <section id="type-a-standard-uncertainty">
-<h2>Type A standard uncertainty<a class="headerlink" href="#type-a-standard-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Type A standard uncertainty<a class="headerlink" href="#type-a-standard-uncertainty" title="Permalink to this heading">#</a></h2>
 <p>This uncertainty is based upon the idea that the readings were drawn
 from a <strong>normal probability distribution</strong>. Using 24 readings we
 estimate <strong>the characteristics of this distribution</strong> – and then worked
@@ -1247,7 +738,7 @@ estimate the position of the centre of the distribution</span>.</p>
 <p><img alt="" src="../_images/standarduncertainty.png" /></p>
 </section>
 <section id="type-b-uncertainty-evaluation">
-<h2>Type B uncertainty evaluation<a class="headerlink" href="#type-b-uncertainty-evaluation" title="Permalink to this headline">#</a></h2>
+<h2>Type B uncertainty evaluation<a class="headerlink" href="#type-b-uncertainty-evaluation" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Type B uncertainty evaluation is needed to assess uncertainties
 where statistics are not applicable, <strong>for example</strong> where there are
@@ -1271,7 +762,7 @@ temperature in the room)</p></li>
 <p>ISO guidelines: <strong>assume that any error or bias is a random draw from a
 known statistical distribution.</strong></p>
 <p>Then we use the standard deviation from that assumed distribution. Our basic options are:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><strong>Uniform</strong>, all equally probable within the range, zero probability outside</p></li>
 <li><p><strong>Triangular</strong>, central more probable within the range</p></li>
 <li><p><strong>Student’s <span class="math notranslate nohighlight">\(t\)</span></strong>, random, all probable, for small <span class="math notranslate nohighlight">\(n \lt 20\)</span></p></li>
@@ -1282,7 +773,7 @@ known statistical distribution.</strong></p>
 <a class="reference external" href="https://www.muelaner.com/uncertainty-of-measurement/">https://www.muelaner.com/uncertainty-of-measurement/</a></p>
 </section>
 <section id="uniform-distribution">
-<h2>Uniform distribution<a class="headerlink" href="#uniform-distribution" title="Permalink to this headline">#</a></h2>
+<h2>Uniform distribution<a class="headerlink" href="#uniform-distribution" title="Permalink to this heading">#</a></h2>
 <p>Most conservative estimate of uncertainty, largest standard deviation</p>
 <p>We assume that we know the end points</p>
 <p>All the effects within the range are equaly likely</p>
@@ -1304,7 +795,7 @@ known statistical distribution.</strong></p>
 </li>
 </ul>
 <section id="back-to-type-b-in-our-example">
-<h3>Back to Type B in our example<a class="headerlink" href="#back-to-type-b-in-our-example" title="Permalink to this headline">#</a></h3>
+<h3>Back to Type B in our example<a class="headerlink" href="#back-to-type-b-in-our-example" title="Permalink to this heading">#</a></h3>
 <p>standard uncertainty = half range/<span class="math notranslate nohighlight">\(\sqrt{3}\)</span></p>
 <ul class="simple">
 <li><p>In this example, the calibration certificate simply states that the
@@ -1317,11 +808,11 @@ $<span class="math notranslate nohighlight">\(0.02 \, \mathrm{mm}/\sqrt{3} = 0.0
 </ul>
 </section>
 <section id="summary-of-uncertainty-types">
-<h3>Summary of uncertainty types<a class="headerlink" href="#summary-of-uncertainty-types" title="Permalink to this headline">#</a></h3>
+<h3>Summary of uncertainty types<a class="headerlink" href="#summary-of-uncertainty-types" title="Permalink to this heading">#</a></h3>
 <p><img alt="" src="../_images/summaryuncertainty.png" /></p>
 </section>
 <section id="decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other">
-<h3>4. Decide whether the errors of the input quantities are independent of each other<a class="headerlink" href="#decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other" title="Permalink to this headline">#</a></h3>
+<h3>4. Decide whether the errors of the input quantities are independent of each other<a class="headerlink" href="#decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Could a large error in one input cause a large error in another?</p></li>
 <li><p>Could an outside influence such as temperature have a similar effect
@@ -1335,7 +826,7 @@ the next lecture.</p></li>
 unreliable uncertainty evaluation.</span></p>
 </section>
 <section id="calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations">
-<h3>5. Calculate the result of your measurement (including any known corrections, such as calibrations)<a class="headerlink" href="#calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations" title="Permalink to this headline">#</a></h3>
+<h3>5. Calculate the result of your measurement (including any known corrections, such as calibrations)<a class="headerlink" href="#calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>You get your result from the mean reading and by making all
 necessary corrections to it, such as <strong>calibration corrections</strong>
@@ -1347,7 +838,7 @@ reading</strong> of 21.493 mm.</p></li>
 </ul>
 </section>
 <section id="find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions">
-<h3>6. Find the combined standard uncertainty from all the individual uncertainty contributions<a class="headerlink" href="#find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions" title="Permalink to this headline">#</a></h3>
+<h3>6. Find the combined standard uncertainty from all the individual uncertainty contributions<a class="headerlink" href="#find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions" title="Permalink to this heading">#</a></h3>
 <p>So in order to evaluate the uncertainty we add the components “in
 quadrature” (also known as “the root sum of the squares”). The result of
 this is called the “combined standard uncertainty”.</p>
@@ -1359,7 +850,7 @@ this is called the “combined standard uncertainty”.</p>
 </ul>
 </section>
 <section id="and-our-combined-uncertainty-is">
-<h3>And our combined uncertainty is …<a class="headerlink" href="#and-our-combined-uncertainty-is" title="Permalink to this headline">#</a></h3>
+<h3>And our combined uncertainty is …<a class="headerlink" href="#and-our-combined-uncertainty-is" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[u = \sqrt{ (0.021)^2 + (0.012)^2} = 0.024 \, \mathrm{mm}\]</div>
 <p>The best estimate of the length is the average of the 24 readings. The
@@ -1368,7 +859,7 @@ quadrature) the standard uncertainties relating to the main factors that
 could cause the calipers to read incorrectly.</p>
 </section>
 <section id="calculate-expanded-uncertainty-for-a-particular-level-of-confidence">
-<h3>7. Calculate expanded uncertainty for a particular level of confidence<a class="headerlink" href="#calculate-expanded-uncertainty-for-a-particular-level-of-confidence" title="Permalink to this headline">#</a></h3>
+<h3>7. Calculate expanded uncertainty for a particular level of confidence<a class="headerlink" href="#calculate-expanded-uncertainty-for-a-particular-level-of-confidence" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>The combined standard uncertainty is equivalent to <span
 class="alert">one standard deviation</span>, the <span class="math notranslate nohighlight">\(\mu \pm 1\sigma\)</span> covers about 68% of the normal distribution.</p></li>
@@ -1385,7 +876,7 @@ normal distribution).</p></li>
 <p><img alt="" src="../_images/extendeduncertainty.png" /></p>
 </section>
 <section id="write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these">
-<h3>8. Write down the measurement result and the uncertainty, and state how you got both of these<a class="headerlink" href="#write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these" title="Permalink to this headline">#</a></h3>
+<h3>8. Write down the measurement result and the uncertainty, and state how you got both of these<a class="headerlink" href="#write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these" title="Permalink to this heading">#</a></h3>
 <p><span style="color:red">It is important to express the result in your report
 so that a reader/boss/user/client can use the information</span></p>
 <p>The main things to mention are:</p>
@@ -1400,21 +891,21 @@ so that a reader/boss/user/client can use the information</span></p>
 </section>
 </section>
 <section id="an-example-1-2">
-<h2>An example 1/2<a class="headerlink" href="#an-example-1-2" title="Permalink to this headline">#</a></h2>
+<h2>An example 1/2<a class="headerlink" href="#an-example-1-2" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/uncertainty_budget.png" /></p>
 <p>Source: <a class="reference external" href="https://www.muelaner.com/uncertainty-budget">https://www.muelaner.com/uncertainty-budget</a></p>
 </section>
 <section id="an-example-2-2">
-<h2>An example, 2/2<a class="headerlink" href="#an-example-2-2" title="Permalink to this headline">#</a></h2>
+<h2>An example, 2/2<a class="headerlink" href="#an-example-2-2" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/combined_uncertainty.png" /></p>
 <p>Source: <a class="reference external" href="https://www.muelaner.com/uncertainty-budget/">https://www.muelaner.com/uncertainty-budget/</a></p>
 </section>
 <section id="eight-steps-to-get-the-correct-measurement">
-<h2>Eight steps to get the correct measurement<a class="headerlink" href="#eight-steps-to-get-the-correct-measurement" title="Permalink to this headline">#</a></h2>
+<h2>Eight steps to get the correct measurement<a class="headerlink" href="#eight-steps-to-get-the-correct-measurement" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../_images/8steps.png" /></p>
 </section>
 <section id="this-is-just-the-simplest-case">
-<h2>This is just the simplest case<a class="headerlink" href="#this-is-just-the-simplest-case" title="Permalink to this headline">#</a></h2>
+<h2>This is just the simplest case<a class="headerlink" href="#this-is-just-the-simplest-case" title="Permalink to this heading">#</a></h2>
 <p>This is a simple example, we do not deal with special cases where different rules apply such as:</p>
 <ul class="simple">
 <li><p>Small number of repeated readings - “Student’s <span class="math notranslate nohighlight">\(t\)</span> distribution</p></li>
@@ -1423,7 +914,7 @@ so that a reader/boss/user/client can use the information</span></p>
 </ul>
 </section>
 <section id="combination-of-uncertainties">
-<h2>Combination of uncertainties<a class="headerlink" href="#combination-of-uncertainties" title="Permalink to this headline">#</a></h2>
+<h2>Combination of uncertainties<a class="headerlink" href="#combination-of-uncertainties" title="Permalink to this heading">#</a></h2>
 <ul>
 <li><p>We measured <em>N</em> physical quantities (variables),
 <span class="math notranslate nohighlight">\(x_1,x_2, \ldots, x_n\)</span> (voltage,
@@ -1439,7 +930,7 @@ $<span class="math notranslate nohighlight">\( y = \overline{y} \pm u_{y} \)</sp
 </ul>
 </section>
 <section id="theory-of-uncertainty-analysis-taylor-expansion">
-<h2>Theory of uncertainty analysis Taylor expansion<a class="headerlink" href="#theory-of-uncertainty-analysis-taylor-expansion" title="Permalink to this headline">#</a></h2>
+<h2>Theory of uncertainty analysis Taylor expansion<a class="headerlink" href="#theory-of-uncertainty-analysis-taylor-expansion" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[ y + u_y = f(x_1+u_{x_1}, x_2 + u_{x_2} + \ldots) = \]</div>
 <div class="math notranslate nohighlight">
@@ -1448,7 +939,7 @@ $<span class="math notranslate nohighlight">\( y = \overline{y} \pm u_{y} \)</sp
 \[+ \frac{1}{2} \left( (u_{x_1})^2 \frac{\partial^2 f}{\partial x_1^2} +  ...   \right) \]</div>
 </section>
 <section id="maximum-uncertainty">
-<h2>Maximum uncertainty<a class="headerlink" href="#maximum-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Maximum uncertainty<a class="headerlink" href="#maximum-uncertainty" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[ u_{y,\mathrm{max}}=\sum_{i=1}^{i=N}\left| u_{x_{i}}\frac{\partial y}{\partial x_{i}} \right| \]</div>
 <ul class="simple">
@@ -1457,7 +948,7 @@ $<span class="math notranslate nohighlight">\( y = \overline{y} \pm u_{y} \)</sp
 </ul>
 </section>
 <section id="expected-uncertainty">
-<h2>Expected uncertainty<a class="headerlink" href="#expected-uncertainty" title="Permalink to this headline">#</a></h2>
+<h2>Expected uncertainty<a class="headerlink" href="#expected-uncertainty" title="Permalink to this heading">#</a></h2>
 <p>Root of the sum of squared uncertainty, RSS:</p>
 <div class="math notranslate nohighlight">
 \[u_{R,\mathrm{RSS}}=\sqrt{\sum_{i=1}^{i=N}\left(u_{x_{i}}\frac{\partial R}{\partial x_{i}}\right)^{2}}\]</div>
@@ -1492,7 +983,7 @@ sec.</p></li>
 \[0.05\times\frac{1}{33.0}+0.1\times\frac{1.15}{33.0^{2}}=\]</div>
 <p>= 0.00162 × 60 = 0.0972 <em>l<strong>p</strong>m</em></p>
 <section id="the-expectation-method">
-<h3>The expectation method<a class="headerlink" href="#the-expectation-method" title="Permalink to this headline">#</a></h3>
+<h3>The expectation method<a class="headerlink" href="#the-expectation-method" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[u_{R,\textrm{RSS}}=\sqrt{\left(u_{\forall}\frac{\partial Q}{\partial\forall}\right)^{2}+\left(u_{t}\frac{\partial Q}{\partial t}\right)^{2}}=\]</div>
 <div class="math notranslate nohighlight">
@@ -1548,7 +1039,7 @@ more expensive tool will not help.</p></li>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./theory"
         },
         predefinedOutput: true
@@ -1556,50 +1047,151 @@ more expensive tool will not help.</p></li>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="laboratory_notebook.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Laboratory Notebook</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laboratory_notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Laboratory Notebook</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="general_measurement_system_analysis.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="general_measurement_system_analysis.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">General measurement system diagram</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-course-is-about">This course is about:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty">Uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#not-this-kind-of-uncertainty">Not this kind of “uncertainty”</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-uncertainty">Measurement uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-repeat-error-is-not-uncertainty">Let’s repeat: error is not uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-use-only-si">We use only SI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-units">Basic units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derived-units">Derived units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-science-is-important">Measurement science is important</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categories-of-experiments">Categories of experiments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-is-as-good-as-its-uncertainty">Measurement is as good as its uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-analysis">Uncertainty analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-known-sources-of-uncertainty">Some known sources of uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-reduce-uncertainty">How to reduce uncertainty?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-plan-to-quantify-uncertainty">8 points plan to quantify uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-what-you-need-to-find-out-from-your-measurement">1. Decide what you need to find out from your measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carry-out-and-record-the-measurements-needed">2. Carry out and record the measurements needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-should-be-clear">Notebook should be clear</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outliers-and-averaging">Outliers and averaging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluate-the-uncertainty-of-each-input-quantity-that-feeds-in-to-the-final-result-type-a-and-type-b-evaluations-express-all-uncertainties-in-similar-terms-standard-uncertainties">3. Evaluate the uncertainty of each input quantity that feeds in to the final result (Type A and Type B evaluations). Express all uncertainties in similar terms (standard uncertainties)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-uncertainty">Type A uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continued">3. continued …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-uncertainty-evaluation">Type A uncertainty evaluation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-it-clear-in-your-notebook">Write it clear in your notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-standard-uncertainty-of-average">Type A standard uncertainty of average</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-a-standard-uncertainty">Type A standard uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-b-uncertainty-evaluation">Type B uncertainty evaluation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-distribution">Uniform distribution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-type-b-in-our-example">Back to Type B in our example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-uncertainty-types">Summary of uncertainty types</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-whether-the-errors-of-the-input-quantities-are-independent-of-each-other">4. Decide whether the errors of the input quantities are independent of each other</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-result-of-your-measurement-including-any-known-corrections-such-as-calibrations">5. Calculate the result of your measurement (including any known corrections, such as calibrations)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-combined-standard-uncertainty-from-all-the-individual-uncertainty-contributions">6. Find the combined standard uncertainty from all the individual uncertainty contributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-our-combined-uncertainty-is">And our combined uncertainty is …</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-expanded-uncertainty-for-a-particular-level-of-confidence">7. Calculate expanded uncertainty for a particular level of confidence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#write-down-the-measurement-result-and-the-uncertainty-and-state-how-you-got-both-of-these">8. Write down the measurement result and the uncertainty, and state how you got both of these</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-1-2">An example 1/2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-2-2">An example, 2/2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eight-steps-to-get-the-correct-measurement">Eight steps to get the correct measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-is-just-the-simplest-case">This is just the simplest case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combination-of-uncertainties">Combination of uncertainties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theory-of-uncertainty-analysis-taylor-expansion">Theory of uncertainty analysis Taylor expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-uncertainty">Maximum uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-uncertainty">Expected uncertainty</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-expectation-method">The expectation method</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Alex Liberzon<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Alex Liberzon
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
