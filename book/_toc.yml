@@ -62,6 +62,7 @@ parts:
     - file: dynamic_signals/load_plot_spectrum_turbulent_data_jet
     - file: dynamic_signals/spectrum_example
     - file: dynamic_signals/simple_fft_two_sine
+    - file: dynamic_signals/mass_measurement_using_vibrations
 
 
 
