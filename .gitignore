@@ -6,3 +6,4 @@ notebooks/**/.ipynb_checkpoints/*
 book/**/.ipynb_checkpoints/*
 .vscode/settings.json
 book/_build/*
+.vscode/PythonImportHelper-v2-Completion.json
