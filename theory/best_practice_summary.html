@@ -432,6 +432,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-is-not-uncertainty">Error is not uncertainty</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure-several-times-before-you-cut">Measure several times before you cut</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-estimates-are-average-and-standard-deviation">Best estimates are average and standard deviation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-errors-and-uncertainties-come-from">Where do errors and uncertainties come from?</a></li>
 </ul>
             </nav>
         </div>
@@ -496,6 +498,26 @@ document.write(`
 * this is natural and normal - you do not do anything wrong.<br />
 * best way to estimate the value if we have repeated measurements is to take the average<br />
 * how many measurements do we need to get a good estimate? The short answer as long as we agree about it.</p>
+</section>
+<section id="best-estimates-are-average-and-standard-deviation">
+<h2>Best estimates are average and standard deviation:<a class="headerlink" href="#best-estimates-are-average-and-standard-deviation" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[ \bar{x} = \frac{1}{N} \sum\limits_{i=1}^{N} x_i \]</div>
+<div class="math notranslate nohighlight">
+\[ s_x = \sqrt{ \frac{\sum\limits_{i=1}^{N} (x_i - \bar{x})^2 }{N-1} } \]</div>
+<p>where <span class="math notranslate nohighlight">\(x_i\)</span> is <span class="math notranslate nohighlight">\(i\)</span>-th measurement, <span class="math notranslate nohighlight">\(i=1...N\)</span> of any quantity <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</section>
+<section id="where-do-errors-and-uncertainties-come-from">
+<h2>Where do errors and uncertainties come from?<a class="headerlink" href="#where-do-errors-and-uncertainties-come-from" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>the measuring instrument</p></li>
+<li><p>the item being measured - items are not perfect, not stable, not representative</p></li>
+<li><p>the measurement process</p></li>
+<li><p>“imported” uncertainties: calibration, known values</p></li>
+<li><p>operator skills</p></li>
+<li><p>sampling process</p></li>
+<li><p>the environment: temperature, air pressure, humidity, radiation, etc.</p></li>
+</ul>
 </section>
 </section>
 
@@ -571,6 +593,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-is-not-uncertainty">Error is not uncertainty</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure-several-times-before-you-cut">Measure several times before you cut</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-estimates-are-average-and-standard-deviation">Best estimates are average and standard deviation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-errors-and-uncertainties-come-from">Where do errors and uncertainties come from?</a></li>
 </ul>
   </nav></div>
 
