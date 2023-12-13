@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'theory/simple_example';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -421,6 +423,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-what-you-measure-and-what-you-need-to-find-out-from-measurements">1. Decide what you measure and what you need to find out from measurements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure">2. Measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-uncertainty-source-by-source-standartize-each">3. Estimate uncertainty, source by source, standartize each</a></li>
 </ul>
             </nav>
         </div>
@@ -440,14 +444,46 @@ document.write(`
 </section>
 <section id="decide-what-you-measure-and-what-you-need-to-find-out-from-measurements">
 <h2>1. Decide what you measure and what you need to find out from measurements<a class="headerlink" href="#decide-what-you-measure-and-what-you-need-to-find-out-from-measurements" title="Permalink to this heading">#</a></h2>
-<p>In this example we want to measure length and we decide to use tape measure. we want to know the length and we want to estimate how good we measure it.</p>
+<p>In this example we want to measure <strong>length of a string</strong> and we decide to use <strong>tape measure</strong>. we want to know the length and we want to estimate how good we measure it.</p>
 <p>First step: think. what are the possible errors?</p>
+<ol class="arabic simple">
+<li><p>errors due to the measurement device:</p></li>
+</ol>
 <ul class="simple">
 <li><p>does the tape need calibration? is it calibrated already? what is the uncertainty of the calibration (it’s an imported uncertainty). how much could calibration change since it was performed last time?</p></li>
 <li><p>is the tape needs stretching? alignment? attachment?</p></li>
 <li><p>could it bend? is bending causing shortening?</p></li>
 <li><p>what is the resolution? what is the smallest change we can notice using this tape? how small are divisions on the tape?</p></li>
-<li></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>measurement errors due to the item being measured:</p>
+<ul class="simple">
+<li><p>can this string be streteched and straight?</p></li>
+<li><p>can it be under-stretched? curly?</p></li>
+<li><p>does the temperature/humidity of the environment affect measured length?</p></li>
+<li><p>can we easily define the ends of the string? can we attack it to the tape measure?</p></li>
+</ul>
+</li>
+<li><p>errors due to the measurement process and the person making measurements:</p>
+<ul class="simple">
+<li><p>how well can you line up the beginning and the end of the string? do you see it well? can you align it?</p></li>
+<li><p>how repeatable is your reading of the point between divisions?</p></li>
+<li><p>can you think of additional error sources?</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="measure">
+<h2>2. Measure<a class="headerlink" href="#measure" title="Permalink to this heading">#</a></h2>
+<p>measure and record your results clearly. state the date, the time, the serial number of the tape measure you use, an id of the string you measure. write down how the measurements are performed, how participated, environmental conditions (temperature, humidity, etc.), all other relevant remarks if you use code, Excel, etc.</p>
+<p>to be extra careful, repeat your measurement several times, attach the string every time.</p>
+<p>record all the measurements and take an average and standard deviation. e.g. 5.017 m and 0.0021 m, respectively</p>
+</section>
+<section id="estimate-uncertainty-source-by-source-standartize-each">
+<h2>3. Estimate uncertainty, source by source, standartize each<a class="headerlink" href="#estimate-uncertainty-source-by-source-standartize-each" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>calibration: the tape measure has to be calibrated. let’s assume we got a calibrated one and it says: 0.1% of reading, in calibration a normal distribution was used (it’s written usually, <span class="math notranslate nohighlight">\(k\)</span> - cover factor is 2, i.e. normal distribution). So we can take our measurement best estimate, the average, <span class="math notranslate nohighlight">\(5.017 \times 0.0001 / 2 \approx 2.5\)</span> mm, <span class="math notranslate nohighlight">\(u_{\mathrm{cal}} = 2.5 \)</span> mm.</p></li>
+<li><p>divisions of the tape are millimeters, i.e. resolution is 1 mm, reading to the nearest one leaves the <code class="docutils literal notranslate"><span class="pre">resolution</span> <span class="pre">error</span></code> which is <span class="math notranslate nohighlight">\(\pm 0.5\)</span> mm. let’s assume that all values whithin this range are equally probable, i.e. we assume rectangular or uniform distribution,</p></li>
 </ul>
 </section>
 </section>
@@ -499,6 +535,8 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source">Source:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-what-you-measure-and-what-you-need-to-find-out-from-measurements">1. Decide what you measure and what you need to find out from measurements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure">2. Measure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-uncertainty-source-by-source-standartize-each">3. Estimate uncertainty, source by source, standartize each</a></li>
 </ul>
   </nav></div>
 
