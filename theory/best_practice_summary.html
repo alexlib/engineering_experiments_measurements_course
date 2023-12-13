@@ -434,6 +434,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-estimates-are-average-and-standard-deviation">Best estimates are average and standard deviation:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-errors-and-uncertainties-come-from">Where do errors and uncertainties come from?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-kinds-of-uncertainty">Different kinds of uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spread-of-random-variables-distribution-shape">Spread of random variables - distribution shape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-not-measurement-uncertainty">What is not measurement uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-types-of-uncertainty">Two types of uncertainty</a></li>
 </ul>
             </nav>
         </div>
@@ -519,6 +523,40 @@ document.write(`
 <li><p>the environment: temperature, air pressure, humidity, radiation, etc.</p></li>
 </ul>
 </section>
+<section id="different-kinds-of-uncertainty">
+<h2>Different kinds of uncertainty<a class="headerlink" href="#different-kinds-of-uncertainty" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>random - repeating measurements give different values. more measurement repetitions, the better the average represents the true value</p></li>
+<li><p>systematic (bias) -  same influence on all the repeating measurements. more measurements cannot help, only use of different instrument, different operator, different environment, etc.</p></li>
+</ol>
+</section>
+<section id="spread-of-random-variables-distribution-shape">
+<h2>Spread of random variables - distribution shape<a class="headerlink" href="#spread-of-random-variables-distribution-shape" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Normal distribution</p></li>
+<li><p>uniform or rectangular distribution</p></li>
+<li><p>triangular</p></li>
+<li><p>bi-modal (M-shaped, or two-peaks)</p></li>
+<li><p>t-distribution</p></li>
+</ol>
+<p>We will explain in separate notebooks each one of those and why and how to use those</p>
+</section>
+<section id="what-is-not-measurement-uncertainty">
+<h2>What is not measurement uncertainty<a class="headerlink" href="#what-is-not-measurement-uncertainty" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>mistakes - not an error in measurement, simply using the wrong instrument, recording a wrong scale, etc. should be carefully checked and avoided</p></li>
+<li><p>tolerances - not uncertainties, but some accepted limits for a product or process</p></li>
+<li><p>specifications - only prescribes what to expect from the product</p></li>
+<li><p>accuracy - a word which is qualitative description. we use uncertainty - a quantitative value that prescribes exactly how accurate or not accurate the measurement result</p></li>
+<li><p><strong>errors are not the same as uncertainties</strong>, although sometimes we use by mistake error analysis instead of uncertainty analysis. we will talk about it in detail. simple answer - error is a single measurement distance from a true value, but it is just a given value at a given time, by a given instrument and operator. every new measurement will give another error. All these errors, plus other errors, scaled by their proper distributions (different events - different statistics or distributions) - will become that “measure of doubt” that we call <strong>uncertainty</strong></p></li>
+<li><p>statistical analysis helps to estimate uncertainty, but it is not the same, it is just one part of the analysis</p></li>
+</ol>
+</section>
+<section id="two-types-of-uncertainty">
+<h2>Two types of uncertainty<a class="headerlink" href="#two-types-of-uncertainty" title="Permalink to this heading">#</a></h2>
+<p><strong>Type A</strong> - uncertainty estimates using statistics of repeated measurements (average, standard deviation, distribution)</p>
+<p><strong>Type B</strong> - uncertainty estimates from any other information, such as past experience, calibration certificates, manufacturer specifications, calculations, published information, common sense.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -595,6 +633,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics">Statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-estimates-are-average-and-standard-deviation">Best estimates are average and standard deviation:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-do-errors-and-uncertainties-come-from">Where do errors and uncertainties come from?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-kinds-of-uncertainty">Different kinds of uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spread-of-random-variables-distribution-shape">Spread of random variables - distribution shape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-not-measurement-uncertainty">What is not measurement uncertainty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-types-of-uncertainty">Two types of uncertainty</a></li>
 </ul>
   </nav></div>
 
