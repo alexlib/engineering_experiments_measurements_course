@@ -428,6 +428,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-what-you-measure-and-what-you-need-to-find-out-from-measurements">1. Decide what you measure and what you need to find out from measurements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure">2. Measure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-uncertainty-source-by-source-standartize-each">3. Estimate uncertainty, source by source, standartize each</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-whether-the-different-error-sources-are-independent-of-each-other">4. Decide whether the different error sources are independent of each other</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-result-of-your-measurement">5. Calculate the result of your measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-combined-uncertainty-from-all-the-sources">6. Find the combined uncertainty from all the sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#express-your-result-using-the-standard-uncertainty-and-cover-factor-write-the-confidence-level-for-the-cover-factor">7. Express your result using the standard uncertainty and cover factor, write the confidence level for the cover factor</a></li>
 </ul>
             </nav>
         </div>
@@ -486,8 +490,33 @@ document.write(`
 <h2>3. Estimate uncertainty, source by source, standartize each<a class="headerlink" href="#estimate-uncertainty-source-by-source-standartize-each" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>calibration: the tape measure has to be calibrated. let’s assume we got a calibrated one and it says: 0.1% of reading, in calibration a normal distribution was used (it’s written usually, <span class="math notranslate nohighlight">\(k\)</span> - cover factor is 2, i.e. normal distribution). So we can take our measurement best estimate, the average, <span class="math notranslate nohighlight">\(5.017 \times 0.0001 / 2 \approx 2.5\)</span> mm, <span class="math notranslate nohighlight">\(u_{\mathrm{cal}} = 2.5 \)</span> mm.</p></li>
-<li><p>divisions of the tape are millimeters, i.e. resolution is 1 mm, reading to the nearest one leaves the <code class="docutils literal notranslate"><span class="pre">resolution</span> <span class="pre">error</span></code> which is <span class="math notranslate nohighlight">\(\pm 0.5\)</span> mm. let’s assume that all values whithin this range are equally probable, i.e. we assume rectangular or uniform distribution,</p></li>
+<li><p>divisions of the tape are millimeters, i.e. resolution is 1 mm, reading to the nearest one leaves the <code class="docutils literal notranslate"><span class="pre">resolution</span> <span class="pre">error</span></code> which is <span class="math notranslate nohighlight">\(\pm 0.5\)</span> mm. let’s assume that all values whithin this range are equally probable, i.e. we assume rectangular or uniform distribution, to find standard uncertainy from the resolution error we divide by the cover coefficient of uniform distribution, <span class="math notranslate nohighlight">\(\sqrt{3}\)</span>, <span class="math notranslate nohighlight">\(u_{\mathrm{res}} = 0.5 / \sqrt{3} \approx 0.3\)</span> mm</p></li>
+<li><p>although we can stretch the string, and the tape, probably it would have some bends along the way, so we could assume that we underestimate the actual, true length. let’s assume we give it 0.2% of the measurement. so we get 10 mm. we can assume it is also uniformly distributed, so we take <span class="math notranslate nohighlight">\(u = 10/\sqrt{3} = 5.8\)</span> mm (rounded to the nearest 0.1 mm)</p></li>
 </ul>
+<p>All these above are <strong>Type B</strong> sources, the following is <strong>Type A</strong>:</p>
+<ul class="simple">
+<li><p>we need to get standard uncertainty of our repeated measurements with average and standard derviation. we calculate the standard uncertainty of the mean of the 10 readings: $<span class="math notranslate nohighlight">\( s/\sqrt{n} = 2.1/\sqrt{10} = 0.7 \)</span>mm (to one decimal place)</p></li>
+</ul>
+</section>
+<section id="decide-whether-the-different-error-sources-are-independent-of-each-other">
+<h2>4. Decide whether the different error sources are independent of each other<a class="headerlink" href="#decide-whether-the-different-error-sources-are-independent-of-each-other" title="Permalink to this heading">#</a></h2>
+<p>let’s assume and write down these are independent</p>
+</section>
+<section id="calculate-the-result-of-your-measurement">
+<h2>5. Calculate the result of your measurement<a class="headerlink" href="#calculate-the-result-of-your-measurement" title="Permalink to this heading">#</a></h2>
+<p>In this simple case it is to write down the average and take into account the corrections you assumed: e.g. that the tape and string are straight and parallel.</p>
+<div class="math notranslate nohighlight">
+\[ 5.017 \mathrm{m} +  0.010 \mathrm{mm} = 5.0127 \mathrm{m} \]</div>
+</section>
+<section id="find-the-combined-uncertainty-from-all-the-sources">
+<h2>6. Find the combined uncertainty from all the sources<a class="headerlink" href="#find-the-combined-uncertainty-from-all-the-sources" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[ u = \sqrt{(2.5^2 + 0.3^2 + 0.7^2 + 5.8^2)}  =  6.4 \mathrm{mm} \]</div>
+</section>
+<section id="express-your-result-using-the-standard-uncertainty-and-cover-factor-write-the-confidence-level-for-the-cover-factor">
+<h2>7. Express your result using the standard uncertainty and cover factor, write the confidence level for the cover factor<a class="headerlink" href="#express-your-result-using-the-standard-uncertainty-and-cover-factor-write-the-confidence-level-for-the-cover-factor" title="Permalink to this heading">#</a></h2>
+<p>For a coverage of <span class="math notranslate nohighlight">\(k=2\)</span>, we multiply the <span class="math notranslate nohighlight">\(u\)</span> by 2 and get <span class="math notranslate nohighlight">\(u = 2 \times 6.4 = 12.8\)</span> mm with the confidence level of 95% (coverage factor, see the lecture about Gaussian distribution)</p>
+<p><img alt="image.png" src="../_images/npl_gpg_131.png" /></p>
 </section>
 </section>
 
@@ -558,6 +587,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-what-you-measure-and-what-you-need-to-find-out-from-measurements">1. Decide what you measure and what you need to find out from measurements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measure">2. Measure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-uncertainty-source-by-source-standartize-each">3. Estimate uncertainty, source by source, standartize each</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decide-whether-the-different-error-sources-are-independent-of-each-other">4. Decide whether the different error sources are independent of each other</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-the-result-of-your-measurement">5. Calculate the result of your measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-the-combined-uncertainty-from-all-the-sources">6. Find the combined uncertainty from all the sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#express-your-result-using-the-standard-uncertainty-and-cover-factor-write-the-confidence-level-for-the-cover-factor">7. Express your result using the standard uncertainty and cover factor, write the confidence level for the cover factor</a></li>
 </ul>
   </nav></div>
 
