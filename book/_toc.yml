@@ -13,6 +13,7 @@ parts:
       - file: theory/standartization
       - file: theory/laboratory_notebook
       - file: theory/uncertainty101
+      - file: theory/iaea_uncertainty_presentation
       - file: theory/best_practice_summary
       - file: theory/simple_example
       - file: theory/uncertainty_of_a_slope
