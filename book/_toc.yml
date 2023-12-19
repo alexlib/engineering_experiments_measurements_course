@@ -16,6 +16,7 @@ parts:
       - file: theory/iaea_uncertainty_presentation
       - file: theory/best_practice_summary
       - file: theory/simple_example
+      - file: theory/example_from_best_practice
       - file: theory/uncertainty_of_a_slope
       - file: theory/general_measurement_system_analysis
       - file: theory/significant_digits
