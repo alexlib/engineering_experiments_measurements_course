@@ -20,6 +20,7 @@ parts:
       - file: theory/uncertainty_of_a_slope
       - file: theory/general_measurement_system_analysis
       - file: theory/significant_digits
+      - file: theory/uncertainty_propagation_monte_carlo_gum
     # sections:
       - file: markdown-notebooks
   - caption: Statistics for measurements
