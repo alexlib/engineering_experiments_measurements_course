@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Uncertainty in simple terms from IAEA &#8212; Introduction to Measurements for Mechanical Engineers</title>
   
@@ -15,53 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'theory/iaea_uncertainty_presentation';</script>
@@ -71,6 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="prev" title="Uncertainty 101" href="uncertainty101.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -78,32 +77,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -111,7 +94,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -119,16 +101,25 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -143,6 +134,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -156,11 +149,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Measurements for Mechanical Engineers - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Measurements for Mechanical Engineers - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Introduction to Measurements for Mechanical Engineers - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -178,6 +178,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Uncertainty in simple terms from IAEA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="best_practice_summary.html">Short summary of the ``Measurement good practice guide ‘’ by NPL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simple_example.html">Simple example of mechanical measurement with uncertainty analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_from_best_practice.html">Using AI tools to learn uncertainty</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uncertainty_of_a_slope.html">How to estimate the uncertainty of a slope for static calibration or regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="general_measurement_system_analysis.html">General measurement system diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="significant_digits.html">Significant digits</a></li>
@@ -245,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -254,14 +255,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -384,27 +385,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -446,13 +439,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="uncertainty-in-simple-terms-from-iaea">
-<h1>Uncertainty in simple terms from IAEA<a class="headerlink" href="#uncertainty-in-simple-terms-from-iaea" title="Permalink to this heading">#</a></h1>
+<h1>Uncertainty in simple terms from IAEA<a class="headerlink" href="#uncertainty-in-simple-terms-from-iaea" title="Link to this heading">#</a></h1>
 <p>see <a class="reference external" href="https://www.iaea.org/sites/default/files/21/12/9_measurement_and_uncertainty.pdf">https://www.iaea.org/sites/default/files/21/12/9_measurement_and_uncertainty.pdf</a></p>
 <section id="measurement-of-physical-properties-is-a-random-process">
-<h2>Measurement of physical properties is a random process<a class="headerlink" href="#measurement-of-physical-properties-is-a-random-process" title="Permalink to this heading">#</a></h2>
+<h2>Measurement of physical properties is a random process<a class="headerlink" href="#measurement-of-physical-properties-is-a-random-process" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>pressure, velocity, temperature are some examples of physical properties of complex physical processes, these are random - the real value is always varying</p></li>
 <li><p>measurement process itself is a random process</p></li>
@@ -460,14 +453,14 @@ document.write(`
 <p><strong>Every measurement value is a random value and all contain some unavoidable sources of uncertainty</strong></p>
 </section>
 <section id="what-is-measurement-and-what-is-not">
-<h2>What is measurement and what is not?<a class="headerlink" href="#what-is-measurement-and-what-is-not" title="Permalink to this heading">#</a></h2>
+<h2>What is measurement and what is not?<a class="headerlink" href="#what-is-measurement-and-what-is-not" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>a measurement tells us about a property of something, e.g. how heavy is an object, how hot, how long, etc. <strong>A measurement means giving a number to the property</strong></p></li>
 <li><p>some experiments or tests are <strong>not measurements</strong>, e.g. counting, comparing two objects, etc.</p></li>
 </ul>
 </section>
 <section id="uncertainty-of-measureement">
-<h2>Uncertainty of measureement<a class="headerlink" href="#uncertainty-of-measureement" title="Permalink to this heading">#</a></h2>
+<h2>Uncertainty of measureement<a class="headerlink" href="#uncertainty-of-measureement" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>it tells something about quality of measurement</p></li>
 <li><p><strong>Uncertainty of measurement is the doubt that exists about the result of any measurement</strong></p></li>
@@ -480,7 +473,7 @@ document.write(`
 </ul>
 </section>
 <section id="error-vs-uncertainty">
-<h2>Error vs uncertainty<a class="headerlink" href="#error-vs-uncertainty" title="Permalink to this heading">#</a></h2>
+<h2>Error vs uncertainty<a class="headerlink" href="#error-vs-uncertainty" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>error is the difference between the measured value and the <em>true value</em></p></li>
 <li><p>uncertainty is a quantification of the doubt about the measurement result</p></li>
@@ -488,7 +481,7 @@ document.write(`
 </ul>
 </section>
 <section id="spread-of-results-standard-deviation-sigma">
-<h2>Spread of results … standard deviation (<span class="math notranslate nohighlight">\(\sigma\)</span>)<a class="headerlink" href="#spread-of-results-standard-deviation-sigma" title="Permalink to this heading">#</a></h2>
+<h2>Spread of results … standard deviation (<span class="math notranslate nohighlight">\(\sigma\)</span>)<a class="headerlink" href="#spread-of-results-standard-deviation-sigma" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>the standard deviation is a measure of the dispersion of randomly occuring events around a mean</p></li>
 <li><p>standard deviation is a most typical way to quantify spread. it only gives the most typical measure of how random individual readings are spread from the average of the set.</p></li>
@@ -496,7 +489,7 @@ document.write(`
 </ul>
 </section>
 <section id="types-of-errors">
-<h2>Types of errors<a class="headerlink" href="#types-of-errors" title="Permalink to this heading">#</a></h2>
+<h2>Types of errors<a class="headerlink" href="#types-of-errors" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Systematic errors</p>
 <ul class="simple">
@@ -516,11 +509,11 @@ document.write(`
 <p><img alt="Accuracy vs precision, random vs systematic error" src="../_images/accuracy_vs_precision.png" /></p>
 </section>
 <section id="learn-statistics">
-<h2>Learn statistics<a class="headerlink" href="#learn-statistics" title="Permalink to this heading">#</a></h2>
+<h2>Learn statistics<a class="headerlink" href="#learn-statistics" title="Link to this heading">#</a></h2>
 <p>measurement result we get is drawn from some statistical distribution. We need to know how to quantify it.</p>
 </section>
 <section id="some-technical-details-about-how-to-express-uncertainty">
-<h2>Some technical details about how to express uncertainty<a class="headerlink" href="#some-technical-details-about-how-to-express-uncertainty" title="Permalink to this heading">#</a></h2>
+<h2>Some technical details about how to express uncertainty<a class="headerlink" href="#some-technical-details-about-how-to-express-uncertainty" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>uncertainty in a scale measuring device (ruler, caliper) is equal to the smallest increment divided by 2</p></li>
 <li><p>uncertainty in a digital measuring device is equal to the smallest increment</p></li>
@@ -532,7 +525,7 @@ document.write(`
 <p>where <span class="math notranslate nohighlight">\(x_\mathrm{best}\)</span> is the best estimate (typically an average) of the result of several measurement attempts</p>
 <p><span class="math notranslate nohighlight">\(u_x\)</span> - uncertainty in the measurement of <span class="math notranslate nohighlight">\(x_\mathrm{best}\)</span></p>
 <section id="rules-for-stating-uncertainties">
-<h3>Rules for stating uncertainties<a class="headerlink" href="#rules-for-stating-uncertainties" title="Permalink to this heading">#</a></h3>
+<h3>Rules for stating uncertainties<a class="headerlink" href="#rules-for-stating-uncertainties" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>experimental uncertainties should be stated to 1-significant figure:</p>
 <p><span class="math notranslate nohighlight">\(x = 31.25 \pm 0.034953\)</span> m/s - <strong>wrong</strong></p>
@@ -547,7 +540,7 @@ document.write(`
 <p><span class="math notranslate nohighlight">\( a= 1300 \pm 200\)</span> cm/s<span class="math notranslate nohighlight">\(^2\)</span></p>
 </section>
 <section id="significant-figure-is-a-reliably-known-digit">
-<h3>Significant figure is a reliably known digit<a class="headerlink" href="#significant-figure-is-a-reliably-known-digit" title="Permalink to this heading">#</a></h3>
+<h3>Significant figure is a reliably known digit<a class="headerlink" href="#significant-figure-is-a-reliably-known-digit" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>because zeros are just counters for the decimal point, zeros on the left do not count</p></li>
 <li><p>only non-zero numbers are significant (or zeros between numbers)</p></li>
@@ -584,7 +577,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -612,7 +605,9 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -656,7 +651,7 @@ By Alex Liberzon
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -680,8 +675,8 @@ By Alex Liberzon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

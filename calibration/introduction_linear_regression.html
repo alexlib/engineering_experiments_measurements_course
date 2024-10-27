@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Introduction to linear regression &#8212; Introduction to Measurements for Mechanical Engineers</title>
   
@@ -15,53 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'calibration/introduction_linear_regression';</script>
@@ -69,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -76,32 +75,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -109,7 +92,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -117,16 +99,27 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -141,6 +134,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../intro.html">
   
@@ -154,11 +149,18 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Measurements for Mechanical Engineers - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Measurements for Mechanical Engineers - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Introduction to Measurements for Mechanical Engineers - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -173,6 +175,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../theory/standartization.html">Standardization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/laboratory_notebook.html">Laboratory Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/uncertainty101.html">Uncertainty 101</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/iaea_uncertainty_presentation.html">Uncertainty in simple terms from IAEA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/best_practice_summary.html">Short summary of the ``Measurement good practice guide ‘’ by NPL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/simple_example.html">Simple example of mechanical measurement with uncertainty analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/example_from_best_practice.html">Using AI tools to learn uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/uncertainty_of_a_slope.html">How to estimate the uncertainty of a slope for static calibration or regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/general_measurement_system_analysis.html">General measurement system diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/significant_digits.html">Significant digits</a></li>
 </ul>
@@ -223,6 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/load_plot_spectrum_turbulent_data_jet.html">Plot power spectrum of experimental data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/spectrum_example.html">Spectrum example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/simple_fft_two_sine.html">Fast Fourier Transform (FFT) of a sum of two sine signals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dynamic_signals/mass_measurement_using_vibrations.html">Lab Worksheet: Measurement of Unknown Mass using Vibrating Beam</a></li>
 </ul>
 
     </div>
@@ -238,7 +246,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -247,14 +255,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -377,27 +385,19 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -443,10 +443,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="introduction-to-linear-regression">
-<h1>Introduction to linear regression<a class="headerlink" href="#introduction-to-linear-regression" title="Permalink to this heading">#</a></h1>
+<h1>Introduction to linear regression<a class="headerlink" href="#introduction-to-linear-regression" title="Link to this heading">#</a></h1>
 <p>Based on the example given in <a class="reference external" href="http://onlinestatbook.com/2/regression/intro.html">http://onlinestatbook.com/2/regression/intro.html</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -490,7 +490,7 @@ Populating the interactive namespace from numpy and matplotlib
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;$y$&#39;)
 </pre></div>
 </div>
-<img alt="../_images/cd576965963e0e576ec232ce3b02d035f006a1543f59eb9f74ed303946f85679.png" src="../_images/cd576965963e0e576ec232ce3b02d035f006a1543f59eb9f74ed303946f85679.png" />
+<img alt="../_images/feb71283d44ada27fd259896ec9f23d26bf9aa6026e504c453ae1f87614f7a08.png" src="../_images/feb71283d44ada27fd259896ec9f23d26bf9aa6026e504c453ae1f87614f7a08.png" />
 </div>
 </div>
 <p>In simple linear regression, the topic of this section, the predictions of Y when plotted as a function of X form a straight line.
@@ -503,7 +503,7 @@ Linear regression consists of finding the best-fitting straight line through the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0e900e48d9c60650906edee92ce1b00978821ef318b0415ae0f3440800d88636.png" src="../_images/0e900e48d9c60650906edee92ce1b00978821ef318b0415ae0f3440800d88636.png" />
+<a class="reference internal image-reference" href="../_images/0e900e48d9c60650906edee92ce1b00978821ef318b0415ae0f3440800d88636.png"><img alt="../_images/0e900e48d9c60650906edee92ce1b00978821ef318b0415ae0f3440800d88636.png" src="../_images/0e900e48d9c60650906edee92ce1b00978821ef318b0415ae0f3440800d88636.png" style="width: 400px;" /></a>
 </div>
 </div>
 <p>The error of prediction for a point is the value of the point minus the predicted value (the value on the line). Table 2 shows the predicted values (Y’) and the errors of prediction (Y-Y’). For example, the first point has a Y of 1.00 and a predicted Y (called Y’) of 1.21. Therefore, its error of prediction is -0.21.</p>
@@ -545,11 +545,11 @@ original y:
 </div>
 </div>
 <section id="computing-the-regression-line">
-<h2>Computing the Regression Line<a class="headerlink" href="#computing-the-regression-line" title="Permalink to this heading">#</a></h2>
+<h2>Computing the Regression Line<a class="headerlink" href="#computing-the-regression-line" title="Link to this heading">#</a></h2>
 <p>In the age of computers, the regression line is typically computed with statistical software. However, the calculations are relatively easy, and are given here for anyone who is interested. The calculations are based on the statistics shown in Table 3. <span class="math notranslate nohighlight">\(M_x\)</span> is the mean of <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(M_y\)</span> is the mean of <span class="math notranslate nohighlight">\(Y\)</span>, <span class="math notranslate nohighlight">\(S_x\)</span> is the standard deviation of <span class="math notranslate nohighlight">\(X\)</span>, <span class="math notranslate nohighlight">\(S_y\)</span> is the standard deviation of <span class="math notranslate nohighlight">\(Y\)</span>, and <span class="math notranslate nohighlight">\(r\)</span> is the correlation between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>.</p>
 </section>
 <section id="formulae-for-standard-deviations-and-correlation">
-<h2>Formulae for standard deviations and correlation<a class="headerlink" href="#formulae-for-standard-deviations-and-correlation" title="Permalink to this heading">#</a></h2>
+<h2>Formulae for standard deviations and correlation<a class="headerlink" href="#formulae-for-standard-deviations-and-correlation" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[ S_x = \frac{1}{N} \sum (x-\bar{x})^2 \]</div>
 <div class="math notranslate nohighlight">
@@ -595,7 +595,7 @@ a = 0.785
 </section>
 </section>
 <section id="regression-analysis">
-<h1>Regression analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this heading">#</a></h1>
+<h1>Regression analysis<a class="headerlink" href="#regression-analysis" title="Link to this heading">#</a></h1>
 <p>Following the recipe of <a class="reference external" href="http://www.answermysearches.com/how-to-do-a-simple-linear-regression-in-python/124/">http://www.answermysearches.com/how-to-do-a-simple-linear-regression-in-python/124/</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -682,7 +682,7 @@ y = 0.42 x + 0.79 $\pm$ 1.37V
 </div>
 </div>
 <section id="standardized-variables">
-<h2>Standardized Variables<a class="headerlink" href="#standardized-variables" title="Permalink to this heading">#</a></h2>
+<h2>Standardized Variables<a class="headerlink" href="#standardized-variables" title="Link to this heading">#</a></h2>
 <p>The regression equation is simpler if variables are <strong>standardized</strong> so that their means are equal to 0 and standard deviations are equal to 1, for then <span class="math notranslate nohighlight">\(b = r\)</span> and <span class="math notranslate nohighlight">\(a = 0\)</span>. This makes the regression line:</p>
 <div class="math notranslate nohighlight">
 \[ Z_y = (R)(Z_x) \]</div>
@@ -701,16 +701,16 @@ y = 0.42 x + 0.79 $\pm$ 1.37V
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fa1e0bb5b10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f98b7013d40&gt;
 </pre></div>
 </div>
-<img alt="../_images/c4d07846c8bd93f7db70f2cad8abc5f67df2a2c6103db96337642a95de60f4af.png" src="../_images/c4d07846c8bd93f7db70f2cad8abc5f67df2a2c6103db96337642a95de60f4af.png" />
+<img alt="../_images/fba32baa80424661154d4b55b537d0a49eb17837a448e5bb39145e9226ef1485.png" src="../_images/fba32baa80424661154d4b55b537d0a49eb17837a448e5bb39145e9226ef1485.png" />
 </div>
 </div>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="estimate-a-b-and-also-delta-a-and-delta-b">
-<h1>Estimate <span class="math notranslate nohighlight">\(a,b\)</span> and also <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span><a class="headerlink" href="#estimate-a-b-and-also-delta-a-and-delta-b" title="Permalink to this heading">#</a></h1>
+<h1>Estimate <span class="math notranslate nohighlight">\(a,b\)</span> and also <span class="math notranslate nohighlight">\(\Delta a\)</span> and <span class="math notranslate nohighlight">\(\Delta b\)</span><a class="headerlink" href="#estimate-a-b-and-also-delta-a-and-delta-b" title="Link to this heading">#</a></h1>
 <p>We start with the list of <span class="math notranslate nohighlight">\(N\)</span> points <span class="math notranslate nohighlight">\(x_i,y_i\)</span> and we assume that the errors in <span class="math notranslate nohighlight">\(\Delta x \ll \Delta y\)</span>. Our goal is to minimize the sum of all the deviations, <span class="math notranslate nohighlight">\(d_i = y_i - (a x_i + b)\)</span></p>
 <p>For that, we shall minimize the sum of square errors: $<span class="math notranslate nohighlight">\( S^2 = \sum\limits_{i=1}^{N} d_i^2 = \sum\limits_{i=1}^{N} \left( y_i - a x_i - b \right)^2\)</span>$</p>
 <p>In order to find those we need to derive <span class="math notranslate nohighlight">\(S^2\)</span> by <span class="math notranslate nohighlight">\(b\)</span> and by <span class="math notranslate nohighlight">\(a\)</span> and solving for zero we get two equations that provide us the minimum. The equations we get are: $<span class="math notranslate nohighlight">\(a = \frac{1}{A}\left(N S_{xy} - S_y S_x \right) \)</span><span class="math notranslate nohighlight">\( \)</span><span class="math notranslate nohighlight">\(b = \frac{1}{A} \left(S_{xx} S_{y} - S_{xy} S_x \right) \)</span><span class="math notranslate nohighlight">\( 
@@ -726,7 +726,7 @@ where
 \)</span><span class="math notranslate nohighlight">\( \sigma_y = \sqrt{\frac{1}{N-2}\sum d_i^2} = \)</span><span class="math notranslate nohighlight">\( 
 \)</span><span class="math notranslate nohighlight">\( = \sqrt{\frac{1}{N-2}\left(S_{yy} + a^2 S_{xx} +Nb^2 - 2aS_{xy} -2bS_{y} + 2abS_x \right) }\)</span>$</p>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -738,7 +738,7 @@ where
 </div>
 </section>
 <section id="let-s-assume-delta-x-0-delta-y-0-2">
-<h2>let’s assume <span class="math notranslate nohighlight">\(\Delta x = 0\)</span>, <span class="math notranslate nohighlight">\(\Delta y = 0.2\)</span><a class="headerlink" href="#let-s-assume-delta-x-0-delta-y-0-2" title="Permalink to this heading">#</a></h2>
+<h2>let’s assume <span class="math notranslate nohighlight">\(\Delta x = 0\)</span>, <span class="math notranslate nohighlight">\(\Delta y = 0.2\)</span><a class="headerlink" href="#let-s-assume-delta-x-0-delta-y-0-2" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -780,11 +780,11 @@ where
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fa1e074dff0&gt;,
- &lt;matplotlib.lines.Line2D at 0x7fa1e074e080&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f98b6f01ee0&gt;,
+ &lt;matplotlib.lines.Line2D at 0x7f98b6f01f40&gt;]
 </pre></div>
 </div>
-<img alt="../_images/c689dfb9c19f1b6e36572790c978c0491bae563aee3b9b0f646f28a88ac2ebf1.png" src="../_images/c689dfb9c19f1b6e36572790c978c0491bae563aee3b9b0f646f28a88ac2ebf1.png" />
+<img alt="../_images/3befd045331380966b06356c9e579e162e3b99538e0bf34c616844f3bdcbe393.png" src="../_images/3befd045331380966b06356c9e579e162e3b99538e0bf34c616844f3bdcbe393.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -817,7 +817,7 @@ where
 </div>
 </section>
 <section id="final-result-is">
-<h2>Final result is:<a class="headerlink" href="#final-result-is" title="Permalink to this heading">#</a></h2>
+<h2>Final result is:<a class="headerlink" href="#final-result-is" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[ a = 1.84 \pm 0.06 \]</div>
 <div class="math notranslate nohighlight">
@@ -852,7 +852,7 @@ where
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -862,7 +862,9 @@ where
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -910,7 +912,7 @@ By Alex Liberzon
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -934,8 +936,8 @@ By Alex Liberzon
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
