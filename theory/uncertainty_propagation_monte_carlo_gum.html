@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Introduction to Measurements for Mechanical Engineers</title>
+    <title>Propagating uncertainty using Monte-Carlo simulations &#8212; Introduction to Measurements for Mechanical Engineers</title>
   
   
   
@@ -169,7 +169,8 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory of experiments and measurements</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="example_uncertainty_analysis.html">Engineering Example: Uncertainty Analysis in Mechanical Measurements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="standartization.html">Standardization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="laboratory_notebook.html">Laboratory Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="uncertainty101.html">Uncertainty 101</a></li>
@@ -180,6 +181,7 @@
 <li class="toctree-l1"><a class="reference internal" href="uncertainty_of_a_slope.html">How to estimate the uncertainty of a slope for static calibration or regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="general_measurement_system_analysis.html">General measurement system diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="significant_digits.html">Significant digits</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Propagating uncertainty using Monte-Carlo simulations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Statistics for measurements</span></p>
 <ul class="nav bd-sidenav">
@@ -393,9 +395,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -406,19 +406,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Propagating uncertainty using Monte-Carlo simulations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -428,7 +420,9 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="propagating-uncertainty-using-monte-carlo-simulations">
+<h1>Propagating uncertainty using Monte-Carlo simulations<a class="headerlink" href="#propagating-uncertainty-using-monte-carlo-simulations" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -496,14 +490,15 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean height: 10.021000
 Combined standard uncertainty of height: 0.006227
-Mean volume: 1006.326554
-Standard uncertainty of volume: 1.879103
-95% coverage interval for volume: [1002.640569, 1009.993448]
+Mean volume: 1006.317597
+Standard uncertainty of volume: 1.875663
+95% coverage interval for volume: [1002.632426, 1009.985871]
 </pre></div>
 </div>
-<img alt="../_images/cdb3f7cccc015cb7050cf1388e8125a0059d1c34c8ec4b34a0912ca774ecf612.png" src="../_images/cdb3f7cccc015cb7050cf1388e8125a0059d1c34c8ec4b34a0912ca774ecf612.png" />
+<img alt="../_images/83d895bb6718699e5d7942b0f6694ad3b44f8b6bf1f37a93f6ae5bcf7ed5d328.png" src="../_images/83d895bb6718699e5d7942b0f6694ad3b44f8b6bf1f37a93f6ae5bcf7ed5d328.png" />
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -559,22 +554,6 @@ Standard uncertainty of volume: 1.879103
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
