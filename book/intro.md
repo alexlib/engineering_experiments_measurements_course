@@ -1,4 +1,4 @@
-# Introduction to measurements for mechanical engineers
+# Mechanical Engineering Metrology and Measurements (MEMM)
 
 Set of Jupyter notebooks, prepared by [Prof. Alex Liberzon](https://turbulencelab.sites.tau.ac.il), School of Mechanical Engineering, Faculty of Engineering, Tel Aviv University for the course that is called in many places as "Mechanical Measurements Lab 1" or "Theory and Design of Mechanical Measurements", "Introduction to Measurements for Mechanical Engineers", etc. 
 
