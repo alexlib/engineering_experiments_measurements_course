@@ -4,11 +4,11 @@ Set of Jupyter notebooks, prepared by [Prof. Alex Liberzon](https://turbulencela
 
 <!-- This is a small sample book to give you a feel for how book content is
 structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+It shows off a few of the major file types and some sample content.
+It does not discuss any particular topic in depth—for more information, check out [the Jupyter Book documentation](https://jupyterbook.org).
  -->
  
-This book does not replace the course materials, but rather organizes it in Jupyter and Markdown notebooks. We hope is useful as an assistance learning material for undergraduate engineering laboratory courses. It is an open source project and any contribution is welcome ( contact on [Github](https://github.com/alexlib) ).
+This book does not replace the course materials but rather organizes them in Jupyter and Markdown notebooks. We hope it is useful as an assistance learning material for undergraduate engineering laboratory courses. It is an open-source project, and any contribution is welcome ( contact on [Github](https://github.com/alexlib) ).
 
 
 ## Textbook and relevant books: 
